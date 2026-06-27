@@ -8,6 +8,13 @@
   <meta property="og:title" content="Make IT STEM — Turning STEM Knowledge into Employability">
   <meta property="og:description" content="Bridging the gap between university theory and industry-ready skills">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="Logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Make IT STEM — STEM Career Mentoring">
+  <meta name="twitter:description" content="Personalised STEM career mentoring helping students and early-career engineers become industry-ready.">
+  <meta name="twitter:image" content="Logo.png">
+  <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="apple-touch-icon" href="Logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -58,6 +65,7 @@
     .nav-logo .make { color: var(--green); }
     .nav-logo .it { color: #00D4FF; }
     .nav-logo .stem { color: var(--yellow); }
+    .nav-logo img { height: 40px; display: block; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
       color: rgba(255,255,255,0.75); text-decoration: none;
@@ -94,16 +102,10 @@
     }
     .hero::before {
       content: '';
-      position: absolute; top: -40%; right: -20%;
-      width: 800px; height: 800px;
-      background: radial-gradient(circle, rgba(28,170,90,0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; top: -40%; left: -20%;
-      width: 800px; height: 800px;
-      background: radial-gradient(circle, rgba(27,58,125,0.15) 0%, transparent 70%);
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(800px circle at 110% -10%, rgba(28,170,90,0.14) 0%, transparent 55%),
+        radial-gradient(800px circle at -10% -10%, rgba(27,58,125,0.18) 0%, transparent 55%);
       pointer-events: none;
     }
     .hero::after {
@@ -277,7 +279,7 @@
     .hero-stats {
       display: flex;
       gap: 2.5rem;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       padding-top: 2rem;
       border-top: 1px solid rgba(28,170,90,0.3);
       justify-content: flex-start;
@@ -299,7 +301,7 @@
     }
 
     /* ── SECTION SHARED ── */
-    section { padding: 5rem 2rem; }
+    section { padding: 5rem 2rem; scroll-margin-top: 64px; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
     .section-label {
       font-family: var(--display);
@@ -399,45 +401,6 @@
 
     /* ── ABOUT ── */
     .about { background: var(--off-white); }
-    .about-layout {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 3.5rem;
-      align-items: start;
-    }
-    .about-photo {
-      background: var(--navy);
-      border-radius: 14px;
-      aspect-ratio: 4 / 5;
-      display: flex; align-items: flex-end;
-      justify-content: center;
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .about-photo::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(22,34,66,0.85));
-    }
-    .photo-placeholder {
-      position: relative; z-index: 1;
-      text-align: center;
-    }
-    .photo-placeholder .initials {
-      font-family: var(--display);
-      font-size: 4rem; font-weight: 700;
-      color: var(--yellow);
-      line-height: 1;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    .photo-placeholder span {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.5);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
     .about-content h2 {
       font-family: var(--display);
       font-size: clamp(1.7rem, 3vw, 2.2rem);
@@ -447,21 +410,8 @@
     }
     .about-content p {
       color: var(--text-secondary);
-      font-size: 0.95rem; line-height: 1.75;
+      font-size: 1rem; line-height: 1.8;
       margin-bottom: 1.2rem;
-    }
-    .credentials {
-      display: flex; flex-wrap: wrap; gap: 0.6rem;
-      margin-top: 1.5rem;
-    }
-    .credential {
-      font-family: var(--display);
-      font-size: 0.75rem; font-weight: 600;
-      color: var(--navy);
-      background: rgba(22,34,66,0.07);
-      padding: 0.4rem 0.9rem;
-      border-radius: 6px;
-      letter-spacing: 0.04em;
     }
 
     /* ── TESTIMONIALS ── */
@@ -744,77 +694,6 @@
       .process-steps { grid-template-columns: 1fr; }
     }
 
-    /* ── PUBLICATIONS ── */
-    .publications { background: var(--card-white); }
-    .publications-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .publication-card {
-      background: var(--off-white);
-      border-radius: 12px;
-      padding: 1.8rem;
-      border: 1px solid var(--border);
-      transition: box-shadow 0.25s, transform 0.2s;
-      display: flex;
-      flex-direction: column;
-    }
-    .publication-card:hover {
-      box-shadow: 0 8px 30px rgba(28,170,90,0.12);
-      transform: translateY(-3px);
-    }
-    .publication-year {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #fff;
-      background: var(--green);
-      padding: 0.3rem 0.7rem;
-      border-radius: 6px;
-      margin-bottom: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-    .publication-card h3 {
-      font-family: var(--display);
-      font-size: 1.05rem;
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 0.8rem;
-      color: var(--text-primary);
-    }
-    .publication-authors {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      margin-bottom: 0.6rem;
-      font-style: italic;
-    }
-    .publication-journal {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-bottom: 1rem;
-      flex-grow: 1;
-    }
-    .publication-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--green);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      transition: color 0.2s;
-    }
-    .publication-link:hover {
-      color: var(--blue);
-    }
-    .publication-link svg {
-      width: 14px;
-      height: 14px;
-    }
-
     /* ── CONTACT FORM IMPROVEMENTS ── */
     .contact-form {
       box-shadow: 0 4px 20px rgba(28,170,90,0.08);
@@ -890,7 +769,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo"><img src="Logo.png" alt="Make IT STEM Logo" style="height: 40px; margin-right: 10px; vertical-align: middle;" style="display: inline-block; height: 40px; margin-right: 10px;"></a>
+    <a href="#" class="nav-logo" aria-label="Make IT STEM — home"><img src="Logo.png" alt="Make IT STEM Logo"></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
@@ -1301,6 +1180,15 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    // Close the mobile menu after tapping a link
+    document.querySelectorAll('#navLinks a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
