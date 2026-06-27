@@ -99,6 +99,13 @@
       background: radial-gradient(circle, rgba(28,170,90,0.12) 0%, transparent 70%);
       pointer-events: none;
     }
+    .hero::before {
+      content: '';
+      position: absolute; top: -40%; left: -20%;
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(27,58,125,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
     .hero::after {
       content: '';
       position: absolute; bottom: 0; left: 0; right: 0;
@@ -106,74 +113,150 @@
       background: linear-gradient(90deg, var(--green), var(--yellow), var(--green));
     }
     .hero-inner {
-      max-width: 1100px; margin: 0 auto; width: 100%;
+      max-width: 1200px; margin: 0 auto; width: 100%;
       position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: center;
     }
-    .hero-eyebrow {
-      font-family: var(--display);
-      font-size: 0.8rem; font-weight: 600;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 1.5rem;
+    .hero-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    .hero-logo {
+      width: 180px;
+      height: auto;
+      filter: drop-shadow(0 10px 30px rgba(28,170,90,0.3));
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    .hero-photo {
+      width: 280px;
+      height: 320px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 4px solid var(--green);
+      box-shadow: 0 20px 60px rgba(28,170,90,0.25);
+      position: relative;
+    }
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
     }
     .hero h1 {
       font-family: var(--display);
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      font-weight: 700; line-height: 1.1;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700; line-height: 1.2;
       color: #fff;
       letter-spacing: -0.03em;
-      max-width: 700px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
     }
-    .hero h1 em {
-      font-style: normal;
+    .hero-tagline {
+      font-family: var(--display);
+      font-size: 1.3rem;
+      font-weight: 500;
       color: var(--yellow);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+    .hero-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    .credential-badge {
+      display: inline-block;
+      background: rgba(28,170,90,0.2);
+      border: 1.5px solid var(--green);
+      color: var(--yellow);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
     .hero-sub {
-      font-size: 1.15rem; color: rgba(255,255,255,0.7);
-      max-width: 540px; margin-bottom: 2.5rem;
-      line-height: 1.7;
+      font-size: 1.1rem; color: rgba(255,255,255,0.75);
+      max-width: 600px; margin-bottom: 2.5rem;
+      line-height: 1.8;
     }
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-sub em {
+      color: var(--yellow);
+      font-style: normal;
+      font-weight: 600;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: var(--green); color: #fff;
       font-family: var(--display);
       font-weight: 600; font-size: 1rem;
-      padding: 0.9rem 2rem; border-radius: 8px;
+      padding: 1rem 2.2rem; border-radius: 8px;
       text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
+      transition: all 0.2s;
       border: none; cursor: pointer;
+      box-shadow: 0 10px 30px rgba(28,170,90,0.3);
     }
-    .btn-primary:hover { background: var(--blue); transform: translateY(-1px); }
+    .btn-primary:hover {
+      background: var(--blue);
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(27,58,125,0.4);
+    }
     .btn-secondary {
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: transparent;
-      color: rgba(255,255,255,0.85);
+      color: #fff;
       font-family: var(--display);
-      font-weight: 500; font-size: 1rem;
-      padding: 0.9rem 2rem; border-radius: 8px;
-      text-decoration: none; border: 1.5px solid rgba(255,255,255,0.25);
-      transition: border-color 0.2s, color 0.2s;
+      font-weight: 600; font-size: 1rem;
+      padding: 1rem 2.2rem; border-radius: 8px;
+      text-decoration: none; border: 2px solid var(--yellow);
+      transition: all 0.2s;
     }
-    .btn-secondary:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
+    .btn-secondary:hover {
+      background: var(--yellow);
+      color: var(--navy);
+      transform: translateY(-2px);
+    }
 
     .hero-stats {
-      margin-top: 3.5rem;
-      display: flex; gap: 3rem; flex-wrap: wrap;
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(28,170,90,0.3);
     }
     .hero-stat {
       display: flex; flex-direction: column;
     }
     .hero-stat strong {
       font-family: var(--display);
-      font-size: 1.6rem; font-weight: 700;
+      font-size: 2.2rem; font-weight: 700;
       color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 0.3rem;
     }
     .hero-stat span {
-      font-size: 0.8rem; color: rgba(255,255,255,0.5);
+      font-size: 0.85rem; color: rgba(255,255,255,0.6);
       text-transform: uppercase; letter-spacing: 0.08em;
-      margin-top: 0.2rem;
+      font-weight: 500;
     }
 
     /* ── SECTION SHARED ── */
@@ -590,8 +673,16 @@
         padding: 1.5rem 2rem;
         gap: 1rem;
       }
-      .hero { min-height: auto; padding: 7rem 1.5rem 3.5rem; }
-      .hero-stats { gap: 2rem; }
+      .hero { min-height: auto; padding: 6rem 1.5rem 3rem; }
+      .hero-inner { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+      .hero-profile { align-items: center; }
+      .hero-logo { width: 140px; }
+      .hero-photo { width: 240px; height: 280px; margin: 0 auto; }
+      .hero h1 { font-size: 2rem; }
+      .hero-tagline { font-size: 1.1rem; }
+      .hero-credentials { justify-content: center; }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; gap: 1.5rem; }
       .about-layout { grid-template-columns: 1fr; }
       .about-photo { aspect-ratio: 16 / 9; max-width: 360px; }
       .contact-layout { grid-template-columns: 1fr; }
@@ -771,33 +862,55 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <p class="hero-eyebrow">STEM Career Mentoring</p>
-      <h1>Turning STEM knowledge into <em>employability</em></h1>
-      <p class="hero-sub">
-        Personalised mentoring that bridges the gap between university theory and
-        industry-ready skills — helping you land the engineering career you've worked for.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">
-          Book a Free Discovery Call
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5-5-5-5"/></svg>
-        </a>
-        <a href="#services" class="btn-secondary">
-          Explore Services
-        </a>
+      <!-- Logo & Profile Section -->
+      <div class="hero-profile">
+        <img src="Logo.png" alt="Make IT STEM Logo" class="hero-logo">
+        <div class="hero-photo">
+          <img src="VFA_2026_403.jpg" alt="Dr Giuseppe Romano - VFA Award Winner">
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <strong>50+</strong>
-          <span>Students Mentored</span>
+
+      <!-- Main Content -->
+      <div class="hero-content">
+        <h1>Dr Giuseppe Romano</h1>
+        <p class="hero-tagline">Chartered Engineer | STEM Career Mentor | PhD</p>
+
+        <div class="hero-credentials">
+          <span class="credential-badge">PhD</span>
+          <span class="credential-badge">CEng</span>
+          <span class="credential-badge">FHEA</span>
+          <span class="credential-badge">MIMechE</span>
+          <span class="credential-badge">MIMMM</span>
+          <span class="credential-badge">STEM Ambassador</span>
         </div>
-        <div class="hero-stat">
-          <strong>15+</strong>
-          <span>Years in Industry</span>
+
+        <p class="hero-sub">
+          Turning STEM knowledge into <em>employability</em>. Personalised mentoring that bridges the gap between university theory and industry-ready skills.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+            Book a Free Discovery Call
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5-5-5-5"/></svg>
+          </a>
+          <a href="#services" class="btn-secondary">
+            Explore Services
+          </a>
         </div>
-        <div class="hero-stat">
-          <strong>CEng</strong>
-          <span>Chartered Engineer</span>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>50+</strong>
+            <span>Students Mentored</span>
+          </div>
+          <div class="hero-stat">
+            <strong>15+</strong>
+            <span>Years in Industry</span>
+          </div>
+          <div class="hero-stat">
+            <strong>6+</strong>
+            <span>Peer-Reviewed Publications</span>
+          </div>
         </div>
       </div>
     </div>
