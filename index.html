@@ -1076,7 +1076,7 @@
             </div>
           </div>
         </div>
-        <form class="contact-form" onsubmit="event.preventDefault(); if(document.getElementById('privacy').checked) { alert('Thank you! I\'ll be in touch within 24 hours.'); this.reset(); } else { alert('Please accept the privacy policy to continue.'); }">
+        <form class="contact-form" action="https://formspree.io/f/mkolboel" method="POST">
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
             <div class="form-group">
               <label for="name">Name</label>
@@ -1104,10 +1104,10 @@
           </div>
           <div class="form-checkbox">
             <input type="checkbox" id="privacy" name="privacy" required>
-            <label for="privacy" style="margin: 0; cursor: pointer;">I accept the <a href="#privacy-policy" target="_blank">privacy policy</a></label>
+            <label for="privacy" style="margin: 0; cursor: pointer;">I accept the <a href="privacy.html" target="_blank">privacy policy</a></label>
           </div>
           <div class="privacy-notice">
-            <strong>Data Protection:</strong> Your information is securely stored with <a href="#">Brevo</a> (GDPR compliant). I will contact you to discuss your career development needs. You can unsubscribe anytime.
+            <strong>Data Protection:</strong> Your information will be sent securely to contact@makeitstem.com (GDPR compliant). I will contact you to discuss your career development needs. You can unsubscribe anytime.
           </div>
           <button type="submit" class="btn-primary form-submit">
             Submit
