@@ -137,8 +137,8 @@
       50% { transform: translateY(-20px); }
     }
     .hero-photo {
-      width: 280px;
-      height: 320px;
+      max-width: 100%;
+      width: 100%;
       border-radius: 16px;
       overflow: hidden;
       border: 4px solid var(--green);
@@ -147,8 +147,9 @@
     }
     .hero-photo img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
+      display: block;
     }
     .vfa-award {
       background: linear-gradient(135deg, rgba(255,215,0,0.15) 0%, rgba(28,170,90,0.15) 100%);
@@ -713,7 +714,7 @@
       .hero-inner { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
       .hero-profile { align-items: center; }
       .hero-logo { width: 140px; }
-      .hero-photo { width: 240px; height: 280px; margin: 0 auto; }
+      .hero-photo { max-width: 280px; margin: 0 auto; }
       .hero h1 { font-size: 2rem; }
       .hero-tagline { font-size: 1.1rem; }
       .hero-credentials { justify-content: center; }
