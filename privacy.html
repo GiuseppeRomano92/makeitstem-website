@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Make IT STEM</title>
+  <meta name="description" content="Privacy policy and data protection information for Make IT STEM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --green: #1CAA5A;
+      --blue: #1B3A7D;
+      --yellow: #FFD700;
+      --navy: #162242;
+      --navy-mid: #1e3060;
+      --off-white: #f5f4f0;
+      --card-white: #ffffff;
+      --text-primary: #1a1a2e;
+      --text-secondary: #52556a;
+      --text-light: #8b8ea0;
+      --border: #e2e3e8;
+      --display: 'Space Grotesk', sans-serif;
+      --body: 'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--body);
+      color: var(--text-primary);
+      background: var(--off-white);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(22, 34, 66, 0.97);
+      backdrop-filter: blur(10px);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--display);
+      font-weight: 700; font-size: 1.2rem;
+      color: #fff; text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo img { height: 40px; margin-right: 10px; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.75); text-decoration: none;
+      font-size: 0.875rem; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta {
+      background: var(--green); color: #fff !important;
+      padding: 0.5rem 1.2rem; border-radius: 6px;
+      font-weight: 600 !important;
+      opacity: 1 !important;
+    }
+    .nav-cta:hover { background: var(--blue); }
+
+    .hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      flex-direction: column; gap: 5px; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: #fff; border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* ── HEADER ── */
+    .page-header {
+      background: var(--navy);
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+      margin-top: 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute; top: -40%; right: -20%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(28,170,90,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-header h1 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .page-header .meta {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── CONTENT ── */
+    section { padding: 5rem 2rem; }
+    .section-inner { max-width: 900px; margin: 0 auto; }
+    .content-section { background: var(--card-white); }
+
+    h2 {
+      font-family: var(--display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-family: var(--display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    ul, ol {
+      margin: 1.5rem 0 1.5rem 2rem;
+      color: var(--text-secondary);
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+      line-height: 1.7;
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .highlight {
+      background: rgba(28,170,90,0.08);
+      border-left: 4px solid var(--green);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 6px;
+    }
+
+    .highlight p {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--off-white);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      padding: 3rem 2rem 2rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-logo {
+      font-family: var(--display);
+      font-weight: 700; font-size: 1.1rem;
+      color: #fff;
+    }
+    .footer-logo .make { color: var(--green); }
+    .footer-logo .it { color: var(--blue); }
+    .footer-logo .stem { color: var(--yellow); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none; font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #fff; }
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .footer-social a {
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-social a:hover {
+      color: var(--green);
+    }
+    .footer-copy {
+      width: 100%;
+      text-align: center;
+      font-size: 0.78rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .page-header { padding: 6rem 1.5rem 3rem; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+      h2 { font-size: 1.4rem; }
+      h3 { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="Logo.png" alt="Make IT STEM Logo"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="section-inner">
+      <h1>Privacy Policy</h1>
+      <div class="meta">Last updated: 27 June 2026</div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content-section">
+    <div class="section-inner">
+      <h2>Data Protection & Your Privacy</h2>
+      <p>
+        At Make IT STEM, we take your privacy seriously. This privacy policy explains how we collect, use, protect, and share your personal information.
+      </p>
+
+      <h3>1. Information We Collect</h3>
+      <p>We collect information you voluntarily provide through:</p>
+      <ul>
+        <li><strong>Contact Forms:</strong> Name, email address, career stage, and message content</li>
+        <li><strong>Mentoring Bookings:</strong> Personal details needed to schedule mentoring sessions</li>
+        <li><strong>Email Communications:</strong> Any information you include in direct emails</li>
+        <li><strong>Website Analytics:</strong> General usage data (pages visited, time spent, device type)</li>
+      </ul>
+
+      <h3>2. How We Use Your Information</h3>
+      <p>We use your personal data for:</p>
+      <ul>
+        <li>Responding to your enquiries and contact requests</li>
+        <li>Scheduling and conducting mentoring sessions</li>
+        <li>Sending you updates about our services (with your consent)</li>
+        <li>Improving our website and services</li>
+        <li>Meeting legal and compliance obligations</li>
+      </ul>
+
+      <h3>3. Legal Basis for Processing</h3>
+      <p>We process your data based on:</p>
+      <ul>
+        <li><strong>Consent:</strong> When you submit a contact form or sign up for mentoring</li>
+        <li><strong>Contract:</strong> When we're providing mentoring services to you</li>
+        <li><strong>Legitimate Interests:</strong> Improving our services and website security</li>
+      </ul>
+
+      <div class="highlight">
+        <strong>GDPR Compliance:</strong> We fully comply with the General Data Protection Regulation (GDPR) and the UK Data Protection Act 2018. You have the right to access, correct, or delete your personal data at any time.
+      </div>
+
+      <h3>4. Data Storage & Security</h3>
+      <p>
+        Your data is securely stored with <strong>Brevo</strong> (formerly Sendinblue), a GDPR-compliant email service provider. We use industry-standard encryption and security protocols to protect your information. Data is stored only as long as necessary to fulfil the purposes outlined in this policy.
+      </p>
+
+      <h3>5. Third Parties & Data Sharing</h3>
+      <p>
+        We do not sell or share your personal data with third parties, except:
+      </p>
+      <ul>
+        <li><strong>Service Providers:</strong> Brevo (email communications), MentorMeet (booking platform)</li>
+        <li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
+      </ul>
+
+      <h3>6. Your Rights</h3>
+      <p>Under GDPR and data protection laws, you have the right to:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of your personal data</li>
+        <li><strong>Rectification:</strong> Correct inaccurate information</li>
+        <li><strong>Erasure:</strong> Request deletion of your data ("right to be forgotten")</li>
+        <li><strong>Portability:</strong> Receive your data in a portable format</li>
+        <li><strong>Objection:</strong> Opt out of marketing communications anytime</li>
+        <li><strong>Withdraw Consent:</strong> Stop processing at any time</li>
+      </ul>
+
+      <p>To exercise any of these rights, contact us at <strong>contact@makeitstem.com</strong></p>
+
+      <h3>7. Cookies & Analytics</h3>
+      <p>
+        Our website uses essential cookies to ensure proper functionality. We also use Google Analytics to understand how visitors use our site, which helps us improve your experience. No personal data is shared with analytics providers without your consent.
+      </p>
+
+      <h3>8. External Links</h3>
+      <p>
+        Our website contains links to external sites (Google Scholar, LinkedIn, MentorMeet). We are not responsible for the privacy practices of these external websites. Please review their privacy policies before sharing personal information.
+      </p>
+
+      <h3>9. Contact Form & Newsletter</h3>
+      <p>
+        When you submit a contact form or subscribe to updates:
+      </p>
+      <ul>
+        <li>We store your email address and communication history</li>
+        <li>You can unsubscribe from marketing emails at any time</li>
+        <li>All emails include an unsubscribe link</li>
+        <li>We never send unsolicited or spam communications</li>
+      </ul>
+
+      <h3>10. Data Retention</h3>
+      <p>
+        We retain your data for:
+      </p>
+      <ul>
+        <li><strong>Contact Enquiries:</strong> 24 months (unless you request deletion)</li>
+        <li><strong>Mentoring Records:</strong> Duration of relationship + 3 years (for compliance)</li>
+        <li><strong>Newsletter Subscribers:</strong> Until you unsubscribe</li>
+      </ul>
+
+      <h3>11. Changes to This Policy</h3>
+      <p>
+        We may update this privacy policy periodically. We'll notify you of significant changes by email or by posting the updated policy on this page. The "Last Updated" date at the top indicates when changes were made.
+      </p>
+
+      <h3>12. Contact Us</h3>
+      <p>
+        If you have questions about this privacy policy or your data, please contact us:
+      </p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:contact@makeitstem.com">contact@makeitstem.com</a></li>
+        <li><strong>Location:</strong> United Kingdom</li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank">Dr Giuseppe Romano</a></li>
+      </ul>
+
+      <div class="highlight">
+        <strong>Data Protection Officer:</strong> If you have concerns about how we handle your data or believe your rights have been violated, you can contact the UK Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" target="_blank">ico.org.uk</a>
+      </div>
+
+      <h3>13. Compliance Certifications</h3>
+      <p>
+        We comply with:
+      </p>
+      <ul>
+        <li>GDPR (General Data Protection Regulation)</li>
+        <li>UK Data Protection Act 2018</li>
+        <li>Brevo's Data Protection Standards</li>
+      </ul>
+
+      <hr style="margin: 3rem 0; border: none; border-top: 1px solid var(--border);">
+
+      <p style="text-align: center; color: var(--text-light); font-size: 0.9rem; margin-top: 3rem;">
+        By using Make IT STEM's website and services, you acknowledge that you have read and understood this privacy policy.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo"><span class="make">Make</span> <span class="it">IT</span> <span class="stem">STEM</span></div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" title="Giuseppe Romano on LinkedIn">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.39v-1.2h-2.49v8.5h2.5v-4.34c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.34h2.5M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.5H5.5v8.5h2.77Z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/makeitstem" target="_blank" title="Make IT STEM on LinkedIn">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.39v-1.2h-2.49v8.5h2.5v-4.34c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.34h2.5M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.5H5.5v8.5h2.77Z"/>
+          </svg>
+        </a>
+      </div>
+      <p class="footer-copy">
+        &copy; 2026 Make IT STEM. All rights reserved. &nbsp;|&nbsp;
+        STEM career mentoring for university students and early-career engineers.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
