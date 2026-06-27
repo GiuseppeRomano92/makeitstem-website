@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make IT STEM | STEM Career Mentoring for Students & Engineers</title>
+  <meta name="description" content="Personalised STEM career mentoring and workshops helping university students and early-career engineers bridge the gap between theory and industry.">
+  <meta property="og:title" content="Make IT STEM — Turning STEM Knowledge into Employability">
+  <meta property="og:description" content="Bridging the gap between university theory and industry-ready skills">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #162242;
+      --navy-mid: #1e3060;
+      --amber: #e0952d;
+      --amber-light: #f4c76b;
+      --off-white: #f5f4f0;
+      --card-white: #ffffff;
+      --text-primary: #1a1a2e;
+      --text-secondary: #52556a;
+      --text-light: #8b8ea0;
+      --border: #e2e3e8;
+      --display: 'Space Grotesk', sans-serif;
+      --body: 'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--body);
+      color: var(--text-primary);
+      background: var(--off-white);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(22, 34, 66, 0.97);
+      backdrop-filter: blur(10px);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--display);
+      font-weight: 700; font-size: 1.2rem;
+      color: #fff; text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--amber); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.75); text-decoration: none;
+      font-size: 0.875rem; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta {
+      background: var(--amber); color: var(--navy) !important;
+      padding: 0.5rem 1.2rem; border-radius: 6px;
+      font-weight: 600 !important;
+      opacity: 1 !important;
+    }
+    .nav-cta:hover { background: var(--amber-light); }
+
+    .hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      flex-direction: column; gap: 5px; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: #fff; border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex; align-items: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -40%; right: -20%;
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(224,149,45,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--amber), var(--amber-light), var(--amber));
+    }
+    .hero-inner {
+      max-width: 1100px; margin: 0 auto; width: 100%;
+      position: relative; z-index: 1;
+    }
+    .hero-eyebrow {
+      font-family: var(--display);
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 700; line-height: 1.1;
+      color: #fff;
+      letter-spacing: -0.03em;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--amber);
+    }
+    .hero-sub {
+      font-size: 1.15rem; color: rgba(255,255,255,0.7);
+      max-width: 540px; margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--amber); color: var(--navy);
+      font-family: var(--display);
+      font-weight: 600; font-size: 1rem;
+      padding: 0.9rem 2rem; border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      border: none; cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--amber-light); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent;
+      color: rgba(255,255,255,0.85);
+      font-family: var(--display);
+      font-weight: 500; font-size: 1rem;
+      padding: 0.9rem 2rem; border-radius: 8px;
+      text-decoration: none; border: 1.5px solid rgba(255,255,255,0.25);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
+
+    .hero-stats {
+      margin-top: 3.5rem;
+      display: flex; gap: 3rem; flex-wrap: wrap;
+    }
+    .hero-stat {
+      display: flex; flex-direction: column;
+    }
+    .hero-stat strong {
+      font-family: var(--display);
+      font-size: 1.6rem; font-weight: 700;
+      color: var(--amber);
+    }
+    .hero-stat span {
+      font-size: 0.8rem; color: rgba(255,255,255,0.5);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-top: 0.2rem;
+    }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 5rem 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-family: var(--display);
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 700; line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin-bottom: 3rem;
+    }
+
+    /* ── SERVICES ── */
+    .services { background: var(--off-white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--card-white);
+      border-radius: 12px;
+      padding: 2.2rem 2rem;
+      border: 1px solid var(--border);
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .service-card:hover {
+      box-shadow: 0 8px 30px rgba(22,34,66,0.08);
+      transform: translateY(-3px);
+    }
+    .service-icon {
+      width: 48px; height: 48px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .service-icon svg { width: 24px; height: 24px; }
+    .service-card h3 {
+      font-family: var(--display);
+      font-size: 1.2rem; font-weight: 600;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    .service-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem; line-height: 1.7;
+    }
+    .service-tag {
+      display: inline-block;
+      margin-top: 1.2rem;
+      font-size: 0.78rem; font-weight: 600;
+      color: var(--amber);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── BRIDGE DIVIDER ── */
+    .bridge-divider {
+      background: var(--navy);
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .bridge-divider::before,
+    .bridge-divider::after {
+      content: '';
+      position: absolute; left: 50%; transform: translateX(-50%);
+      width: 120px; height: 3px;
+      background: var(--amber);
+    }
+    .bridge-divider::before { top: 0; }
+    .bridge-divider::after { bottom: 0; }
+    .bridge-quote {
+      font-family: var(--display);
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+      max-width: 700px; margin: 0 auto;
+      letter-spacing: -0.01em;
+      line-height: 1.5;
+    }
+    .bridge-quote em {
+      font-style: normal;
+      color: var(--amber);
+    }
+
+    /* ── ABOUT ── */
+    .about { background: var(--off-white); }
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .about-photo {
+      background: var(--navy);
+      border-radius: 14px;
+      aspect-ratio: 4 / 5;
+      display: flex; align-items: flex-end;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-photo::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(22,34,66,0.85));
+    }
+    .photo-placeholder {
+      position: relative; z-index: 1;
+      text-align: center;
+    }
+    .photo-placeholder .initials {
+      font-family: var(--display);
+      font-size: 4rem; font-weight: 700;
+      color: var(--amber);
+      line-height: 1;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .photo-placeholder span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .about-content h2 {
+      font-family: var(--display);
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
+      font-weight: 700; line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    .about-content p {
+      color: var(--text-secondary);
+      font-size: 0.95rem; line-height: 1.75;
+      margin-bottom: 1.2rem;
+    }
+    .credentials {
+      display: flex; flex-wrap: wrap; gap: 0.6rem;
+      margin-top: 1.5rem;
+    }
+    .credential {
+      font-family: var(--display);
+      font-size: 0.75rem; font-weight: 600;
+      color: var(--navy);
+      background: rgba(22,34,66,0.07);
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--card-white); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .testimonial-card {
+      background: var(--off-white);
+      border-radius: 12px;
+      padding: 2rem;
+      border: 1px solid var(--border);
+    }
+    .testimonial-stars {
+      color: var(--amber);
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+    .testimonial-card blockquote {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .author-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--display);
+      font-weight: 700; font-size: 0.85rem;
+      color: var(--amber);
+    }
+    .author-info strong {
+      display: block;
+      font-size: 0.88rem; font-weight: 600;
+    }
+    .author-info span {
+      font-size: 0.78rem;
+      color: var(--text-light);
+    }
+
+    /* ── HOW IT WORKS ── */
+    .process { background: var(--off-white); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .process-step {
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    .step-number {
+      font-family: var(--display);
+      font-size: 2.5rem; font-weight: 700;
+      color: var(--amber);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .process-step h3 {
+      font-family: var(--display);
+      font-size: 1.05rem; font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+    .process-step p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .step-connector {
+      display: none;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--navy);
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--amber), var(--amber-light), var(--amber));
+    }
+    .cta-section h2 {
+      font-family: var(--display);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700; color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .cta-section p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1.05rem;
+      max-width: 500px; margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    /* ── CONTACT FORM ── */
+    .contact { background: var(--off-white); }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .contact-info h2 {
+      font-family: var(--display);
+      font-size: 1.8rem; font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .contact-info p {
+      color: var(--text-secondary);
+      font-size: 0.95rem; line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .contact-detail {
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .contact-detail-icon {
+      width: 40px; height: 40px;
+      background: rgba(22,34,66,0.06);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-detail-icon svg { width: 18px; height: 18px; color: var(--navy); }
+    .contact-detail-text {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    .contact-detail-text strong {
+      display: block;
+      color: var(--text-primary);
+      font-size: 0.85rem;
+    }
+    .contact-form {
+      background: var(--card-white);
+      border-radius: 14px;
+      padding: 2.5rem;
+      border: 1px solid var(--border);
+    }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem; font-weight: 500;
+      margin-bottom: 0.4rem;
+      color: var(--text-primary);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-family: var(--body);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      background: var(--off-white);
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--amber);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      padding: 3rem 2rem 2rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-logo {
+      font-family: var(--display);
+      font-weight: 700; font-size: 1.1rem;
+      color: #fff;
+    }
+    .footer-logo span { color: var(--amber); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none; font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy {
+      width: 100%;
+      text-align: center;
+      font-size: 0.78rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px; left: 0; right: 0;
+        background: var(--navy);
+        padding: 1.5rem 2rem;
+        gap: 1rem;
+      }
+      .hero { min-height: auto; padding: 7rem 1.5rem 3.5rem; }
+      .hero-stats { gap: 2rem; }
+      .about-layout { grid-template-columns: 1fr; }
+      .about-photo { aspect-ratio: 16 / 9; max-width: 360px; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; }
+      .btn-primary, .btn-secondary { justify-content: center; width: 100%; }
+      .services-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Make <span>IT</span> STEM</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Results</a></li>
+      <li><a href="#process">How It Works</a></li>
+      <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">STEM Career Mentoring</p>
+      <h1>Turning STEM knowledge into <em>employability</em></h1>
+      <p class="hero-sub">
+        Personalised mentoring that bridges the gap between university theory and
+        industry-ready skills — helping you land the engineering career you've worked for.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          Book a Free Discovery Call
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5-5-5-5"/></svg>
+        </a>
+        <a href="#services" class="btn-secondary">
+          Explore Services
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>50+</strong>
+          <span>Students Mentored</span>
+        </div>
+        <div class="hero-stat">
+          <strong>15+</strong>
+          <span>Years in Industry</span>
+        </div>
+        <div class="hero-stat">
+          <strong>CEng</strong>
+          <span>Chartered Engineer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <p class="section-label">Services</p>
+      <h2 class="section-title">What I offer</h2>
+      <p class="section-subtitle">
+        Three ways to accelerate your transition from student to confident, industry-ready engineer.
+      </p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" stroke="#e0952d" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>1-to-1 Career Mentoring</h3>
+          <p>
+            Personalised guidance tailored to where you are and where you want to go.
+            We work on your CV, interview technique, skills mapping, and career strategy
+            — drawing on real industry experience, not textbook advice.
+          </p>
+          <span class="service-tag">Most popular</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" stroke="#e0952d" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8"/><path d="M12 17v4"/>
+            </svg>
+          </div>
+          <h3>Group Workshops</h3>
+          <p>
+            Tailored sessions for university departments, student societies, or cohorts.
+            Topics include industry readiness, technical communication, professional
+            development, and making your degree work harder for you.
+          </p>
+          <span class="service-tag">Universities & Societies</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg fill="none" stroke="#e0952d" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3>Digital Resources</h3>
+          <p>
+            Downloadable guides, templates, and planning tools for self-directed
+            career development. From CV frameworks to skills audits — practical
+            resources built by an engineer, for engineers.
+          </p>
+          <span class="service-tag">Self-paced</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRIDGE -->
+  <div class="bridge-divider">
+    <p class="bridge-quote">
+      "The best engineers I've worked with didn't just have strong degrees —
+      they knew how to <em>communicate value</em> and navigate industry from day one."
+    </p>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="about-layout">
+        <div class="about-photo">
+          <div class="photo-placeholder">
+            <span class="initials">GR</span>
+            <span>Your photo here</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <p class="section-label">Meet the Founder</p>
+          <h2>Dr Giuseppe Romano</h2>
+          <p>
+            I'm a Chartered Engineer and Senior R&D Engineer at Synopsys, with a
+            PhD from the University of Manchester in Mechanical and Aerospace
+            Engineering. I've spent over 15 years working at the intersection of
+            advanced materials, simulation, and product development.
+          </p>
+          <p>
+            Make IT STEM grew out of something I kept seeing: talented graduates
+            who had strong technical foundations but struggled to translate that
+            into the confidence, communication skills, and strategic thinking that
+            employers actually look for. I started mentoring informally, then
+            realised this gap needed a dedicated, structured approach.
+          </p>
+          <p>
+            Today I help students and early-career engineers bridge that gap —
+            combining real industry insight with personalised mentoring that goes
+            far beyond generic careers advice.
+          </p>
+          <div class="credentials">
+            <span class="credential">PhD</span>
+            <span class="credential">CEng</span>
+            <span class="credential">FHEA</span>
+            <span class="credential">MIMechE</span>
+            <span class="credential">MIMMM</span>
+            <span class="credential">STEM Ambassador</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-inner">
+      <p class="section-label">Results</p>
+      <h2 class="section-title">What mentees say</h2>
+      <p class="section-subtitle">
+        Real outcomes from engineers who've been through the programme.
+      </p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "Giuseppe helped me completely rethink how I presented my skills.
+            Within two months I had three interviews and landed a graduate
+            role in simulation engineering. His industry perspective made all
+            the difference."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">YY</div>
+            <div class="author-info">
+              <strong>Yang Y.</strong>
+              <span>Graduate Engineer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "The mentoring sessions gave me a clear roadmap I didn't have before.
+            Giuseppe doesn't just give advice — he challenges you to think
+            strategically about your career in a way university never did."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">YR</div>
+            <div class="author-info">
+              <strong>Yeshwanth R.</strong>
+              <span>Early-Career Mechanical Engineer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "I was struggling to get past the application stage despite a strong
+            academic record. Giuseppe's structured approach to CV writing and
+            interview preparation transformed my confidence and my results."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">MS</div>
+            <div class="author-info">
+              <strong>Mohamed S.</strong>
+              <span>Aerospace Engineering Graduate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="section-inner">
+      <p class="section-label">How It Works</p>
+      <h2 class="section-title">From first call to career clarity</h2>
+      <p class="section-subtitle">
+        A straightforward process designed around your goals.
+      </p>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Discovery Call</h3>
+          <p>A free 15-minute conversation to understand where you are, where you want to be, and whether we're a good fit.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>Skills Assessment</h3>
+          <p>We map your technical and professional strengths, identify gaps, and set clear, measurable goals together.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>Mentoring Sessions</h3>
+          <p>Structured 1-to-1 sessions tailored to your plan — CV, interview prep, industry insight, career strategy.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>Launch & Support</h3>
+          <p>You apply with confidence. I stay available for follow-up questions as you navigate offers and early career decisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2>Ready to bridge the gap?</h2>
+      <p>
+        Book a free 15-minute discovery call and let's talk about
+        where you are, where you want to be, and how to get there.
+      </p>
+      <a href="#contact" class="btn-primary">
+        Book Your Free Call
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5-5-5-5"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <p class="section-label">Get in Touch</p>
+          <h2>Let's start a conversation</h2>
+          <p>
+            Whether you're a final-year student, a recent graduate, or an
+            early-career engineer looking for direction — I'd be glad to hear from you.
+          </p>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              hello@makeitstem.co.uk
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Based in</strong>
+              United Kingdom
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>LinkedIn</strong>
+              Connect with me
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! I\'ll be in touch within 24 hours.');">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required placeholder="Full name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com">
+          </div>
+          <div class="form-group">
+            <label for="stage">Where are you in your career?</label>
+            <select id="stage" name="stage">
+              <option value="">Select one...</option>
+              <option value="undergrad">Undergraduate (final year)</option>
+              <option value="postgrad">Postgraduate student</option>
+              <option value="recent">Recent graduate (0–2 years)</option>
+              <option value="early">Early-career engineer (2–5 years)</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">How can I help?</label>
+            <textarea id="message" name="message" placeholder="Tell me a bit about your situation and what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit">
+            Send Message
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Make <span>IT</span> STEM</div>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <p class="footer-copy">
+        &copy; 2026 Make IT STEM. All rights reserved. &nbsp;|&nbsp;
+        STEM career mentoring for university students and early-career engineers.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
