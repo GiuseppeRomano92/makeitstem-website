@@ -242,15 +242,16 @@
       margin-bottom: 2.5rem;
     }
     .btn-primary {
-      display: inline-flex; align-items: center; gap: 0.5rem;
+      display: inline-flex; align-items: center; gap: 0.6rem;
       background: var(--green); color: #fff;
       font-family: var(--display);
       font-weight: 600; font-size: 1rem;
-      padding: 1rem 2.2rem; border-radius: 8px;
+      padding: 1.1rem 2.4rem; border-radius: 8px;
       text-decoration: none;
       transition: all 0.2s;
       border: none; cursor: pointer;
       box-shadow: 0 10px 30px rgba(28,170,90,0.3);
+      overflow: visible;
     }
     .btn-primary:hover {
       background: var(--blue);
@@ -646,6 +647,12 @@
     .form-submit {
       width: 100%;
       margin-top: 0.5rem;
+      padding: 1.1rem 2.4rem !important;
+      justify-content: center;
+    }
+    .form-submit svg {
+      width: 18px;
+      height: 18px;
     }
 
     /* ── FOOTER ── */
