@@ -150,6 +150,42 @@
       height: 100%;
       object-fit: cover;
     }
+    .vfa-award {
+      background: linear-gradient(135deg, rgba(255,215,0,0.15) 0%, rgba(28,170,90,0.15) 100%);
+      border: 2px solid var(--yellow);
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .vfa-award-title {
+      font-family: var(--display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+    .vfa-award-subtitle {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 0.8rem;
+      line-height: 1.5;
+    }
+    .vfa-award-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--yellow);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .vfa-award-link:hover {
+      color: #fff;
+    }
     .hero-content {
       display: flex;
       flex-direction: column;
@@ -238,9 +274,10 @@
     .hero-stats {
       display: flex;
       gap: 2.5rem;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       padding-top: 2rem;
       border-top: 1px solid rgba(28,170,90,0.3);
+      justify-content: flex-start;
     }
     .hero-stat {
       display: flex; flex-direction: column;
@@ -866,6 +903,17 @@
         <img src="Logo.png" alt="Make IT STEM Logo" class="hero-logo">
         <div class="hero-photo">
           <img src="VFA_2026_403.jpg" alt="Dr Giuseppe Romano - VFA Award Winner">
+        </div>
+        <div class="vfa-award">
+          <div class="vfa-award-title">Venture Further Awards 2026</div>
+          <div class="vfa-award-subtitle">
+            Freelancer of the Year<br>
+            £4,000 Winner
+          </div>
+          <a href="https://www.manchester.ac.uk/about/news/university-of-manchester-and-mec-students-celebrated-at-the-venture-further-awards-2026/" target="_blank" class="vfa-award-link">
+            Learn More
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
       </div>
 
