@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Stripe Buy Button -->
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NL49D78HZD"></script>
   <script>
@@ -943,6 +945,21 @@
           Access Free Resources
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </a>
+      </div>
+
+      <div style="max-width: 640px; margin: 2rem auto 0; background: var(--card-white); border-left: 4px solid var(--yellow); border-radius: 12px; padding: 2.5rem; text-align: center;">
+        <p class="service-tag" style="margin-top: 0; margin-bottom: 0.8rem;">Premium</p>
+        <h3 style="font-family: var(--display); font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.8rem;">
+          CV Checklists for Academia — £3
+        </h3>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+          A focused checklist to make sure your academic CV hits every mark
+          before you submit — sent straight to your inbox after purchase.
+        </p>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1TnkCgRXBhYZq7zP3o8ITXA4"
+          publishable-key="pk_live_51TnKWCRXBhYZq7zPc7RvG9wztAmASJr23DPucvsrU4rgqoKOb0SQLqPHLCK99rTb8Cu7P5uUoweRH5jz9YklCZrP00rW6JwncA"
+        ></stripe-buy-button>
       </div>
     </div>
   </section>
