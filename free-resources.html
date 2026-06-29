@@ -12,9 +12,9 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications | Dr Giuseppe Romano - Make IT STEM</title>
-  <meta name="description" content="Academic publications and research by Dr Giuseppe Romano on Google Scholar.">
-  <link rel="canonical" href="https://makeitstem.com/publications.html">
+  <title>Free Resources | Make IT STEM</title>
+  <meta name="description" content="Free CV and cover letter templates for academia and industry, in LaTeX (Overleaf) and Word format.">
+  <link rel="canonical" href="https://makeitstem.com/free-resources.html">
   <link rel="icon" type="image/png" href="Logo.png">
   <link rel="apple-touch-icon" href="Logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -202,65 +202,6 @@
       margin-bottom: 2rem;
     }
 
-    /* ── PUBLICATION LIST ── */
-    .pub-group { margin-top: 2.5rem; }
-    .pub-group h3 {
-      font-family: var(--display);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--green);
-    }
-    .pub-item {
-      padding: 1.1rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .pub-item:last-child { border-bottom: none; }
-    .pub-authors {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-    .pub-authors strong { color: var(--text-primary); }
-    .pub-title {
-      display: block;
-      font-style: italic;
-      color: var(--text-primary);
-      margin: 0.15rem 0;
-      line-height: 1.5;
-    }
-    .pub-venue {
-      font-size: 0.92rem;
-      color: var(--text-secondary);
-    }
-    .pub-meta {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.75rem;
-      margin-top: 0.5rem;
-    }
-    .pub-badge {
-      display: inline-block;
-      background: rgba(28,170,90,0.1);
-      color: var(--green);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      padding: 0.22rem 0.6rem;
-      border-radius: 5px;
-    }
-    .pub-doi {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--blue);
-      text-decoration: none;
-    }
-    .pub-doi:hover { text-decoration: underline; }
-    .pub-loading { color: var(--text-light); font-style: italic; }
-
     .btn-primary {
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: var(--green); color: #fff;
@@ -272,23 +213,6 @@
       border: none; cursor: pointer;
     }
     .btn-primary:hover { background: var(--blue); transform: translateY(-1px); }
-
-    .btn-secondary {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: transparent;
-      color: var(--green);
-      font-family: var(--display);
-      font-weight: 600; font-size: 1rem;
-      padding: 0.9rem 2rem; border-radius: 8px;
-      text-decoration: none;
-      border: 2px solid var(--green);
-      transition: all 0.2s;
-    }
-    .btn-secondary:hover {
-      background: var(--green);
-      color: #fff;
-      transform: translateY(-1px);
-    }
 
     /* ── FOOTER ── */
     footer {
@@ -307,9 +231,9 @@
       color: #fff;
     }
     .footer-logo .make { color: var(--green); }
-    .footer-logo .it { color: var(--blue); }
+    .footer-logo .it { color: #00D4FF; }
     .footer-logo .stem { color: var(--yellow); }
-    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
     .footer-links a {
       color: rgba(255,255,255,0.5);
       text-decoration: none; font-size: 0.85rem;
@@ -365,6 +289,11 @@
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
   </style>
 </head>
 <body>
@@ -396,48 +325,38 @@
   <!-- PAGE HEADER -->
   <section class="page-header">
     <div class="section-inner">
-      <h1>Research & Publications</h1>
-      <p>Exploring the intersection of advanced materials, simulation, and engineering education</p>
-      <a href="https://orcid.org/0000-0002-9385-3541" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; color: #A6CE39; font-weight: 600; text-decoration: none; font-size: 0.95rem; position: relative; z-index: 1;">
-        <svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z"/><path fill="#fff" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z"/><path fill="#fff" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z"/><path fill="#fff" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1C84.2,46.7,88.7,51.3,88.7,56.8z"/></svg>
-        ORCID: 0000-0002-9385-3541
-      </a>
+      <h1>Free Resources</h1>
+      <p>CV and cover letter templates for academia and industry applications</p>
     </div>
   </section>
 
   <!-- CONTENT -->
   <section class="content-section">
     <div class="section-inner">
-      <h2>My Academic Work</h2>
+      <h2>CV Templates</h2>
       <p>
-        My research focuses on advanced materials, computational simulation, and the practical application of engineering theory in industry. I publish regularly in peer-reviewed journals and conferences.
+        Free templates for academia and industry applications — available in
+        both LaTeX (Overleaf) and Word format.
       </p>
 
-      <div id="publications">
-        <p class="pub-loading">Loading publications…</p>
-      </div>
-
       <div class="cta-box">
-        <h3>View Full Profile &amp; Citations</h3>
+        <h3>Download the Templates</h3>
         <p>
-          For citations, h-index, and the most up-to-date list, visit my Google Scholar profile.
+          CV and cover letter templates tailored for both academic
+          (PhD/postdoc) and industry job applications, ready to edit in
+          Overleaf or Microsoft Word.
         </p>
-        <a href="https://scholar.google.com/citations?hl=it&user=dF_84b0AAAAJ" target="_blank" rel="noopener" class="btn-primary">
-          View on Google Scholar
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        <a href="https://drive.google.com/drive/folders/1RlpEasMYuZEkTvbx7RQ49txU8EJx_rJm?usp=sharing" target="_blank" rel="noopener" class="btn-primary">
+          Access Free Resources
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </a>
       </div>
 
-      <h2 style="margin-top: 3rem;">Research Interests</h2>
-      <ul style="margin: 1.5rem 0 1.5rem 2rem; color: var(--text-secondary); line-height: 1.8;">
-        <li>Advanced materials and composite structures</li>
-        <li>Finite element analysis and computational simulation</li>
-        <li>Thermal and mechanical analysis</li>
-        <li>Multi-scale modeling approaches</li>
-        <li>Engineering education and industry-academia collaboration</li>
-        <li>STEM career development and employability</li>
-      </ul>
-
+      <p>
+        Looking for something more tailored? See the
+        <a href="premium-resources.html" style="color: var(--green); font-weight: 600;">Premium Resources</a>
+        page for in-depth checklists.
+      </p>
     </div>
   </section>
 
@@ -488,64 +407,6 @@
           burger.setAttribute('aria-expanded', 'false');
         });
       });
-    })();
-  </script>
-
-  <script>
-    (function () {
-      var container = document.getElementById('publications');
-
-      function esc(s) {
-        return String(s).replace(/[&<>"]/g, function (c) {
-          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
-        });
-      }
-
-      // Bold the author's own name within the author list
-      function highlightAuthor(authors) {
-        return esc(authors).replace(/Romano, G\./g, '<strong>Romano, G.</strong>');
-      }
-
-      function renderItem(p) {
-        var meta = '';
-        if (p.metrics || p.url) {
-          meta += '<div class="pub-meta">';
-          if (p.metrics) meta += '<span class="pub-badge">' + esc(p.metrics) + '</span>';
-          if (p.url) meta += '<a class="pub-doi" href="' + esc(p.url) + '" target="_blank" rel="noopener">View paper →</a>';
-          meta += '</div>';
-        }
-        var venue = esc(p.venue);
-        if (p.date) venue += ', ' + esc(p.date);
-        return '<div class="pub-item">' +
-          '<span class="pub-authors">' + highlightAuthor(p.authors) + '</span>' +
-          '<span class="pub-title">' + esc(p.title) + '</span>' +
-          '<span class="pub-venue">' + venue + '</span>' +
-          meta +
-          '</div>';
-      }
-
-      function renderGroup(title, items) {
-        if (!items || !items.length) return '';
-        return '<div class="pub-group"><h3>' + esc(title) + '</h3>' +
-          items.map(renderItem).join('') + '</div>';
-      }
-
-      fetch('publications.json')
-        .then(function (r) {
-          if (!r.ok) throw new Error('HTTP ' + r.status);
-          return r.json();
-        })
-        .then(function (data) {
-          container.innerHTML =
-            renderGroup('Journal Papers', data.journal) +
-            renderGroup('Conference Papers', data.conference);
-        })
-        .catch(function () {
-          container.innerHTML =
-            '<p>My full list of publications is available on ' +
-            '<a href="https://scholar.google.com/citations?hl=it&user=dF_84b0AAAAJ" ' +
-            'target="_blank" rel="noopener" style="color: var(--green); font-weight: 600;">Google Scholar</a>.</p>';
-        });
     })();
   </script>
 

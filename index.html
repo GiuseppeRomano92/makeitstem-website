@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Stripe Buy Button -->
-  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NL49D78HZD"></script>
   <script>
@@ -84,6 +82,40 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: #fff; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: inline-flex; align-items: center; gap: 0.3rem; }
+    .nav-dropdown > a::after {
+      content: '';
+      width: 6px; height: 6px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: rotate(45deg);
+      margin-top: -2px;
+    }
+    .dropdown-menu {
+      position: absolute; top: 100%; left: 0;
+      min-width: 190px;
+      background: var(--navy-mid);
+      border-radius: 8px;
+      padding: 0.5rem 0;
+      margin-top: 0.6rem;
+      list-style: none;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      opacity: 0; visibility: hidden; transform: translateY(-8px);
+      transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+      z-index: 200;
+    }
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+      opacity: 1; visibility: visible; transform: translateY(0);
+    }
+    .dropdown-menu a {
+      display: block;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    .dropdown-menu a:hover { background: rgba(255,255,255,0.08); }
     .nav-cta {
       background: var(--green); color: #fff !important;
       padding: 0.5rem 1.2rem; border-radius: 6px;
@@ -669,6 +701,14 @@
         padding: 1.5rem 2rem;
         gap: 1rem;
       }
+      .dropdown-menu {
+        position: static;
+        opacity: 1; visibility: visible; transform: none;
+        background: rgba(255,255,255,0.05);
+        box-shadow: none;
+        margin-top: 0.5rem;
+        padding-left: 0.5rem;
+      }
       .hero { min-height: auto; padding: 4rem 1.5rem 2rem; }
       .hero-inner { grid-template-columns: 1fr; gap: 2rem; text-align: center; padding: 0 1rem; }
       .hero-profile { align-items: center; }
@@ -772,7 +812,13 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
-      <li><a href="#resources">Free Resources</a></li>
+      <li class="nav-dropdown">
+        <a href="free-resources.html">Resources</a>
+        <ul class="dropdown-menu">
+          <li><a href="free-resources.html">Free Resources</a></li>
+          <li><a href="premium-resources.html">Premium Resources</a></li>
+        </ul>
+      </li>
       <li><a href="#about">About</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="publications.html">Publications</a></li>
@@ -916,50 +962,12 @@
             career development. From CV frameworks to skills audits — practical
             resources built by an engineer, for engineers.
           </p>
-          <a href="#resources" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--green); text-decoration: none; font-weight: 600; font-size: 0.9rem; margin-top: 1rem;">
+          <a href="free-resources.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--green); text-decoration: none; font-weight: 600; font-size: 0.9rem; margin-top: 1rem;">
             Get Free Templates
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5-5-5-5"/></svg>
           </a>
           <span class="service-tag">Self-paced</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FREE RESOURCES -->
-  <section class="resources" id="resources" style="background: var(--off-white); padding: 5rem 2rem; scroll-margin-top: 84px;">
-    <div class="section-inner">
-      <p class="section-label">Free Resources</p>
-      <h2 class="section-title">CV templates</h2>
-      <p class="section-subtitle">
-        Free templates for academia and industry applications — available in
-        both LaTeX (Overleaf) and Word format.
-      </p>
-      <div style="max-width: 640px; margin: 0 auto; background: var(--card-white); border-left: 4px solid var(--green); border-radius: 12px; padding: 2.5rem; text-align: center;">
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-          Download CV templates tailored for both academic
-          (PhD/postdoc) and industry job applications, ready to edit in
-          Overleaf or Microsoft Word.
-        </p>
-        <a href="https://drive.google.com/drive/folders/1RlpEasMYuZEkTvbx7RQ49txU8EJx_rJm?usp=sharing" target="_blank" rel="noopener" class="btn-primary">
-          Access Free Resources
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        </a>
-      </div>
-
-      <div style="max-width: 640px; margin: 2rem auto 0; background: var(--card-white); border-left: 4px solid var(--yellow); border-radius: 12px; padding: 2.5rem; text-align: center;">
-        <p class="service-tag" style="margin-top: 0; margin-bottom: 0.8rem;">Premium</p>
-        <h3 style="font-family: var(--display); font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.8rem;">
-          CV Checklists for Academia — £3
-        </h3>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-          A focused checklist to make sure your academic CV hits every mark
-          before you submit — sent straight to your inbox after purchase.
-        </p>
-        <stripe-buy-button
-          buy-button-id="buy_btn_1TnkkWRXBhYZq7zPungAXG2B"
-          publishable-key="pk_live_51TnKWCRXBhYZq7zPc7RvG9wztAmASJr23DPucvsrU4rgqoKOb0SQLqPHLCK99rTb8Cu7P5uUoweRH5jz9YklCZrP00rW6JwncA"
-        ></stripe-buy-button>
       </div>
     </div>
   </section>
@@ -1307,7 +1315,8 @@
       <div class="footer-logo"><span class="make">Make</span> <span class="it">IT</span> <span class="stem">STEM</span></div>
       <ul class="footer-links">
         <li><a href="#services">Services</a></li>
-        <li><a href="#resources">Free Resources</a></li>
+        <li><a href="free-resources.html">Free Resources</a></li>
+        <li><a href="premium-resources.html">Premium Resources</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="publications.html">Publications</a></li>
