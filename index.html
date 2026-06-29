@@ -217,19 +217,19 @@
     .hero-credentials {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.8rem;
+      align-items: center;
+      gap: 0.6rem;
       margin-bottom: 2rem;
     }
     .credential-badge {
-      display: inline-block;
-      background: rgba(28,170,90,0.2);
-      border: 1.5px solid var(--green);
       color: var(--yellow);
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       font-weight: 600;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.03em;
+    }
+    .credential-divider {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.85rem;
     }
     .hero-sub {
       font-size: 1.1rem; color: rgba(255,255,255,0.75);
@@ -768,7 +768,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo" aria-label="Make IT STEM — home"><img src="Logo.png" alt="Make IT STEM Logo"></a>
+    <a href="index.html" class="nav-logo" aria-label="Make IT STEM — home"><img src="Logo.png" alt="Make IT STEM Logo"></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
       <li><a href="#resources">Free Resources</a></li>
@@ -812,9 +812,13 @@
 
         <div class="hero-credentials">
           <span class="credential-badge">PhD</span>
+          <span class="credential-divider">&middot;</span>
           <span class="credential-badge">CEng</span>
+          <span class="credential-divider">&middot;</span>
           <span class="credential-badge">FHEA</span>
+          <span class="credential-divider">&middot;</span>
           <span class="credential-badge">MIMechE</span>
+          <span class="credential-divider">&middot;</span>
           <span class="credential-badge">MIMMM</span>
         </div>
 
