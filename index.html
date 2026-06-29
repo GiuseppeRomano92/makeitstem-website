@@ -69,15 +69,12 @@
       display: flex; align-items: center; justify-content: space-between;
     }
     .nav-logo {
-      font-family: var(--display);
-      font-weight: 700; font-size: 1.2rem;
-      color: #fff; text-decoration: none;
-      letter-spacing: -0.02em;
+      display: flex; align-items: center;
+      color: #fff;
+      transition: color 0.2s;
     }
-    .nav-logo .make { color: var(--green); }
-    .nav-logo .it { color: #00D4FF; }
-    .nav-logo .stem { color: var(--yellow); }
-    .nav-logo img { height: 40px; display: block; }
+    .nav-logo:hover { color: var(--green); }
+    .nav-logo svg { display: block; }
     .nav-links { display: flex; gap: 1.5rem; list-style: none; }
     .nav-links a {
       color: rgba(255,255,255,0.75); text-decoration: none;
@@ -768,7 +765,9 @@
 
   <!-- NAV -->
   <nav>
-    <a href="index.html" class="nav-logo" aria-label="Make IT STEM — home"><img src="Logo.png" alt="Make IT STEM Logo"></a>
+    <a href="index.html" class="nav-logo" aria-label="Make IT STEM — home">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"/></svg>
+    </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
       <li><a href="#resources">Free Resources</a></li>
