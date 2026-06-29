@@ -168,6 +168,65 @@
       margin-bottom: 2rem;
     }
 
+    /* ── PUBLICATION LIST ── */
+    .pub-group { margin-top: 2.5rem; }
+    .pub-group h3 {
+      font-family: var(--display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--green);
+    }
+    .pub-item {
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pub-item:last-child { border-bottom: none; }
+    .pub-authors {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .pub-authors strong { color: var(--text-primary); }
+    .pub-title {
+      display: block;
+      font-style: italic;
+      color: var(--text-primary);
+      margin: 0.15rem 0;
+      line-height: 1.5;
+    }
+    .pub-venue {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+    .pub-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+    .pub-badge {
+      display: inline-block;
+      background: rgba(28,170,90,0.1);
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      padding: 0.22rem 0.6rem;
+      border-radius: 5px;
+    }
+    .pub-doi {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .pub-doi:hover { text-decoration: underline; }
+    .pub-loading { color: var(--text-light); font-style: italic; }
+
     .btn-primary {
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: var(--green); color: #fff;
@@ -290,10 +349,14 @@
         My research focuses on advanced materials, computational simulation, and the practical application of engineering theory in industry. I publish regularly in peer-reviewed journals and conferences.
       </p>
 
+      <div id="publications">
+        <p class="pub-loading">Loading publications…</p>
+      </div>
+
       <div class="cta-box">
-        <h3>View All Publications</h3>
+        <h3>View Full Profile &amp; Citations</h3>
         <p>
-          For a complete list of my publications, citations, h-index, and research metrics, visit my Google Scholar profile.
+          For citations, h-index, and the most up-to-date list, visit my Google Scholar profile.
         </p>
         <a href="https://scholar.google.com/citations?hl=it&user=dF_84b0AAAAJ" target="_blank" rel="noopener" class="btn-primary">
           View on Google Scholar
@@ -342,6 +405,64 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var container = document.getElementById('publications');
+
+      function esc(s) {
+        return String(s).replace(/[&<>"]/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+        });
+      }
+
+      // Bold the author's own name within the author list
+      function highlightAuthor(authors) {
+        return esc(authors).replace(/Romano, G\./g, '<strong>Romano, G.</strong>');
+      }
+
+      function renderItem(p) {
+        var meta = '';
+        if (p.metrics || p.url) {
+          meta += '<div class="pub-meta">';
+          if (p.metrics) meta += '<span class="pub-badge">' + esc(p.metrics) + '</span>';
+          if (p.url) meta += '<a class="pub-doi" href="' + esc(p.url) + '" target="_blank" rel="noopener">View paper →</a>';
+          meta += '</div>';
+        }
+        var venue = esc(p.venue);
+        if (p.date) venue += ', ' + esc(p.date);
+        return '<div class="pub-item">' +
+          '<span class="pub-authors">' + highlightAuthor(p.authors) + '</span>' +
+          '<span class="pub-title">' + esc(p.title) + '</span>' +
+          '<span class="pub-venue">' + venue + '</span>' +
+          meta +
+          '</div>';
+      }
+
+      function renderGroup(title, items) {
+        if (!items || !items.length) return '';
+        return '<div class="pub-group"><h3>' + esc(title) + '</h3>' +
+          items.map(renderItem).join('') + '</div>';
+      }
+
+      fetch('publications.json')
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function (data) {
+          container.innerHTML =
+            renderGroup('Journal Papers', data.journal) +
+            renderGroup('Conference Papers', data.conference);
+        })
+        .catch(function () {
+          container.innerHTML =
+            '<p>My full list of publications is available on ' +
+            '<a href="https://scholar.google.com/citations?hl=it&user=dF_84b0AAAAJ" ' +
+            'target="_blank" rel="noopener" style="color: var(--green); font-weight: 600;">Google Scholar</a>.</p>';
+        });
+    })();
+  </script>
 
 </body>
 </html>

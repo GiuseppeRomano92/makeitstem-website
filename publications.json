@@ -1,0 +1,73 @@
+{
+  "journal": [
+    {
+      "authors": "Ortiz-Leyva, N.G., Romano, G., Wilson, J., Hunter, J. & De Rosis, A.",
+      "title": "Development of a Novel Spinneret Design for Improved Melt Extrusion Performance: A Computational and Empirical Study",
+      "venue": "Polymers (MDPI)",
+      "url": "https://doi.org/10.3390/polym18010115",
+      "metrics": "Q1 · MDPI · IF 4.9"
+    },
+    {
+      "authors": "Romano, G., Katnam, K-B., Zou, Z. & Potluri, P.",
+      "title": "The role of intra-laminar hybridization on the thermo-mechanical behaviour of fibre-hybrid composites using 3D RVEs",
+      "venue": "Composite Structures, vol. 368, p. 119316",
+      "date": "Sep 2025",
+      "url": "https://doi.org/10.1016/j.compstruct.2025.119316",
+      "metrics": "Q1 · Elsevier · IF 7.1"
+    },
+    {
+      "authors": "Romano, G., Yang, Y., Katnam, K-B., Zou, Z. & Potluri, P.",
+      "title": "Effect of fibre hybridization on interfacial micro-stress fields using 3D RVEs",
+      "venue": "Composites Part C: Open Access, vol. 17, p. 100622",
+      "date": "Jul 2025",
+      "url": "https://doi.org/10.1016/j.jcomc.2025.100622",
+      "metrics": "Q1 · Elsevier · IF 7.0"
+    },
+    {
+      "authors": "Romano, G., Katnam, K-B., Nagaraja Rao, Y., Liu, C., Zou, Z. & Potluri, P.",
+      "title": "On the micro-stress fields in fibre-hybrid polymer composite laminae with periodic microstructure under transverse tension and shear loading",
+      "venue": "Applied Composite Materials",
+      "date": "Mar 2024",
+      "url": "https://doi.org/10.1007/s10443-024-10213-4",
+      "metrics": "Q2 · Springer Nature · IF 2.9"
+    }
+  ],
+  "conference": [
+    {
+      "authors": "Romano, G., Yang, Y., Zou, Z., Potluri, P. & Katnam, K-B.",
+      "title": "On the transverse shear failure in unidirectional fibre-hybrid composite laminae with periodic microstructures",
+      "venue": "21st European Conference on Composite Materials, Nantes, France",
+      "date": "2–5 Jul 2024"
+    },
+    {
+      "authors": "Romano, G., Katnam, K-B. & Zou, Z.",
+      "title": "Computational micromechanics of unidirectional fibre-hybrid composite laminae",
+      "venue": "1st Postgraduate Research Student Conference, Dept. of Solids and Structures, University of Manchester, UK",
+      "date": "17 Jan 2024"
+    },
+    {
+      "authors": "Romano, G., Yang, Y., Zou, Z., Potluri, P. & Katnam, K-B.",
+      "title": "Micromechanics of intra-laminar hybrid lamina with hollow fibres: a RVE model",
+      "venue": "23rd International Conference on Composite Materials, Belfast, UK",
+      "date": "30 Jul – 4 Aug 2023"
+    },
+    {
+      "authors": "Romano, G., Nagaraja Rao, Y., Zou, Z., Potluri, P. & Katnam, K-B.",
+      "title": "Thermally induced residual micro-stresses in hybrid composite laminates with tow-level fibre hybridization",
+      "venue": "25th International Conference on Composite Structures, University of Porto, Portugal",
+      "date": "19–22 Jul 2022"
+    },
+    {
+      "authors": "Romano, G. & Katnam, K-B.",
+      "title": "Micromechanics of yarn-level hybrid composite lamina",
+      "venue": "MACE PGR Conference 2022, University of Manchester, UK",
+      "date": "1 Jul 2022"
+    },
+    {
+      "authors": "Romano, G.",
+      "title": "Elastic Properties Prediction in Yarn Level Hybrid Composite Lamina",
+      "venue": "NAFEMS UK Conference 2022 (NRC22), Milton Keynes, UK",
+      "date": "11–12 Jun 2022"
+    }
+  ]
+}
