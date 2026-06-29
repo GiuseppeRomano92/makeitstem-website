@@ -6,7 +6,8 @@
       "Bash(python -c ' *)",
       "Bash(git add *)",
       "Bash(git commit -m 'Create publications and privacy policy pages, update navigation *)",
-      "Bash(curl -s \"https://scholar.google.com/citations?hl=it&user=dF_84b0AAAAJ\")"
+      "Bash(curl -s \"https://scholar.google.com/citations?hl=it&user=dF_84b0AAAAJ\")",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
