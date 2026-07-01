@@ -12,9 +12,9 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications | Dr Giuseppe Romano - Make IT STEM</title>
-  <meta name="description" content="Academic publications and research by Dr Giuseppe Romano on Google Scholar.">
-  <link rel="canonical" href="https://makeitstem.com/publications.html">
+  <title>Testimonials | Make IT STEM</title>
+  <meta name="description" content="What students and early-career engineers say about mentoring with Dr Giuseppe Romano — written and video testimonials.">
+  <link rel="canonical" href="https://makeitstem.com/testimonials.html">
   <link rel="icon" type="image/png" href="Logo.png">
   <link rel="apple-touch-icon" href="Logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -165,136 +165,198 @@
       z-index: 1;
     }
 
-    /* ── CONTENT ── */
+    /* ── SECTIONS ── */
     section { padding: 5rem 2rem; }
-    .section-inner { max-width: 900px; margin: 0 auto; }
-    .content-section { background: var(--card-white); }
-
-    h2 {
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .written-section { background: var(--card-white); }
+    .video-section { background: var(--off-white); }
+    .review-section { background: var(--card-white); }
+    .section-label {
       font-family: var(--display);
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    p {
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-
-    .cta-box {
-      background: rgba(28,170,90,0.08);
-      border-left: 4px solid var(--green);
-      padding: 2.5rem;
-      border-radius: 12px;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 0.75rem;
       text-align: center;
-      margin: 3rem 0;
+    }
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 700; line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin: 0 auto 3rem;
+      text-align: center;
     }
 
-    .cta-box h3 {
-      font-family: var(--display);
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--text-primary);
+    /* ── WRITTEN TESTIMONIALS ── */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+      gap: 1.5rem;
+    }
+    .testimonial-card {
+      background: var(--off-white);
+      border-radius: 12px;
+      padding: 2rem;
+      border: 1px solid var(--border);
+    }
+    .testimonial-stars {
+      color: var(--yellow);
+      font-size: 1rem;
+      letter-spacing: 2px;
       margin-bottom: 1rem;
     }
-
-    .cta-box p {
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-    }
-
-    /* ── PUBLICATION LIST ── */
-    .pub-group { margin-top: 2.5rem; }
-    .pub-group h3 {
-      font-family: var(--display);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--green);
-    }
-    .pub-item {
-      padding: 1.1rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .pub-item:last-child { border-bottom: none; }
-    .pub-authors {
+    .testimonial-card blockquote {
       font-size: 0.95rem;
       color: var(--text-secondary);
-      line-height: 1.6;
-    }
-    .pub-authors strong { color: var(--text-primary); }
-    .pub-title {
-      display: block;
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
       font-style: italic;
-      color: var(--text-primary);
-      margin: 0.15rem 0;
-      line-height: 1.5;
     }
-    .pub-venue {
-      font-size: 0.92rem;
+    .testimonial-author {
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .author-avatar {
+      width: 40px; height: 40px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--display);
+      font-weight: 700; font-size: 0.85rem;
+      color: var(--yellow);
+      overflow: hidden;
+    }
+    .author-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .author-info strong {
+      display: block;
+      font-size: 0.88rem; font-weight: 600;
+    }
+
+    /* ── VIDEO TESTIMONIALS ── */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+      gap: 1.75rem;
+    }
+    .video-card { display: flex; flex-direction: column; }
+    .video-frame {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: var(--navy);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .video-frame iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; border: 0;
+    }
+    .video-placeholder {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 0.6rem;
+      color: rgba(255,255,255,0.55);
+      font-size: 0.9rem;
+      text-align: center; padding: 1rem;
+    }
+    .video-placeholder svg { opacity: 0.5; }
+    .video-card figcaption { margin-top: 0.9rem; }
+    .video-card figcaption strong {
+      display: block;
+      font-family: var(--display);
+      font-size: 0.95rem;
+    }
+    .video-card figcaption span {
+      font-size: 0.85rem;
       color: var(--text-secondary);
     }
-    .pub-meta {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.75rem;
-      margin-top: 0.5rem;
-    }
-    .pub-badge {
-      display: inline-block;
-      background: rgba(28,170,90,0.1);
-      color: var(--green);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      padding: 0.22rem 0.6rem;
-      border-radius: 5px;
-    }
-    .pub-doi {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--blue);
-      text-decoration: none;
-    }
-    .pub-doi:hover { text-decoration: underline; }
-    .pub-loading { color: var(--text-light); font-style: italic; }
 
+    /* ── REVIEW FORM ── */
+    .review-wrap { max-width: 600px; margin: 0 auto; }
+    .contact-form {
+      background: var(--card-white);
+      border-radius: 14px;
+      padding: 2.5rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(28,170,90,0.08);
+      text-align: left;
+    }
+    .form-group { display: grid; gap: 0.5rem; margin-bottom: 1.2rem; }
+    .form-group label {
+      font-size: 0.85rem; font-weight: 600;
+      color: var(--text-primary);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-family: var(--body);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      background: #fafafa;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--green);
+      background: #fff;
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    .form-checkbox input[type="checkbox"] {
+      width: 18px; height: 18px;
+      margin-top: 2px;
+      cursor: pointer;
+      accent-color: var(--green);
+      flex-shrink: 0;
+    }
+    .privacy-notice {
+      background: rgba(28,170,90,0.05);
+      border-left: 4px solid var(--green);
+      padding: 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 1rem;
+    }
     .btn-primary {
-      display: inline-flex; align-items: center; gap: 0.5rem;
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
       background: var(--green); color: #fff;
       font-family: var(--display);
       font-weight: 600; font-size: 1rem;
-      padding: 0.9rem 2.5rem; border-radius: 8px;
+      padding: 1.1rem 2.4rem; border-radius: 8px;
       text-decoration: none;
       transition: background 0.2s, transform 0.15s;
       border: none; cursor: pointer;
     }
     .btn-primary:hover { background: var(--blue); transform: translateY(-1px); }
-
-    .btn-secondary {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: transparent;
-      color: var(--green);
-      font-family: var(--display);
-      font-weight: 600; font-size: 1rem;
-      padding: 0.9rem 2rem; border-radius: 8px;
-      text-decoration: none;
-      border: 2px solid var(--green);
-      transition: all 0.2s;
-    }
-    .btn-secondary:hover {
-      background: var(--green);
-      color: #fff;
-      transform: translateY(-1px);
-    }
+    .btn-primary svg { flex-shrink: 0; }
+    .form-submit { width: 100%; margin-top: 0.5rem; }
 
     /* ── FOOTER ── */
     footer {
@@ -313,7 +375,7 @@
       color: #fff;
     }
     .footer-logo .make { color: var(--green); }
-    .footer-logo .it { color: var(--blue); }
+    .footer-logo .it { color: #00D4FF; }
     .footer-logo .stem { color: var(--yellow); }
     .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
     .footer-links a {
@@ -372,6 +434,11 @@
       .footer-links { justify-content: center; }
       .footer-social { justify-content: center; }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
   </style>
 </head>
 <body>
@@ -393,6 +460,7 @@
         </ul>
       </li>
       <li><a href="index.html#about"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>About</a></li>
+      <li><a href="testimonials.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Testimonials</a></li>
       <li><a href="publications.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Publications</a></li>
       <li><a href="login.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>Log In</a></li>
       <li><a href="index.html#contact" class="nav-cta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Book a Call</a></li>
@@ -405,48 +473,225 @@
   <!-- PAGE HEADER -->
   <section class="page-header">
     <div class="section-inner">
-      <h1>Research & Publications</h1>
-      <p>Exploring the intersection of advanced materials, simulation, and engineering education</p>
-      <a href="https://orcid.org/0000-0002-9385-3541" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; color: #A6CE39; font-weight: 600; text-decoration: none; font-size: 0.95rem; position: relative; z-index: 1;">
-        <svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z"/><path fill="#fff" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z"/><path fill="#fff" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z"/><path fill="#fff" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1C84.2,46.7,88.7,51.3,88.7,56.8z"/></svg>
-        ORCID: 0000-0002-9385-3541
-      </a>
+      <h1>Testimonials</h1>
+      <p>What students and early-career engineers say about working with me</p>
     </div>
   </section>
 
-  <!-- CONTENT -->
-  <section class="content-section">
+  <!-- WRITTEN TESTIMONIALS -->
+  <section class="written-section">
     <div class="section-inner">
-      <h2>My Academic Work</h2>
-      <p>
-        My research focuses on advanced materials, computational simulation, and the practical application of engineering theory in industry. I publish regularly in peer-reviewed journals and conferences.
+      <p class="section-label">Testimonials</p>
+      <h2 class="section-title">What mentees say</h2>
+      <p class="section-subtitle">
+        Real outcomes from students and engineers who've been through the programme.
+      </p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "I had the privilege of learning from Giuseppe during my Master's
+            dissertation on composite materials. His approachable nature and
+            openness to discussion make him an exceptional mentor. Before meeting
+            him, my knowledge of programming and FEA was very limited and I couldn't
+            see its potential, but his engaging teaching style sparked my interest
+            and eventually turned it into a passion. He has a strong grasp of the
+            fundamentals and explains concepts in a clear, easily understandable way.
+            With his expertise in programming, FEA, and composites, I can confidently
+            vouch for his mentorship — any learner under his guidance is truly privileged."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">YR</div>
+            <div class="author-info">
+              <strong>Yeshwanth N. Rao</strong>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "During my MSc Aerospace Engineering programme, I was initially quite lost
+            on my dissertation about microstructure simulation using Abaqus CAE. That's
+            when I found Dr Romano as a personal tutor for help — and the outcome was
+            really positive! Giuseppe not only taught me the academic concepts and
+            modelling skills, he also helped me understand the fundamental principles.
+            He isn't someone who just aims to get the task done; he tried his best to
+            help me truly understand. I scored the highest in the whole engineering
+            faculty. He is patient and easy to get along with. Highly recommend his
+            tutoring — especially for any query in modelling, materials or structures."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar"><img src="yang-yang.png" alt="Yang Yang"></div>
+            <div class="author-info">
+              <strong>Yang Yang</strong>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "I undertook my dissertation on Finite Element Analysis using Abaqus in my
+            final year, with help from Dr Romano during the last year of his PhD. He was
+            incredibly helpful and approachable even during his busiest periods — he
+            always spared time and gave me the resources and guidance to do well. I am
+            incredibly grateful and achieved 79.5% in my final dissertation report at the
+            University of Manchester. I highly recommend working with him."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">MA</div>
+            <div class="author-info">
+              <strong>Mohamed Sadik Mohamed Ali</strong>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "I've had the pleasure of learning from Giuseppe. He really knows his way
+            around the software and explains things clearly without overcomplicating it.
+            Any time I've had questions or got stuck, he's always been happy to help and
+            point me in the right direction. What really stands out is how approachable
+            and genuinely passionate he is about helping others grow in this field — always
+            willing to lend a hand or share useful tips, no matter how busy he is."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">TK</div>
+            <div class="author-info">
+              <strong>Tom Simon Kocherry</strong>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "Dr Romano has been incredibly helpful with my work on composite analysis
+            using FEA. His wealth of knowledge in FEA, composites, scripting methods for
+            Abaqus, and meshing techniques have allowed me to make significant
+            breakthroughs in my work, and I am grateful for his support. His passion for
+            the area, friendliness and approachability have made it very easy to work
+            with him."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">AV</div>
+            <div class="author-info">
+              <strong>Agasthya Vivek</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO TESTIMONIALS -->
+  <section class="video-section">
+    <div class="section-inner">
+      <p class="section-label">Video Testimonials</p>
+      <h2 class="section-title">In their own words</h2>
+      <p class="section-subtitle">
+        Short video reviews from students and mentees.
       </p>
 
-      <div id="publications">
-        <p class="pub-loading">Loading publications…</p>
+      <!--
+        HOW TO ADD A VIDEO (Google Drive):
+        1. Upload the clip to Google Drive.
+        2. Right-click the file → Share → set to "Anyone with the link".
+        3. Copy the link; it looks like:
+           https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+        4. In the matching card below, delete the <div class="video-placeholder">…</div>
+           and uncomment the <iframe>, replacing FILE_ID with your file's id:
+           <iframe src="https://drive.google.com/file/d/FILE_ID/preview"
+                   allow="autoplay" allowfullscreen loading="lazy"></iframe>
+      -->
+
+      <div class="video-grid">
+        <figure class="video-card">
+          <div class="video-frame">
+            <!-- <iframe src="https://drive.google.com/file/d/FILE_ID/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe> -->
+            <div class="video-placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Video coming soon
+            </div>
+          </div>
+          <figcaption>
+            <strong>Student name</strong>
+            <span>Role / University</span>
+          </figcaption>
+        </figure>
+        <figure class="video-card">
+          <div class="video-frame">
+            <!-- <iframe src="https://drive.google.com/file/d/FILE_ID/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe> -->
+            <div class="video-placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Video coming soon
+            </div>
+          </div>
+          <figcaption>
+            <strong>Student name</strong>
+            <span>Role / University</span>
+          </figcaption>
+        </figure>
+        <figure class="video-card">
+          <div class="video-frame">
+            <!-- <iframe src="https://drive.google.com/file/d/FILE_ID/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe> -->
+            <div class="video-placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Video coming soon
+            </div>
+          </div>
+          <figcaption>
+            <strong>Student name</strong>
+            <span>Role / University</span>
+          </figcaption>
+        </figure>
       </div>
+    </div>
+  </section>
 
-      <div class="cta-box">
-        <h3>View Full Profile &amp; Citations</h3>
-        <p>
-          For citations, h-index, and the most up-to-date list, visit my Google Scholar profile.
-        </p>
-        <a href="https://scholar.google.com/citations?hl=it&user=dF_84b0AAAAJ" target="_blank" rel="noopener" class="btn-primary">
-          View on Google Scholar
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
+  <!-- LEAVE A REVIEW -->
+  <section class="review-section" id="leave-review">
+    <div class="section-inner">
+      <p class="section-label">Leave a Review</p>
+      <h2 class="section-title">Worked with me?</h2>
+      <p class="section-subtitle">
+        Your review is sent to me privately — I'll reach out before publishing anything on the site.
+      </p>
+      <div class="review-wrap">
+        <form class="contact-form" action="https://formspree.io/f/mkolboel" method="POST">
+          <input type="hidden" name="_subject" value="New review submission — Make IT STEM">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
+            <div class="form-group">
+              <label for="review-name">Name</label>
+              <input type="text" id="review-name" name="name" required placeholder="Full name">
+            </div>
+            <div class="form-group">
+              <label for="review-rating">Rating</label>
+              <select id="review-rating" name="rating" required>
+                <option value="">Select...</option>
+                <option value="5 stars">★★★★★</option>
+                <option value="4 stars">★★★★</option>
+                <option value="3 stars">★★★</option>
+                <option value="2 stars">★★</option>
+                <option value="1 star">★</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="review-text">Your review</label>
+            <textarea id="review-text" name="review" required placeholder="Share what it was like working with me..."></textarea>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" id="review-consent" name="consent" required>
+            <label for="review-consent" style="margin: 0; cursor: pointer;">I'm happy for this review to be published on the Make IT STEM website if approved</label>
+          </div>
+          <div class="privacy-notice">
+            <strong>Data Protection:</strong> Your review is sent securely to contact@makeitstem.com and will not be published without your approval (GDPR compliant).
+          </div>
+          <button type="submit" class="btn-primary form-submit">
+            Submit Review
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+        </form>
       </div>
-
-      <h2 style="margin-top: 3rem;">Research Interests</h2>
-      <ul style="margin: 1.5rem 0 1.5rem 2rem; color: var(--text-secondary); line-height: 1.8;">
-        <li>Advanced materials and composite structures</li>
-        <li>Finite element analysis and computational simulation</li>
-        <li>Thermal and mechanical analysis</li>
-        <li>Multi-scale modeling approaches</li>
-        <li>Engineering education and industry-academia collaboration</li>
-        <li>STEM career development and employability</li>
-      </ul>
-
     </div>
   </section>
 
@@ -458,7 +703,6 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="free-resources.html">Free Resources</a></li>
         <li><a href="premium-resources.html">Premium Resources</a></li>
-          <li><a href="courses.html">Courses</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="index.html#contact">Contact</a></li>
@@ -516,64 +760,6 @@
           burger.setAttribute('aria-expanded', 'false');
         });
       });
-    })();
-  </script>
-
-  <script>
-    (function () {
-      var container = document.getElementById('publications');
-
-      function esc(s) {
-        return String(s).replace(/[&<>"]/g, function (c) {
-          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
-        });
-      }
-
-      // Bold the author's own name within the author list
-      function highlightAuthor(authors) {
-        return esc(authors).replace(/Romano, G\./g, '<strong>Romano, G.</strong>');
-      }
-
-      function renderItem(p) {
-        var meta = '';
-        if (p.metrics || p.url) {
-          meta += '<div class="pub-meta">';
-          if (p.metrics) meta += '<span class="pub-badge">' + esc(p.metrics) + '</span>';
-          if (p.url) meta += '<a class="pub-doi" href="' + esc(p.url) + '" target="_blank" rel="noopener">View paper →</a>';
-          meta += '</div>';
-        }
-        var venue = esc(p.venue);
-        if (p.date) venue += ', ' + esc(p.date);
-        return '<div class="pub-item">' +
-          '<span class="pub-authors">' + highlightAuthor(p.authors) + '</span>' +
-          '<span class="pub-title">' + esc(p.title) + '</span>' +
-          '<span class="pub-venue">' + venue + '</span>' +
-          meta +
-          '</div>';
-      }
-
-      function renderGroup(title, items) {
-        if (!items || !items.length) return '';
-        return '<div class="pub-group"><h3>' + esc(title) + '</h3>' +
-          items.map(renderItem).join('') + '</div>';
-      }
-
-      fetch('publications.json')
-        .then(function (r) {
-          if (!r.ok) throw new Error('HTTP ' + r.status);
-          return r.json();
-        })
-        .then(function (data) {
-          container.innerHTML =
-            renderGroup('Journal Papers', data.journal) +
-            renderGroup('Conference Papers', data.conference);
-        })
-        .catch(function () {
-          container.innerHTML =
-            '<p>My full list of publications is available on ' +
-            '<a href="https://scholar.google.com/citations?hl=it&user=dF_84b0AAAAJ" ' +
-            'target="_blank" rel="noopener" style="color: var(--green); font-weight: 600;">Google Scholar</a>.</p>';
-        });
     })();
   </script>
 
