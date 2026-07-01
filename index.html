@@ -663,7 +663,7 @@
     .footer-logo .make { color: var(--green); }
     .footer-logo .it { color: #00D4FF; }
     .footer-logo .stem { color: var(--yellow); }
-    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
     .footer-links a {
       color: rgba(255,255,255,0.5);
       text-decoration: none; font-size: 0.85rem;
@@ -727,6 +727,7 @@
       .contact-layout { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
+      .footer-social { justify-content: center; }
       .process-steps { grid-template-columns: 1fr 1fr; }
       [style*="display: grid"][style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
     }
