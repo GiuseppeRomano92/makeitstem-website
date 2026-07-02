@@ -846,7 +846,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="gift.html" class="nav-gift"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Free Gift</a></li>
       <li class="nav-dropdown">
-        <a href="free-resources.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Explore</a>
+        <a href="#services"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Explore</a>
         <ul class="dropdown-menu">
           <li><a href="#mentoring"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>1-to-1 Career Mentoring</a></li>
           <li><a href="#workshops"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>Workshops</a></li>
@@ -911,7 +911,7 @@
         </p>
 
         <div class="hero-actions">
-          <a href="#contact?enquiry=Free+Discovery+Call" class="btn-primary">
+          <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
             Book a Free Discovery Call
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5-5-5-5"/></svg>
           </a>
@@ -1190,7 +1190,7 @@
         Book a free 15-minute discovery call and let's talk about
         where you are, where you want to be, and how to get there.
       </p>
-      <a href="#contact?enquiry=Free+Discovery+Call" class="btn-primary">
+      <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
         Book Your Free Call
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5-5-5-5"/></svg>
       </a>
@@ -1392,29 +1392,25 @@
   </script>
 
   <script>
-    // Pre-select the enquiry dropdown from ?enquiry= URL param
+    // Pre-select the enquiry dropdown from ?enquiry= URL param or data-enquiry CTA clicks
     (function () {
-      var params = new URLSearchParams(window.location.search);
-      var enquiry = params.get('enquiry');
-      if (!enquiry) {
-        // Also check the hash for ?enquiry= (e.g. #contact?enquiry=...)
-        var hash = window.location.hash;
-        var qi = hash.indexOf('?');
-        if (qi !== -1) {
-          enquiry = new URLSearchParams(hash.slice(qi + 1)).get('enquiry');
+      var sel = document.getElementById('enquiry');
+      if (!sel) return;
+
+      function pick(value) {
+        for (var i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value === value) { sel.selectedIndex = i; return; }
         }
       }
-      if (enquiry) {
-        var sel = document.getElementById('enquiry');
-        if (sel) {
-          for (var i = 0; i < sel.options.length; i++) {
-            if (sel.options[i].value === enquiry) {
-              sel.selectedIndex = i;
-              break;
-            }
-          }
-        }
-      }
+
+      var enquiry = new URLSearchParams(window.location.search).get('enquiry');
+      if (enquiry) pick(enquiry);
+
+      document.querySelectorAll('[data-enquiry]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          pick(link.getAttribute('data-enquiry'));
+        });
+      });
     })();
   </script>
 

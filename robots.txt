@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /login.html
+Disallow: /free-resources.html
+
+Sitemap: https://makeitstem.com/sitemap.xml
