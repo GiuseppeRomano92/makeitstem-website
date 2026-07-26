@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NL49D78HZD"></script>
+  <!-- Google tag (gtag.js) - loader injected by cookie-consent.js only after consent -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+
+    // Consent Mode v2 — analytics stays denied until the visitor opts in via cookie-consent.js
+    var misConsent = null;
+    try { misConsent = localStorage.getItem('mis-cookie-consent'); } catch (e) {}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: misConsent === 'accepted' ? 'granted' : 'denied',
+      wait_for_update: 500
+    });
+
     gtag('js', new Date());
 
     gtag('config', 'G-NL49D78HZD');
@@ -356,15 +367,22 @@
         waiting list and I'll email you the moment they launch — early
         members get first access and launch discounts.
       </p>
-      <form class="waitlist-form" action="https://formspree.io/f/mkolboel" method="POST">
-        <input type="hidden" name="_subject" value="New course waitlist signup — Make IT STEM">
-        <input type="hidden" name="list" value="Courses waiting list">
-        <input type="email" name="email" required placeholder="your@email.com" aria-label="Email address">
-        <button type="submit" class="btn-primary">
-          Join the Waiting List
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5-5-5-5"/></svg>
-        </button>
-      </form>
+      <div id="mc_embed_shell">
+        <form action="https://makeitstem.us16.list-manage.com/subscribe/post?u=7ec8ec17c4bd6dd573878b585&amp;id=077b230fd8&amp;f_id=00a1c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="waitlist-form validate" target="_blank" novalidate>
+          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required placeholder="your@email.com" aria-label="Email address">
+          <div aria-hidden="true" style="position: absolute; left: -5000px;">
+            <input type="text" name="b_7ec8ec17c4bd6dd573878b585_077b230fd8" tabindex="-1" value="">
+          </div>
+          <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn-primary">
+            Join the Waiting List
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5-5-5-5"/></svg>
+          </button>
+        </form>
+        <div id="mce-responses" style="max-width: 460px; margin: 0.75rem auto 0;">
+          <div class="response" id="mce-error-response" style="display: none; color: #ff8080; font-size: 0.85rem;"></div>
+          <div class="response" id="mce-success-response" style="display: none; color: var(--green); font-size: 0.85rem;"></div>
+        </div>
+      </div>
       <p class="waitlist-note">
         No spam — just one email when courses go live. See our
         <a href="privacy.html">privacy policy</a>.
@@ -386,6 +404,8 @@
         <li><a href="publications.html">Publications</a></li>
         <li><a href="index.html#contact">Contact</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="#" data-cookie-settings>Cookie Settings</a></li>
       </ul>
       <div class="footer-social">
         <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener" title="Giuseppe Romano on LinkedIn">
@@ -419,6 +439,10 @@
       <p class="footer-copy">
         &copy; 2026 Make IT STEM. All rights reserved. &nbsp;|&nbsp;
         STEM career mentoring for university students and early-career engineers.
+        <span style="display: block; margin-top: 0.6rem;">
+          Giuseppe Romano, trading as Make IT STEM &nbsp;&middot;&nbsp;
+          <a href="mailto:contact@makeitstem.com" style="color: rgba(255,255,255,0.62); text-decoration: underline;">contact@makeitstem.com</a>
+        </span>
       </p>
     </div>
   </footer>
@@ -441,6 +465,21 @@
       });
     })();
   </script>
+
+  <!-- Mailchimp waitlist form validation -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script type="text/javascript">
+    (function($) {
+      window.fnames = new Array();
+      window.ftypes = new Array();
+      fnames[0] = 'EMAIL';
+      ftypes[0] = 'email';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+  </script>
+
+  <script src="cookie-consent.js"></script>
 
 </body>
 </html>

@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NL49D78HZD"></script>
+  <!-- Google tag (gtag.js) - loader injected by cookie-consent.js only after consent -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+
+    // Consent Mode v2 — analytics stays denied until the visitor opts in via cookie-consent.js
+    var misConsent = null;
+    try { misConsent = localStorage.getItem('mis-cookie-consent'); } catch (e) {}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: misConsent === 'accepted' ? 'granted' : 'denied',
+      wait_for_update: 500
+    });
+
     gtag('js', new Date());
 
     gtag('config', 'G-NL49D78HZD');
@@ -338,6 +349,8 @@
         <li><a href="publications.html">Publications</a></li>
         <li><a href="index.html#contact">Contact</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="#" data-cookie-settings>Cookie Settings</a></li>
       </ul>
       <div class="footer-social">
         <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener" title="Giuseppe Romano on LinkedIn">
@@ -371,6 +384,10 @@
       <p class="footer-copy">
         &copy; 2026 Make IT STEM. All rights reserved. &nbsp;|&nbsp;
         STEM career mentoring for university students and early-career engineers.
+        <span style="display: block; margin-top: 0.6rem;">
+          Giuseppe Romano, trading as Make IT STEM &nbsp;&middot;&nbsp;
+          <a href="mailto:contact@makeitstem.com" style="color: rgba(255,255,255,0.62); text-decoration: underline;">contact@makeitstem.com</a>
+        </span>
       </p>
     </div>
   </footer>
@@ -393,6 +410,8 @@
       });
     })();
   </script>
+
+  <script src="cookie-consent.js"></script>
 
 </body>
 </html>
