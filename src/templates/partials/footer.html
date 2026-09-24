@@ -1,0 +1,37 @@
+{%- set home = "" if page == "index" else "./" -%}
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo"><span class="make">Make</span> <span class="it">IT</span> <span class="stem">STEM</span></div>
+      <ul class="footer-links">
+        <li><a href="{{ home }}#services">{{ t.footer.services }}</a></li>
+        <li><a href="premium-resources.html">{{ t.footer.resources }}</a></li>
+        <li><a href="courses.html">{{ t.footer.courses }}</a></li>
+        <li><a href="{{ home }}#about">{{ t.footer.about }}</a></li>
+        <li><a href="testimonials.html">{{ t.footer.testimonials }}</a></li>
+        <li><a href="testimonials.html#leave-review">{{ t.footer.review }}</a></li>
+        <li><a href="blog.html">{{ t.footer.blog }}</a></li>
+        <li><a href="publications.html">{{ t.footer.publications }}</a></li>
+        <li><a href="{{ home }}#contact">{{ t.footer.contact }}</a></li>
+      </ul>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener" title="{{ t.footer.linkedin_personal }}" aria-label="{{ t.footer.linkedin_personal }}">{{ icon("linkedin", 20) }}</a>
+        <a href="https://www.linkedin.com/company/makeitstem" target="_blank" rel="noopener" title="{{ t.footer.linkedin_company }}" aria-label="{{ t.footer.linkedin_company }}">{{ icon("linkedin", 20) }}</a>
+        <a href="https://www.instagram.com/make_it_stem/" target="_blank" rel="noopener" title="{{ t.footer.instagram }}" aria-label="{{ t.footer.instagram }}">{{ icon("instagram", 20) }}</a>
+        <a href="https://www.youtube.com/@MakeITSTEM" target="_blank" rel="noopener" title="{{ t.footer.youtube }}" aria-label="{{ t.footer.youtube }}">{{ icon("youtube", 20) }}</a>
+        <a href="https://www.tiktok.com/@make_it_stem" target="_blank" rel="noopener" title="{{ t.footer.tiktok }}" aria-label="{{ t.footer.tiktok }}">{{ icon("tiktok", 20) }}</a>
+      </div>
+      <p class="footer-copy">
+        &copy; {{ site.copyright_year }} {{ site.name }}. {{ t.footer.rights }} &nbsp;|&nbsp;
+        {{ t.footer.tagline }}
+        <span class="footer-legal">
+          {{ t.footer.trading }} &nbsp;&middot;&nbsp;
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </span>
+        <span class="footer-policies">
+          <a href="privacy.html">{{ t.footer.privacy }}</a> &nbsp;&middot;&nbsp;
+          <a href="terms.html">{{ t.footer.terms }}</a> &nbsp;&middot;&nbsp;
+          <a href="#" data-cookie-settings>{{ t.footer.cookies }}</a>
+        </span>
+      </p>
+    </div>
+  </footer>

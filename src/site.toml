@@ -1,0 +1,55 @@
+# Site-wide settings for scripts/build.py.
+
+url = "https://makeitstem.com"
+name = "Make IT STEM"
+ga_id = "G-NL49D78HZD"
+email = "contact@makeitstem.com"
+formspree = "https://formspree.io/f/mkolboel"
+copyright_year = 2026
+
+# Course platform login (e.g. your LearnWorlds school, "https://learn.makeitstem.com/login").
+# Leave empty while courses aren't live: "Log In" then shows the coming-soon page.
+# When set, "Log In" in the nav goes straight there and login.html redirects to it.
+login_url = ""
+
+# One entry per language. The first one is the default: it lives at the site
+# root, and search engines fall back to it (hreflang x-default).
+# `path` is the folder the language's pages are written to.
+# Adding a language = add an entry here, src/i18n/<code>.toml and src/pages/<code>/.
+[[languages]]
+code = "en"
+label = "EN"
+name = "English"
+locale = "en_GB"
+path = ""
+
+[[languages]]
+code = "it"
+label = "IT"
+name = "Italiano"
+locale = "it_IT"
+path = "it/"
+
+[[languages]]
+code = "es"
+label = "ES"
+name = "Español"
+locale = "es_ES"
+path = "es/"
+
+# Pages listed in sitemap.xml (every language version is included), with priority.
+# login is left out on purpose — robots.txt also keeps crawlers away from it.
+[sitemap]
+index = 1.0
+gift = 0.9
+blog = 0.8
+testimonials = 0.8
+premium-resources = 0.7
+courses = 0.6
+publications = 0.6
+privacy = 0.3
+terms = 0.3
+
+# Old URLs that should keep working: old page name = new page name.
+[redirects]
+free-resources = "gift"

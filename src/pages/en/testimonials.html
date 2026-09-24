@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% set title = "Testimonials | Make IT STEM" %}
+{% set description = "What students and early-career engineers say about mentoring with Dr Giuseppe Romano — written and video testimonials." %}
+{% set styles = ["testimonials"] %}
+
+{% block content %}
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="section-inner">
+        <h1>Testimonials</h1>
+        <p>What students and early-career engineers say about working with me</p>
+      </div>
+    </section>
+
+    <!-- WRITTEN TESTIMONIALS (cards come from src/data/testimonials.toml) -->
+    <section class="written-section">
+      <div class="section-inner">
+        <p class="section-label">Testimonials</p>
+        <h2 class="section-title">What mentees say</h2>
+        <p class="section-subtitle">
+          Real outcomes from students and engineers who've been through the programme.
+        </p>
+        {% include "partials/testimonial-cards.html" %}
+      </div>
+    </section>
+
+    <!-- VIDEO TESTIMONIALS -->
+    <section class="video-section">
+      <div class="section-inner">
+        <p class="section-label">Video Testimonials</p>
+        <h2 class="section-title">In their own words</h2>
+        <p class="section-subtitle">
+          Short video reviews from students and mentees.
+        </p>
+
+        <!--
+          HOW TO ADD A VIDEO (Google Drive):
+          1. Upload the clip to Google Drive.
+          2. Right-click the file → Share → set to "Anyone with the link".
+          3. Copy the link; it looks like:
+             https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+          4. In the matching card below, delete the <div class="video-placeholder">…</div>
+             and uncomment the <iframe>, replacing FILE_ID with your file's id:
+             <iframe src="https://drive.google.com/file/d/FILE_ID/preview"
+                     allow="autoplay" allowfullscreen loading="lazy"></iframe>
+          Do the same in src/pages/it/testimonials.html.
+        -->
+
+        <div class="video-grid">
+          {% for _ in range(3) %}
+          <figure class="video-card">
+            <div class="video-frame">
+              <!-- <iframe src="https://drive.google.com/file/d/FILE_ID/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe> -->
+              <div class="video-placeholder">
+                {{ icon("play", 40, stroke=1.5) }}
+                Video coming soon
+              </div>
+            </div>
+            <figcaption>
+              <strong>Student name</strong>
+              <span>Role / University</span>
+            </figcaption>
+          </figure>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAVE A REVIEW -->
+    <section class="review-section" id="leave-review">
+      <div class="section-inner">
+        <p class="section-label">Leave a Review</p>
+        <h2 class="section-title">Worked with me?</h2>
+        <p class="section-subtitle">
+          Your review is sent to me privately — I'll reach out before publishing anything on the site.
+        </p>
+        <div class="review-wrap">
+          <form class="contact-form" action="{{ site.formspree }}" method="POST">
+            <input type="hidden" name="_subject" value="New review submission — Make IT STEM">
+            <input type="hidden" name="language" value="{{ lang.name }}">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="review-name">Name</label>
+                <input type="text" id="review-name" name="name" required placeholder="Full name">
+              </div>
+              <div class="form-group">
+                <label for="review-rating">Rating</label>
+                <select id="review-rating" name="rating" required>
+                  <option value="">Select...</option>
+                  <option value="5 stars">★★★★★</option>
+                  <option value="4 stars">★★★★</option>
+                  <option value="3 stars">★★★</option>
+                  <option value="2 stars">★★</option>
+                  <option value="1 star">★</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="review-text">Your review</label>
+              <textarea id="review-text" name="review" required placeholder="Share what it was like working with me..."></textarea>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="review-consent" name="consent" required>
+              <label for="review-consent">I'm happy for this review to be published on the Make IT STEM website if approved</label>
+            </div>
+            <div class="privacy-notice">
+              <strong>Data Protection:</strong> Your review is sent securely to {{ site.email }} and will not be published without your approval (GDPR compliant).
+            </div>
+            <button type="submit" class="btn-primary form-submit">
+              Submit Review
+              {{ icon("send", 18) }}
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+{% endblock %}

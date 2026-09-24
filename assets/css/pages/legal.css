@@ -1,0 +1,117 @@
+/* Shared by privacy.html and terms.html. Element selectors are scoped to <main>
+   so they never leak into the nav or footer. */
+
+.page-header h1 { margin-bottom: 0.5rem; }
+
+/* ── CONTENT ── */
+section { padding: 5rem 2rem; }
+.section-inner { max-width: 900px; margin: 0 auto; }
+main h2 {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 84px;
+}
+main h2:first-child {
+  margin-top: 0;
+}
+main h3 {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+  scroll-margin-top: 84px;
+}
+main p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+main ul, main ol {
+  margin: 1.5rem 0 1.5rem 2rem;
+  color: var(--text-secondary);
+}
+main li {
+  margin-bottom: 0.6rem;
+  line-height: 1.7;
+}
+main strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.highlight {
+  background: rgba(28,170,90,0.08);
+  border-left: 4px solid var(--green);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+.highlight p {
+  margin-bottom: 0;
+}
+main a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+main a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+main th, main td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+main th {
+  background: var(--off-white);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+main code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+/* Wide tables must scroll themselves, never the page. */
+.table-scroll { overflow-x: auto; margin: 1.5rem 0; }
+.table-scroll table { margin: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 992px) {
+  main h2 { font-size: 1.4rem; }
+  main h3 { font-size: 1rem; }
+}
+
+/* ── SMALL PIECES ── */
+main h3.legal-subhead { font-size: 1rem; margin-top: 1.4rem; }
+.legal-divider { margin: 3rem 0; border: none; border-top: 1px solid var(--border); }
+main .legal-closing { text-align: center; color: var(--text-light); font-size: 0.9rem; margin-top: 3rem; }
+/* Italian pages: note that the English version is the binding one. */
+.translation-note {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+main .translation-note p { margin: 0; font-size: 0.9rem; }

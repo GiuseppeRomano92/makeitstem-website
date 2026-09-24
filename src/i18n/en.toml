@@ -1,0 +1,77 @@
+# Interface text shared by every English page: nav, footer, cookie banner, dates.
+# Page content lives in src/pages/en/*.html.
+# Every key here must also exist in the other language files — the build checks.
+
+[nav]
+label = "Main"
+skip = "Skip to content"
+home = "Make IT STEM — home"
+menu = "Toggle menu"
+gift = "Free Gift"
+explore = "Explore"
+mentoring = "1-to-1 Career Mentoring"
+workshops = "Workshops"
+resources = "Digital Resources"
+courses = "Courses"
+process = "How It Works"
+about = "About"
+testimonials = "Testimonials"
+blog = "Blog"
+publications = "Publications"
+login = "Log In"
+cta = "Book a Free Call"
+language = "Language"
+
+[footer]
+services = "Services"
+resources = "Digital Resources"
+courses = "Courses"
+about = "About"
+testimonials = "Testimonials"
+review = "Leave a Review"
+blog = "Blog"
+publications = "Publications"
+contact = "Contact"
+privacy = "Privacy Policy"
+terms = "Terms & Conditions"
+cookies = "Cookie Settings"
+rights = "All rights reserved."
+tagline = "STEM career mentoring for university students and early-career engineers."
+trading = "Giuseppe Romano, trading as Make IT STEM"
+linkedin_personal = "Giuseppe Romano on LinkedIn"
+linkedin_company = "Make IT STEM on LinkedIn"
+instagram = "Make IT STEM on Instagram"
+youtube = "Make IT STEM on YouTube"
+tiktok = "Make IT STEM on TikTok"
+
+[meta]
+logo_alt = "Make IT STEM logo"
+
+# Read by assets/js/cookie-consent.js (keys are camelCase on purpose).
+[cookie]
+label = "Cookie consent"
+title = "We use cookies"
+body = "Essential cookies keep this site working. We’d also like to use Google Analytics to see which pages are useful — only if you agree. You can change your mind at any time. Read our"
+policyLink = "Cookie & Privacy Policy"
+reject = "Reject non-essential"
+accept = "Accept analytics"
+
+[blog]
+live = "Live"
+all = "All"
+
+[blog.categories]
+cv = "CV & Applications"
+industry = "Industry Readiness"
+academia = "PhD & Academia"
+fea = "FEA & Simulation"
+strategy = "Career Strategy"
+
+[dates]
+months_short = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+months_long = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+[redirect]
+title = "Page moved"
+body = "This page has moved — redirecting you to"
+link = "its new location"

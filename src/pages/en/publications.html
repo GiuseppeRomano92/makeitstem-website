@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% set title = "Publications | Dr Giuseppe Romano - Make IT STEM" %}
+{% set description = "Academic publications and research by Dr Giuseppe Romano on Google Scholar." %}
+{% set styles = ["content", "publications"] %}
+{% set scholar = "https://scholar.google.com/citations?hl=en&user=dF_84b0AAAAJ" %}
+
+{% block content %}
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="section-inner">
+        <h1>Research &amp; Publications</h1>
+        <p>Exploring the intersection of advanced materials, simulation, and engineering education</p>
+        <a href="https://orcid.org/0000-0002-9385-3541" target="_blank" rel="noopener" class="orcid-link">
+          {{ icon("orcid", 18) }}
+          ORCID: 0000-0002-9385-3541
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="content-section">
+      <div class="section-inner">
+        <h2>My Academic Work</h2>
+        <p>
+          My research focuses on advanced materials, computational simulation, and the practical application of engineering theory in industry. I publish regularly in peer-reviewed journals and conferences.
+        </p>
+
+        <div id="publications"
+             data-src="{{ root }}publications.json"
+             data-journal-heading="Journal Papers"
+             data-conference-heading="Conference Papers"
+             data-view-paper="View paper →"
+             data-fallback="My full list of publications is available on"
+             data-scholar-url="{{ scholar }}">
+          <p class="pub-loading">Loading publications…</p>
+        </div>
+
+        <div class="cta-box">
+          <h3>View Full Profile &amp; Citations</h3>
+          <p>
+            For citations, h-index, and the most up-to-date list, visit my Google Scholar profile.
+          </p>
+          <a href="{{ scholar }}" target="_blank" rel="noopener" class="btn-primary">
+            View on Google Scholar
+            {{ icon("external", 16) }}
+          </a>
+        </div>
+
+        <h2 class="research-heading">Research Interests</h2>
+        <ul class="research-list">
+          <li>Advanced materials and composite structures</li>
+          <li>Finite element analysis and computational simulation</li>
+          <li>Thermal and mechanical analysis</li>
+          <li>Multi-scale modeling approaches</li>
+          <li>Engineering education and industry-academia collaboration</li>
+          <li>STEM career development and employability</li>
+        </ul>
+      </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ asset('js/publications.js') }}"></script>
+{% endblock %}

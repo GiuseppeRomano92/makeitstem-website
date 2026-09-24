@@ -1,0 +1,23 @@
+name: Check generated site is up to date
+
+# The HTML at the repo root and in it/ is generated from src/ by scripts/build.py.
+# This fails if someone edits src/ or assets/ without rebuilding (or edits the
+# generated HTML directly), so what GitHub Pages serves always matches the source.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - run: python scripts/build.py --check

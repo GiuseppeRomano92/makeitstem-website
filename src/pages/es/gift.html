@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% set title = "Regalo gratis — Plantillas de CV | Make IT STEM" %}
+{% set description = "Consigue gratis plantillas de CV para candidaturas académicas y de la industria, además de consejos profesionales STEM directamente en tu correo." %}
+{% set styles = ["gift"] %}
+
+{% block content %}
+    <!-- GIFT HERO -->
+    <section class="gift-hero">
+      <div class="gift-inner">
+        <!-- Left: pitch -->
+        <div>
+          <p class="gift-label">🎁 Regalo gratis</p>
+          <h1 class="gift-title">Consigue gratis tus <span>plantillas de CV</span> para la academia y la industria</h1>
+          <p class="gift-subtitle">
+            Deja de adivinar qué buscan los responsables de selección. Descarga las mismas plantillas de CV que uso en mis mentorías con ingenieros — una para candidaturas académicas y otra para puestos en la industria —, listas para editar en Overleaf o Word.
+          </p>
+          <ul class="gift-bullets">
+            <li>{{ icon("check", 18, stroke=2.5) }} Plantilla de CV académico (candidaturas a doctorado, postdoc y docencia)</li>
+            <li>{{ icon("check", 18, stroke=2.5) }} Plantilla de CV para la industria (puestos de ingeniería para recién titulados, junior y mid-level)</li>
+            <li>{{ icon("check", 18, stroke=2.5) }} Disponibles en LaTeX (Overleaf) y en formato Word</li>
+            <li>{{ icon("check", 18, stroke=2.5) }} Además, consejos profesionales STEM directamente en tu correo</li>
+          </ul>
+        </div>
+
+        <!-- Right: form -->
+        <div class="gift-form-box">
+          <div class="gift-mock">
+            {{ icon("file", 40, stroke=1.5) }}
+            <span class="gift-mock-label">Descarga gratuita</span>
+            <span class="gift-mock-title">Plantillas de CV para la academia y la industria</span>
+          </div>
+
+          <h2>Acceso inmediato</h2>
+          <p>Escribe tu email y te enviaré las plantillas directamente a tu bandeja de entrada.</p>
+
+          {# _subject stays in English so every request lands in the same inbox filter. #}
+          <form action="{{ site.formspree }}" method="POST">
+            <input type="hidden" name="_subject" value="Free CV templates request — Make IT STEM">
+            <input type="hidden" name="gift" value="CV Templates">
+            <input type="hidden" name="language" value="{{ lang.name }}">
+            <div class="form-group">
+              <label for="gift-name">Nombre</label>
+              <input type="text" id="gift-name" name="name" required placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+              <label for="gift-email">Dirección de email</label>
+              <input type="email" id="gift-email" name="email" required placeholder="tu@email.com">
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="gift-privacy" name="privacy" required>
+              <label for="gift-privacy">Acepto recibir las plantillas y, de vez en cuando, consejos profesionales. Puedo darme de baja en cualquier momento. Consulta la <a href="privacy.html" target="_blank" rel="noopener">política de privacidad</a>.</label>
+            </div>
+            <button type="submit" class="btn-gift">
+              {{ icon("download", 18) }}
+              Envíame las plantillas gratis
+            </button>
+          </form>
+          <p class="gift-notice">Nada de spam. Date de baja con un clic.</p>
+        </div>
+      </div>
+    </section>
+{% endblock %}

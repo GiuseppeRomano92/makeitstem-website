@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ lang.code }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ t.redirect.title }} | {{ site.name }}</title>
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ target }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <link rel="icon" type="image/png" href="{{ root }}assets/img/logo.png">
+</head>
+<body>
+  <p>{{ t.redirect.body }} <a href="{{ target }}">{{ t.redirect.link }}</a>…</p>
+  <script>window.location.replace('{{ target }}');</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Blog posts, newest first. Shown on blog.html in every language.
+# `category` is a key from [blog.categories] in src/i18n/<lang>.toml.
+# Text that visitors read goes under [posts.en] / [posts.it]; add a table per
+# language. `article_lang` is the language the linked article is written in.
+
+[[posts]]
+date = 2025-07-09
+category = "strategy"
+url = "https://mentormeet.com/articles/the-power-of-hidden-skills-what-i-wish-i-knew-earlier/"
+article_lang = "en"
+live = true
+image = "blog/hidden-skills.png"
+image_width = 1920
+image_height = 1208
+
+[posts.en]
+title = "The Power of Hidden Skills: What I Wish I Knew Earlier"
+summary = "Three underrated competencies that shaped my engineering career — starting simple, knowing when to ask for help, and why mentoring others accelerates your own growth."
+image_alt = "Illustration of a team collaborating around an idea board with a lightbulb"
+link = "Read on MentorMeet"
+
+[posts.it]
+title = "Il potere delle competenze nascoste: cosa avrei voluto sapere prima"
+summary = "Tre competenze sottovalutate che hanno segnato la mia carriera da ingegnere: partire dalle cose semplici, sapere quando chiedere aiuto e perché fare da mentore agli altri accelera anche la tua crescita."
+image_alt = "Illustrazione di un team che collabora attorno a una lavagna di idee con una lampadina"
+link = "Leggi su MentorMeet (in inglese)"
+
+[posts.es]
+title = "El poder de las habilidades ocultas: lo que me habría gustado saber antes"
+summary = "Tres competencias infravaloradas que marcaron mi carrera como ingeniero: empezar por lo sencillo, saber cuándo pedir ayuda y por qué ser mentor de otros acelera también tu propio crecimiento."
+image_alt = "Ilustración de un equipo que colabora alrededor de un tablero de ideas con una bombilla"
+link = "Leer en MentorMeet (en inglés)"

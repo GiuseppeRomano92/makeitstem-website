@@ -1,0 +1,29 @@
+{
+    // "Serve site" builds the site, serves it on http://localhost:8080 and
+    // rebuilds whenever src/ or assets/ change. launch.json starts it on F5.
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Serve site",
+            "type": "shell",
+            "command": "python scripts/build.py --serve",
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "build",
+                "pattern": { "regexp": "^Build failed: (.*)$", "message": 1 },
+                "background": {
+                    "activeBegins": true,
+                    "beginsPattern": "^Built ",
+                    "endsPattern": "^Serving http"
+                }
+            }
+        },
+        {
+            "label": "Build site",
+            "type": "shell",
+            "command": "python scripts/build.py",
+            "problemMatcher": [],
+            "group": { "kind": "build", "isDefault": true }
+        }
+    ]
+}

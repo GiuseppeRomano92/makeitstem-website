@@ -15,13 +15,26 @@
  *
  * Storage key: mis-cookie-consent  →  'accepted' | 'rejected'
  * Re-open the banner from anywhere with:  <a href="#" data-cookie-settings>…</a>
+ *
+ * Text, the privacy-policy link and the GA id come from the page's
+ * <script type="application/json" id="site-config"> block, which the build
+ * fills in per language from src/i18n/<lang>.toml. English is the fallback.
  */
 (function () {
   'use strict';
 
   var STORAGE_KEY = 'mis-cookie-consent';
-  var PRIVACY_URL = 'privacy.html#cookies';
-  var GA_ID = 'G-NL49D78HZD';
+
+  var config = {};
+  try {
+    config = JSON.parse(document.getElementById('site-config').textContent) || {};
+  } catch (e) { /* no config block — fall back to English defaults */ }
+
+  var T = config.cookie || {};
+  function t(key, fallback) { return T[key] || fallback; }
+
+  var PRIVACY_URL = config.privacyUrl || 'privacy.html#cookies';
+  var GA_ID = config.gaId || 'G-NL49D78HZD';
 
   // localStorage throws in private-browsing edge cases — never let that break the page.
   function read() {
@@ -136,7 +149,7 @@
     banner.className = 'mis-cookie-banner';
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-live', 'polite');
-    banner.setAttribute('aria-label', 'Cookie consent');
+    banner.setAttribute('aria-label', t('label', 'Cookie consent'));
 
     var inner = document.createElement('div');
     inner.className = 'mis-cookie-inner';
@@ -144,12 +157,16 @@
     var text = document.createElement('div');
     text.className = 'mis-cookie-text';
     var heading = document.createElement('strong');
-    heading.textContent = 'We use cookies';
+    heading.textContent = t('title', 'We use cookies');
     text.appendChild(heading);
     var body = document.createElement('span');
-    body.innerHTML = 'Essential cookies keep this site working. We’d also like to use Google Analytics ' +
-      'to see which pages are useful — only if you agree. You can change your mind at any time. ' +
-      'Read our <a href="' + PRIVACY_URL + '">Cookie &amp; Privacy Policy</a>.';
+    body.textContent = t('body', 'Essential cookies keep this site working. We’d also like to use Google Analytics ' +
+      'to see which pages are useful — only if you agree. You can change your mind at any time. Read our') + ' ';
+    var policy = document.createElement('a');
+    policy.href = PRIVACY_URL;
+    policy.textContent = t('policyLink', 'Cookie & Privacy Policy');
+    body.appendChild(policy);
+    body.appendChild(document.createTextNode('.'));
     text.appendChild(body);
 
     var actions = document.createElement('div');
@@ -158,13 +175,13 @@
     var reject = document.createElement('button');
     reject.type = 'button';
     reject.className = 'mis-cookie-btn mis-cookie-reject';
-    reject.textContent = 'Reject non-essential';
+    reject.textContent = t('reject', 'Reject non-essential');
     reject.addEventListener('click', function () { choose(false); });
 
     var accept = document.createElement('button');
     accept.type = 'button';
     accept.className = 'mis-cookie-btn mis-cookie-accept';
-    accept.textContent = 'Accept analytics';
+    accept.textContent = t('accept', 'Accept analytics');
     accept.addEventListener('click', function () { choose(true); });
 
     // Reject listed first in the DOM so it is never the harder option to reach.

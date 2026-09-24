@@ -1,0 +1,107 @@
+/* "Coming soon" pages (courses, login). The waitlist form is only on courses. */
+
+/* ── COMING SOON ── */
+.coming-soon {
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.coming-soon::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(800px circle at 110% -10%, rgba(28,170,90,0.14) 0%, transparent 55%),
+    radial-gradient(800px circle at -10% -10%, rgba(27,58,125,0.18) 0%, transparent 55%);
+  pointer-events: none;
+}
+.coming-soon-inner {
+  position: relative; z-index: 1;
+  max-width: 560px;
+}
+.coming-soon-tag {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 1rem;
+}
+.coming-soon h1 {
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.coming-soon p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+.btn-primary, .btn-secondary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--display);
+  font-weight: 600; font-size: 1rem;
+  padding: 0.9rem 2.2rem; border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: none; cursor: pointer;
+}
+.btn-primary {
+  background: var(--green); color: #fff;
+}
+.btn-primary:hover { background: var(--blue); transform: translateY(-1px); }
+.btn-secondary {
+  background: transparent; color: #fff;
+  border: 2px solid var(--yellow);
+}
+.btn-secondary:hover { background: var(--yellow); color: var(--navy); transform: translateY(-1px); }
+.coming-soon-actions {
+  display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+}
+
+/* ── WAITLIST FORM ── */
+.waitlist-form {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 460px;
+  margin: 0 auto 1.5rem;
+}
+.waitlist-form input[type="email"] {
+  flex: 1 1 240px;
+  min-width: 0;
+  padding: 0.9rem 1.1rem;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-family: var(--body);
+  font-size: 1rem;
+}
+.waitlist-form input[type="email"]::placeholder { color: rgba(255,255,255,0.5); }
+.waitlist-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--green);
+  background: rgba(255,255,255,0.12);
+}
+.waitlist-form button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+.waitlist-note {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2rem;
+}
+.waitlist-note a { color: rgba(255,255,255,0.7); }
+.mce-responses { max-width: 460px; margin: 0.75rem auto 0; }
+#mce-error-response { color: #ff8080; font-size: 0.85rem; }
+#mce-success-response { color: var(--green); font-size: 0.85rem; }

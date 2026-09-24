@@ -1,0 +1,28 @@
+{#- Category filters + post cards from src/data/blog.toml, in the page's language. -#}
+        <div class="category-filters">
+          <button class="category-btn active">{{ t.blog.all }}</button>
+          {% for label in t.blog.categories.values() %}
+          <button class="category-btn">{{ label }}</button>
+          {% endfor %}
+        </div>
+
+        <div class="blog-grid">
+          {% for post in data.blog.posts %}
+          {% set text = post[lang.code] %}
+          <article class="blog-card{% if post.live %} is-live{% endif %}">
+            <div class="blog-card-image">
+              <img src="{{ root }}assets/img/{{ post.image }}" alt="{{ text.image_alt }}" width="{{ post.image_width }}" height="{{ post.image_height }}">
+              {% if post.live %}<span class="blog-live">● {{ t.blog.live }}</span>{% endif %}
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">{{ t.blog.categories[post.category] }}</span>
+                <span class="blog-date">{{ post.date | date(t) }}</span>
+              </div>
+              <h2>{{ text.title }}</h2>
+              <p>{{ text.summary }}</p>
+              <a href="{{ post.url }}" target="_blank" rel="noopener" class="blog-read-more"{% if post.article_lang != lang.code %} hreflang="{{ post.article_lang }}"{% endif %}>{{ text.link }} {{ icon("arrow-small", 14) }}</a>
+            </div>
+          </article>
+          {% endfor %}
+        </div>

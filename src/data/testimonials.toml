@@ -1,0 +1,70 @@
+# Written testimonials, shown on testimonials.html (all) and the homepage (first 3),
+# in every language. Quotes are shown exactly as the person wrote them, so they
+# are not translated.
+#
+# Fields: name, quote, and either initials (avatar letters) or photo (a file in
+# assets/img/). Optional: stars (default 5), lang (language of the quote, default "en").
+
+[[testimonials]]
+name = "Yeshwanth N. Rao"
+initials = "YR"
+quote = """
+I had the privilege of learning from Giuseppe during my Master's dissertation on composite materials. \
+His approachable nature and openness to discussion make him an exceptional mentor. Before meeting him, \
+my knowledge of programming and FEA was very limited and I couldn't see its potential, but his engaging \
+teaching style sparked my interest and eventually turned it into a passion. He has a strong grasp of the \
+fundamentals and explains concepts in a clear, easily understandable way. With his expertise in \
+programming, FEA, and composites, I can confidently vouch for his mentorship — any learner under his \
+guidance is truly privileged."""
+
+[[testimonials]]
+name = "Yang Yang"
+photo = "testimonials/yang-yang.png"
+quote = """
+During my MSc Aerospace Engineering programme, I was initially quite lost on my dissertation about \
+microstructure simulation using Abaqus CAE. That's when I found Dr Romano as a personal tutor for help — \
+and the outcome was really positive! Giuseppe not only taught me the academic concepts and modelling \
+skills, he also helped me understand the fundamental principles. He isn't someone who just aims to get \
+the task done; he tried his best to help me truly understand. I scored the highest in the whole \
+engineering faculty. He is patient and easy to get along with. Highly recommend his tutoring — especially \
+for any query in modelling, materials or structures."""
+
+[[testimonials]]
+name = "Mohamed Sadik Mohamed Ali"
+initials = "MA"
+quote = """
+I undertook my dissertation on Finite Element Analysis using Abaqus in my final year, with help from \
+Dr Romano during the last year of his PhD. He was incredibly helpful and approachable even during his \
+busiest periods — he always spared time and gave me the resources and guidance to do well. I am \
+incredibly grateful and achieved 79.5% in my final dissertation report at the University of Manchester. \
+I highly recommend working with him."""
+
+[[testimonials]]
+name = "Tom Simon Kocherry"
+initials = "TK"
+quote = """
+I've had the pleasure of learning from Giuseppe. He really knows his way around the software and \
+explains things clearly without overcomplicating it. Any time I've had questions or got stuck, he's \
+always been happy to help and point me in the right direction. What really stands out is how \
+approachable and genuinely passionate he is about helping others grow in this field — always willing to \
+lend a hand or share useful tips, no matter how busy he is."""
+
+[[testimonials]]
+name = "Agasthya Vivek"
+initials = "AV"
+quote = """
+Dr Romano has been incredibly helpful with my work on composite analysis using FEA. His wealth of \
+knowledge in FEA, composites, scripting methods for Abaqus, and meshing techniques have allowed me to \
+make significant breakthroughs in my work, and I am grateful for his support. His passion for the area, \
+friendliness and approachability have made it very easy to work with him."""
+
+[[testimonials]]
+name = "Alessandro De Rosis"
+initials = "AD"
+quote = """
+I have known Giuseppe since 2019, initially as a Graduate Teaching Assistant on two units I coordinated, \
+and later through our research collaboration. He is an exceptionally capable, reliable and hardworking \
+individual who combines strong technical ability with genuine intellectual curiosity. Giuseppe is \
+proactive, professional and a natural team player, and I have always found him a pleasure to work with. \
+What particularly distinguishes him is his integrity and commitment: he can be trusted completely and \
+consistently delivers high-quality work with minimal supervision. I have no hesitation in recommending him!"""

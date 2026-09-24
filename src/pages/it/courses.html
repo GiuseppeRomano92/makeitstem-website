@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% set title = "Corsi | Make IT STEM" %}
+{% set description = "Corsi di carriera STEM da seguire in autonomia, a cura di Make IT STEM — in arrivo." %}
+{% set styles = ["coming-soon"] %}
+
+{% block content %}
+    <!-- COMING SOON -->
+    <section class="coming-soon">
+      <div class="coming-soon-inner">
+        <span class="coming-soon-tag">Corsi</span>
+        <h1>In arrivo</h1>
+        <p>
+          Sto preparando corsi da seguire in autonomia sullo sviluppo della carriera
+          in ambito STEM, sulla strategia per CV e colloqui e sulle competenze per
+          entrare nell'industria. Iscriviti alla lista d'attesa e ti scriverò appena
+          saranno disponibili: i primi iscritti avranno accesso in anteprima e sconti
+          di lancio.
+        </p>
+        {% set waitlist_button = "Iscriviti alla lista d'attesa" %}
+        {% set waitlist_email_label = "Indirizzo email" %}
+        {% set waitlist_placeholder = "tu@email.com" %}
+        {% include "partials/waitlist-form.html" %}
+        <p class="waitlist-note">
+          Niente spam: solo un'email quando i corsi saranno online. Consulta la nostra
+          <a href="privacy.html">informativa sulla privacy</a>.
+        </p>
+        <div class="coming-soon-actions">
+          <a href="./" class="btn-secondary">Torna alla home</a>
+        </div>
+      </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+  {% include "partials/waitlist-scripts.html" %}
+{% endblock %}

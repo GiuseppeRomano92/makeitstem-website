@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% set title = "Premium Resources | Make IT STEM" %}
+{% set description = "In-depth CV and application checklists for academia and industry, available as paid downloads." %}
+{% set styles = ["content", "premium-resources"] %}
+
+{% block head %}
+  <!-- Stripe Buy Button -->
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+{% endblock %}
+
+{% block content %}
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="section-inner">
+        <h1>Premium Resources</h1>
+        <p>In-depth, paid checklists and guides for serious applications</p>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="content-section">
+      <div class="section-inner">
+        <h2>CV Checklists for Academia</h2>
+        <p>
+          A focused checklist to make sure your academic CV hits every mark
+          before you submit. Pay securely via Stripe — the download link is
+          sent straight to your inbox after purchase.
+        </p>
+
+        <div class="product-card">
+          <span class="product-tag">Premium</span>
+          <h3>CV Checklists for Academia — £3</h3>
+          <p>
+            A line-by-line checklist covering formatting, content, and the
+            details academic hiring panels actually look for.
+          </p>
+          {% include "partials/stripe-button.html" %}
+        </div>
+
+        <p class="product-alt">
+          Looking for free templates instead? Grab them on the
+          <a href="gift.html">Free Gift</a>
+          page.
+        </p>
+      </div>
+    </section>
+{% endblock %}

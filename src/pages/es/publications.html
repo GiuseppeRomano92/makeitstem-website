@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% set title = "Publicaciones | Dr Giuseppe Romano - Make IT STEM" %}
+{% set description = "Publicaciones académicas e investigación del Dr. Giuseppe Romano, con enlace a Google Scholar." %}
+{% set styles = ["content", "publications"] %}
+{% set scholar = "https://scholar.google.com/citations?hl=es&user=dF_84b0AAAAJ" %}
+
+{% block content %}
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="section-inner">
+        <h1>Investigación y publicaciones</h1>
+        <p>En la intersección entre materiales avanzados, simulación y formación en ingeniería</p>
+        <a href="https://orcid.org/0000-0002-9385-3541" target="_blank" rel="noopener" class="orcid-link">
+          {{ icon("orcid", 18) }}
+          ORCID: 0000-0002-9385-3541
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="content-section">
+      <div class="section-inner">
+        <h2>Mi trabajo académico</h2>
+        <p>
+          Mi investigación se centra en materiales avanzados, simulación computacional y la aplicación práctica de la teoría de ingeniería en la industria. Publico regularmente en revistas y congresos con revisión por pares.
+        </p>
+
+        <div id="publications"
+             data-src="{{ root }}publications.json"
+             data-journal-heading="Artículos en revistas"
+             data-conference-heading="Actas de congresos"
+             data-view-paper="Ver el artículo →"
+             data-fallback="La lista completa de mis publicaciones está disponible en"
+             data-scholar-url="{{ scholar }}">
+          <p class="pub-loading">Cargando publicaciones…</p>
+        </div>
+
+        <div class="cta-box">
+          <h3>Perfil completo y citas</h3>
+          <p>
+            Para ver las citas, el índice h y la lista más actualizada, visita mi perfil de Google Scholar.
+          </p>
+          <a href="{{ scholar }}" target="_blank" rel="noopener" class="btn-primary">
+            Ver en Google Scholar
+            {{ icon("external", 16) }}
+          </a>
+        </div>
+
+        <h2 class="research-heading">Áreas de investigación</h2>
+        <ul class="research-list">
+          <li>Materiales avanzados y estructuras de materiales compuestos</li>
+          <li>Análisis por elementos finitos y simulación computacional</li>
+          <li>Análisis térmico y mecánico</li>
+          <li>Modelización multiescala</li>
+          <li>Formación en ingeniería y colaboración entre universidad e industria</li>
+          <li>Desarrollo profesional STEM y empleabilidad</li>
+        </ul>
+      </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ asset('js/publications.js') }}"></script>
+{% endblock %}

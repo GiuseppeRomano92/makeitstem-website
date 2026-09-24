@@ -1,0 +1,91 @@
+{#-
+  Layout shared by every page. A page template looks like:
+
+    {% extends "base.html" %}
+    {% set title = "Blog | Make IT STEM" %}
+    {% set description = "…" %}
+    {% set styles = ["blog"] %}          (files in assets/css/pages/, optional)
+    {% block content %} … {% endblock %}
+
+  Optional: social_title / social_description (link previews),
+  {% block head %} for extra <head> tags, {% block scripts %} for page scripts.
+-#}
+{%- set styles = styles | default([]) -%}
+{%- set social_title = social_title | default(title) -%}
+{%- set social_description = social_description | default(description) -%}
+<!DOCTYPE html>
+<html lang="{{ lang.code }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) - loader injected by cookie-consent.js only after consent -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Consent Mode v2 — analytics stays denied until the visitor opts in via cookie-consent.js
+    var misConsent = null;
+    try { misConsent = localStorage.getItem('mis-cookie-consent'); } catch (e) {}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: misConsent === 'accepted' ? 'granted' : 'denied',
+      wait_for_update: 500
+    });
+
+    gtag('js', new Date());
+    gtag('config', '{{ site.ga_id }}');
+  </script>
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ canonical }}">
+  {% for alt in alternates %}
+  <link rel="alternate" hreflang="{{ alt.code }}" href="{{ alt.url }}">
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ default_url }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ social_title }}">
+  <meta property="og:description" content="{{ social_description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="{{ site.url }}/assets/img/logo.png">
+  <meta property="og:image:alt" content="{{ t.meta.logo_alt }}">
+  <meta property="og:locale" content="{{ lang.locale }}">
+  {% for alt in alternates if alt.code != lang.code %}
+  <meta property="og:locale:alternate" content="{{ alt.locale }}">
+  {% endfor %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ social_title }}">
+  <meta name="twitter:description" content="{{ social_description }}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/img/logo.png">
+  <link rel="icon" type="image/png" href="{{ root }}assets/img/logo.png">
+  <link rel="apple-touch-icon" href="{{ root }}assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/site.css') }}">
+  {% for name in styles %}
+  <link rel="stylesheet" href="{{ asset('css/pages/' ~ name ~ '.css') }}">
+  {% endfor %}
+  {% block head %}{% endblock %}
+</head>
+<body class="page-{{ page }}">
+
+  <a class="skip-link" href="#main">{{ t.nav.skip }}</a>
+
+  {% include "partials/nav.html" %}
+
+  <main id="main" tabindex="-1">
+{% block content %}{% endblock %}
+  </main>
+
+  {% include "partials/footer.html" %}
+
+  <script type="application/json" id="site-config">{{ js_config | tojson }}</script>
+  <script src="{{ asset('js/site.js') }}"></script>
+  {% block scripts %}{% endblock %}
+  <script src="{{ asset('js/cookie-consent.js') }}"></script>
+
+</body>
+</html>

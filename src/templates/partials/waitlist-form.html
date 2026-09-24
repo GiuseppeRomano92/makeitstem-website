@@ -1,0 +1,18 @@
+{#- Mailchimp course waitlist form. Button text and placeholder come from the page:
+    set `waitlist_button`, `waitlist_email_label` and `waitlist_placeholder` before including. -#}
+        <div id="mc_embed_shell">
+          <form action="https://makeitstem.us16.list-manage.com/subscribe/post?u=7ec8ec17c4bd6dd573878b585&amp;id=077b230fd8&amp;f_id=00a1c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="waitlist-form validate" target="_blank" novalidate>
+            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required placeholder="{{ waitlist_placeholder }}" aria-label="{{ waitlist_email_label }}">
+            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+              <input type="text" name="b_7ec8ec17c4bd6dd573878b585_077b230fd8" tabindex="-1" value="">
+            </div>
+            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn-primary">
+              {{ waitlist_button }}
+              {{ icon("arrow", 16) }}
+            </button>
+          </form>
+          <div id="mce-responses" class="mce-responses">
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
+          </div>
+        </div>

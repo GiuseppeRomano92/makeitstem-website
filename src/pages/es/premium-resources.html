@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% set title = "Recursos premium | Make IT STEM" %}
+{% set description = "Checklists detalladas de CV y candidaturas para la academia y la industria, disponibles como descargas de pago." %}
+{% set styles = ["content", "premium-resources"] %}
+
+{% block head %}
+  <!-- Stripe Buy Button -->
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+{% endblock %}
+
+{% block content %}
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="section-inner">
+        <h1>Recursos premium</h1>
+        <p>Checklists y guías detalladas de pago, para candidaturas que van en serio</p>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="content-section">
+      <div class="section-inner">
+        <h2>Checklist para CV académicos</h2>
+        <p>
+          Una checklist concreta para asegurarte de que tu CV académico cumple con todo antes
+          de enviarlo. Pagas de forma segura con Stripe y recibes el enlace de descarga
+          directamente en tu correo tras la compra.
+        </p>
+
+        <div class="product-card">
+          <span class="product-tag">Premium</span>
+          <h3>Checklist para CV académicos — 3 £</h3>
+          <p>
+            Una checklist punto por punto sobre formato, contenido y los detalles en los que
+            de verdad se fijan los comités de selección académicos.
+          </p>
+          {% include "partials/stripe-button.html" %}
+        </div>
+
+        <p class="product-alt">
+          ¿Buscas plantillas gratuitas? Las encontrarás en la página
+          <a href="gift.html">Regalo gratis</a>.
+        </p>
+      </div>
+    </section>
+{% endblock %}

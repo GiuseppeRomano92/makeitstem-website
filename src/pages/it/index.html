@@ -1,0 +1,365 @@
+{% extends "base.html" %}
+{% set title = "Make IT STEM | Mentoring di carriera STEM per studenti e ingegneri" %}
+{% set description = "Mentoring di carriera STEM personalizzato e workshop per aiutare studenti universitari e giovani ingegneri a colmare il divario tra teoria e industria." %}
+{% set social_title = "Make IT STEM — Trasformare le conoscenze STEM in occupabilità" %}
+{% set social_description = "Colmare il divario tra la teoria universitaria e le competenze richieste dall'industria" %}
+{% set styles = ["home"] %}
+
+{% block content %}
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <!-- Logo & Profile Section -->
+        <div class="hero-profile">
+          <img src="{{ root }}assets/img/logo.png" alt="Logo di Make IT STEM" class="hero-logo">
+          <div class="hero-photo">
+            <img src="{{ root }}assets/img/vfa-awards-2026.jpg" alt="Dr Giuseppe Romano, vincitore dei Venture Further Awards">
+          </div>
+          <div class="vfa-award">
+            <div class="vfa-award-title">Venture Further Awards 2026</div>
+            <div class="vfa-award-subtitle">
+              Freelancer dell'anno<br>
+              Premio da £4.000
+            </div>
+            <a href="https://www.manchester.ac.uk/about/news/university-of-manchester-and-mec-students-celebrated-at-the-venture-further-awards-2026/" target="_blank" rel="noopener" class="vfa-award-link" hreflang="en">
+              Scopri di più
+              {{ icon("external", 14) }}
+            </a>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="hero-content">
+          <h1>Dr Giuseppe Romano</h1>
+
+          <div class="hero-credentials">
+            <span class="credential-badge">PhD</span>
+            <span class="credential-divider">&middot;</span>
+            <span class="credential-badge">CEng</span>
+            <span class="credential-divider">&middot;</span>
+            <span class="credential-badge">FHEA</span>
+            <span class="credential-divider">&middot;</span>
+            <span class="credential-badge">MIMechE</span>
+            <span class="credential-divider">&middot;</span>
+            <span class="credential-badge">MIMMM</span>
+          </div>
+
+          <p class="hero-sub">
+            Trasformare le conoscenze STEM in <em>occupabilità</em>. Un mentoring personalizzato che colma il divario tra la teoria universitaria e le competenze richieste dall'industria.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
+              Prenota una call conoscitiva gratuita
+              {{ icon("arrow", 16) }}
+            </a>
+            <a href="#services" class="btn-secondary">
+              Scopri i servizi
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>15</strong>
+              <span>Studenti seguiti</span>
+            </div>
+            <div class="hero-stat">
+              <strong>5</strong>
+              <span>Anni nell'industria</span>
+            </div>
+            <div class="hero-stat">
+              <strong>4</strong>
+              <span>Pubblicazioni peer-reviewed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="section-inner">
+        <p class="section-label">Servizi</p>
+        <h2 class="section-title">Cosa offro</h2>
+        <p class="section-subtitle">
+          Tre modi per accelerare il passaggio da studente a ingegnere sicuro di sé e pronto per l'industria.
+        </p>
+        <div class="services-grid">
+          <div class="service-card" id="mentoring">
+            <div class="service-icon">{{ icon("users", 24, color="#1CAA5A") }}</div>
+            <h3>Mentoring di carriera 1:1</h3>
+            <p>
+              Un percorso personalizzato, costruito su dove sei oggi e su dove vuoi arrivare.
+              Lavoriamo su CV, colloqui, mappatura delle competenze e strategia di carriera,
+              partendo da un'esperienza reale nell'industria, non da consigli da manuale.
+            </p>
+            <div class="service-links">
+              <a href="https://calendly.com/makeitstem/45min" target="_blank" rel="noopener" class="service-link">
+                Prenota una sessione di mentoring &mdash; &pound;30
+                {{ icon("arrow", 16) }}
+              </a>
+              <a href="https://mentormeet.com/profiles/dr-giuseppe-romano/" target="_blank" rel="noopener" class="service-link">
+                Vedi il profilo su MentorMeet
+                {{ icon("arrow", 16) }}
+              </a>
+            </div>
+            <span class="service-tag">Il più richiesto</span>
+          </div>
+          <div class="service-card" id="workshops">
+            <div class="service-icon">{{ icon("monitor", 24, color="#1CAA5A") }}</div>
+            <h3>Workshop</h3>
+            <p class="service-price">Workshop di gruppo <span class="price">— £20 a persona</span> <span class="seats">max 20</span></p>
+            <p class="service-desc">
+              Sessioni su misura per dipartimenti universitari, associazioni studentesche o gruppi di corso.
+              Tra i temi: prepararsi al mondo del lavoro, comunicazione tecnica, sviluppo
+              professionale e come far rendere di più la tua laurea.
+            </p>
+            <p class="service-price">Career Cohort <span class="price">— £200 a persona</span> <span class="seats">max 10</span></p>
+            <p class="service-desc">
+              Un percorso strutturato di 4–6 settimane con lavoro su progetti e feedback personalizzato.
+            </p>
+            <a href="#contact" class="service-link service-cta">
+              Iscriviti alla lista d'attesa
+              {{ icon("arrow", 16) }}
+            </a>
+            <span class="service-tag">Università e associazioni</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">{{ icon("file-text", 24, color="#1CAA5A") }}</div>
+            <h3>Risorse digitali</h3>
+            <p>
+              Guide scaricabili, modelli e strumenti di pianificazione per sviluppare la tua
+              carriera in autonomia. Dai modelli di CV all'analisi delle competenze: risorse
+              pratiche create da un ingegnere, per ingegneri.
+            </p>
+            <div class="service-links">
+              <a href="premium-resources.html" class="service-link">
+                Scopri le risorse digitali
+                {{ icon("arrow", 16) }}
+              </a>
+              <a href="courses.html" class="service-link">
+                Corsi — Iscriviti alla lista d'attesa
+                {{ icon("arrow", 16) }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRIDGE -->
+    <div class="bridge-divider">
+      <p class="bridge-quote">
+        “I migliori ingegneri con cui ho lavorato non avevano solo una laurea solida:
+        sapevano <em>comunicare il proprio valore</em> e muoversi nell'industria fin dal primo giorno.”
+      </p>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="section-inner">
+        <div class="about-content">
+          <p class="section-label">Il fondatore</p>
+          <div class="about-photo-wrap">
+            <img src="{{ root }}assets/img/giuseppe-romano.jpeg" alt="Dr Giuseppe Romano">
+          </div>
+          <h2>Dr Giuseppe Romano</h2>
+          <p>
+            Sono un Chartered Engineer (CEng MIMechE, MIMMM, FHEA) con un PhD conseguito
+            all'Università di Manchester, dove ho sviluppato modelli micromeccanici per
+            compositi ibridi a fibre. Oggi sono Senior R&amp;D Engineer in Synopsys; in
+            precedenza ho lavorato come R&amp;D Engineer in Ansys Materials, sviluppando
+            strumenti di materials intelligence usati nei flussi di simulazione dei settori
+            aerospaziale, automobilistico ed energetico. Per oltre quattro anni sono stato
+            anche Regional Representative di NAFEMS Italia, organizzando webinar e conferenze
+            sulla simulazione ingegneristica.
+          </p>
+          <p>
+            Make IT STEM nasce da una situazione che vedevo ripetersi, insegnando a Manchester
+            e facendo mentoring nel tempo libero: laureati di talento, con solide basi tecniche,
+            che però faticavano a tradurle nella sicurezza, nelle capacità comunicative e nel
+            pensiero strategico che le aziende cercano davvero. Ho iniziato a fare mentoring in
+            modo informale, poi ho capito che questo divario richiedeva un approccio dedicato e
+            strutturato.
+          </p>
+          <p>
+            Oggi aiuto studenti e giovani ingegneri a colmare quel divario, unendo un'esperienza
+            concreta in CAE e nella R&amp;D sui materiali a un mentoring personalizzato 1:1 che
+            va ben oltre i consigli di carriera generici.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+      <div class="section-inner">
+        <p class="section-label">Testimonianze</p>
+        <h2 class="section-title">Cosa dicono i miei mentee</h2>
+        <p class="section-subtitle">
+          Risultati concreti di ingegneri che hanno seguito il percorso. Le testimonianze sono riportate nella lingua originale.
+        </p>
+        {% set limit = 3 %}
+        {% include "partials/testimonial-cards.html" %}
+        <div class="testimonials-more">
+          <a href="testimonials.html" class="btn-primary">
+            Leggi tutte le testimonianze
+            {{ icon("arrow", 16) }}
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" id="process">
+      <div class="section-inner">
+        <p class="section-label">Come funziona</p>
+        <h2 class="section-title">Dalla prima call a una carriera chiara</h2>
+        <p class="section-subtitle">
+          Un percorso semplice, costruito attorno ai tuoi obiettivi.
+        </p>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Call conoscitiva</h3>
+            <p>Una conversazione gratuita di 15 minuti per capire dove sei, dove vuoi arrivare e se siamo la combinazione giusta.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Analisi delle competenze</h3>
+            <p>Mappiamo i tuoi punti di forza tecnici e professionali, individuiamo le lacune e fissiamo insieme obiettivi chiari e misurabili.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Sessioni di mentoring</h3>
+            <p>Sessioni 1:1 strutturate e costruite sul tuo piano: CV, preparazione ai colloqui, visione dell'industria, strategia di carriera.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Lancio e supporto</h3>
+            <p>Ti candidi con sicurezza. Resto disponibile per le tue domande mentre valuti le offerte e prendi le prime decisioni di carriera.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="section-inner">
+        <h2>Vuoi colmare il divario?</h2>
+        <p>
+          Prenota una call conoscitiva gratuita di 15 minuti: parliamo di dove sei,
+          di dove vuoi arrivare e di come arrivarci.
+        </p>
+        <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
+          Prenota la tua call gratuita
+          {{ icon("arrow", 16) }}
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="section-inner">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <p class="section-label">Contatti</p>
+            <h2>Iniziamo a parlarne</h2>
+            <p>
+              Che tu sia all'ultimo anno di università, neolaureato o un ingegnere a inizio
+              carriera in cerca di una direzione, sarò felice di sentirti.
+            </p>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">{{ icon("mail", 18) }}</div>
+              <div class="contact-detail-text">
+                <strong>Email</strong>
+                {{ site.email }}
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">{{ icon("map-pin", 18) }}</div>
+              <div class="contact-detail-text">
+                <strong>Sede</strong>
+                Cambridge, Regno Unito
+              </div>
+            </div>
+            <p class="contact-social-label">Seguici</p>
+            <div class="contact-detail">
+              <div class="contact-detail-icon icon-linkedin">{{ icon("linkedin-badge", 18, color="none") }}</div>
+              <div class="contact-detail-text">
+                <strong>LinkedIn</strong>
+                <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener">Il mio profilo</a>
+                <a href="https://www.linkedin.com/company/makeitstem" target="_blank" rel="noopener">Make IT STEM</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon icon-instagram">{{ icon("instagram", 18, color="#fff") }}</div>
+              <div class="contact-detail-text">
+                <strong>Instagram</strong>
+                <a href="https://www.instagram.com/make_it_stem/" target="_blank" rel="noopener">Make IT STEM</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon icon-youtube">{{ icon("youtube", 18, color="#fff") }}</div>
+              <div class="contact-detail-text">
+                <strong>YouTube</strong>
+                <a href="https://www.youtube.com/@MakeITSTEM" target="_blank" rel="noopener">Make IT STEM</a>
+              </div>
+            </div>
+          </div>
+          {# Option values stay in English so every enquiry arrives in the same format. #}
+          <form class="contact-form" action="{{ site.formspree }}" method="POST">
+            <input type="hidden" name="language" value="{{ lang.name }}">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" required placeholder="Nome e cognome">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="enquiry">Oggetto della richiesta</label>
+              <select id="enquiry" name="enquiry" required>
+                <option value="">Seleziona...</option>
+                <option value="Free Discovery Call">Call conoscitiva gratuita</option>
+                <option value="1-to-1 Career Mentoring">Mentoring di carriera 1:1</option>
+                <option value="Group Workshops">Workshop di gruppo</option>
+                <option value="Career Cohort">Career Cohort</option>
+                <option value="Courses">Corsi</option>
+                <option value="Other">Altro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="stage">A che punto sei della tua carriera?</label>
+              <select id="stage" name="stage">
+                <option value="">Seleziona...</option>
+                <option value="undergrad">Studente di laurea triennale (ultimo anno)</option>
+                <option value="postgrad">Studente di magistrale o dottorato</option>
+                <option value="recent">Neolaureato (0–2 anni)</option>
+                <option value="early">Ingegnere a inizio carriera (2–5 anni)</option>
+                <option value="other">Altro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Messaggio</label>
+              <textarea id="message" name="message" required placeholder="Raccontami la tua situazione e cosa stai cercando..."></textarea>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">Accetto l'<a href="privacy.html" target="_blank" rel="noopener">informativa sulla privacy</a></label>
+            </div>
+            <div class="privacy-notice">
+              <strong>Protezione dei dati:</strong> le tue informazioni vengono inviate in modo sicuro a {{ site.email }} (in conformità al GDPR). Ti contatterò per parlare delle tue esigenze di sviluppo professionale. Puoi annullare l'iscrizione in qualsiasi momento.
+            </div>
+            <button type="submit" class="btn-primary form-submit">
+              Invia
+              {{ icon("send", 18) }}
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+{% endblock %}

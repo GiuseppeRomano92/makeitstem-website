@@ -1,0 +1,280 @@
+{% extends "base.html" %}
+{% set title = "Informativa sulla privacy | Make IT STEM" %}
+{% set description = "Informativa sulla privacy e sulla protezione dei dati di Make IT STEM." %}
+{% set styles = ["legal"] %}
+
+{% block content %}
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="section-inner">
+        <h1>Informativa sulla privacy</h1>
+        <div class="meta">Ultimo aggiornamento: 24 settembre 2026</div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="content-section">
+      <div class="section-inner">
+        <div class="translation-note">
+          <p>
+            Questa è una traduzione di cortesia. In caso di differenze tra questa versione e la
+            <a href="{{ root }}privacy.html" hreflang="en" lang="en">versione inglese</a>, prevale la versione inglese.
+          </p>
+        </div>
+
+        <h2>Protezione dei dati e privacy</h2>
+        <p>
+          Make IT STEM prende sul serio la tua privacy. La presente informativa spiega come raccogliamo, utilizziamo, proteggiamo e condividiamo i tuoi dati personali.
+        </p>
+
+        <h3>Chi è responsabile dei tuoi dati</h3>
+        <p>
+          Il titolare del trattamento di questo sito è <strong>Giuseppe Romano, che opera con il nome commerciale Make IT STEM</strong>,
+          ditta individuale (sole trader) con sede nel Regno Unito.
+        </p>
+        <ul>
+          <li><strong>Titolare del trattamento:</strong> Giuseppe Romano, che opera con il nome commerciale Make IT STEM</li>
+          <li><strong>Indirizzo commerciale:</strong> 4 Ferndale House, Ferndale Rise, Cambridge, CB5 8ET, Regno Unito</li>
+          <li><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+        <p>
+          Le nostre condizioni di servizio sono riportate separatamente nei
+          <a href="terms.html">Termini e condizioni</a>.
+        </p>
+
+        <h3>1. Dati che raccogliamo</h3>
+        <p>Raccogliamo le informazioni che ci fornisci volontariamente tramite:</p>
+        <ul>
+          <li><strong>Moduli di contatto:</strong> nome, indirizzo email, fase della carriera, contenuto del messaggio e versione linguistica del sito che hai utilizzato</li>
+          <li><strong>Prenotazioni di mentoring:</strong> i dati personali necessari per programmare le sessioni di mentoring</li>
+          <li><strong>Comunicazioni via email:</strong> qualsiasi informazione inclusa nelle email che ci invii direttamente</li>
+          <li><strong>Statistiche del sito:</strong> dati generali di utilizzo (pagine visitate, tempo di permanenza, tipo di dispositivo)</li>
+        </ul>
+
+        <h3>2. Come utilizziamo i tuoi dati</h3>
+        <p>Utilizziamo i tuoi dati personali per:</p>
+        <ul>
+          <li>Rispondere alle tue richieste e domande di contatto</li>
+          <li>Programmare e svolgere le sessioni di mentoring</li>
+          <li>Inviarti aggiornamenti sui nostri servizi (con il tuo consenso)</li>
+          <li>Migliorare il sito e i nostri servizi</li>
+          <li>Adempiere agli obblighi di legge e di conformità</li>
+        </ul>
+
+        <h3>3. Base giuridica del trattamento</h3>
+        <p>Trattiamo i tuoi dati sulla base di:</p>
+        <ul>
+          <li><strong>Consenso:</strong> quando invii un modulo di contatto o ti iscrivi al mentoring</li>
+          <li><strong>Contratto:</strong> quando ti forniamo servizi di mentoring</li>
+          <li><strong>Legittimo interesse:</strong> per migliorare i nostri servizi e la sicurezza del sito</li>
+        </ul>
+
+        <div class="highlight">
+          <strong>Conformità al GDPR:</strong> rispettiamo pienamente il Regolamento generale sulla protezione dei dati (GDPR) e lo UK Data Protection Act 2018. Hai il diritto di accedere ai tuoi dati personali, correggerli o cancellarli in qualsiasi momento.
+        </div>
+
+        <h3>4. Conservazione e sicurezza dei dati</h3>
+        <p>
+          I tuoi dati sono conservati e trattati in modo sicuro, in conformità al GDPR. Utilizziamo protocolli di crittografia e di sicurezza standard del settore per proteggere le tue informazioni. I dati sono conservati solo per il tempo necessario a raggiungere le finalità descritte nella presente informativa.
+        </p>
+
+        <h3>5. Terze parti e condivisione dei dati</h3>
+        <p>
+          <strong>Non vendiamo mai i tuoi dati personali.</strong> Ci avvaliamo però di un numero ridotto di
+          fornitori terzi (responsabili del trattamento) per gestire il sito e fornire i nostri servizi. Ciascuno
+          riceve solo i dati necessari alla propria funzione:
+        </p>
+        <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Fornitore</th><th>Cosa fa</th><th>Dati che riceve</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Stripe</strong></td>
+              <td>Gestisce i pagamenti delle risorse digitali a pagamento</td>
+              <td>Nome, email, dati di fatturazione e della carta (non vediamo mai il numero completo della carta)</td>
+            </tr>
+            <tr>
+              <td><strong>Formspree</strong></td>
+              <td>Recapita nella nostra casella email i messaggi inviati con i moduli di contatto e delle risorse gratuite</td>
+              <td>Nome, email, fase della carriera, contenuto del messaggio, indirizzo IP</td>
+            </tr>
+            <tr>
+              <td><strong>Mailchimp</strong></td>
+              <td>Gestisce la lista d'attesa dei corsi e gli aggiornamenti via email</td>
+              <td>Indirizzo email, dati di iscrizione e di interazione</td>
+            </tr>
+            <tr>
+              <td><strong>MentorMeet</strong></td>
+              <td>Gestisce prenotazioni e calendario del mentoring</td>
+              <td>I dati di prenotazione che fornisci sulla loro piattaforma</td>
+            </tr>
+            <tr>
+              <td><strong>Calendly</strong></td>
+              <td>Pianifica le sessioni di mentoring 1:1 prenotate da questo sito</td>
+              <td>Nome, email e i dati di prenotazione che fornisci sulla loro piattaforma</td>
+            </tr>
+            <tr>
+              <td><strong>Google Analytics</strong></td>
+              <td>Statistiche aggregate sull'utilizzo del sito &mdash; <em>solo con il tuo consenso</em></td>
+              <td>Indirizzo IP troncato, pagine visitate, tipo di dispositivo e di browser</td>
+            </tr>
+            <tr>
+              <td><strong>Google Fonts</strong></td>
+              <td>Fornisce i caratteri tipografici usati sul sito</td>
+              <td>Indirizzo IP e dati del browser, nell'ambito della richiesta dei font</td>
+            </tr>
+            <tr>
+              <td><strong>GitHub Pages</strong></td>
+              <td>Ospita questo sito</td>
+              <td>Indirizzo IP e dati della richiesta nei normali log del server</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <p>
+          Possiamo inoltre comunicare dati quando <strong>richiesto dalla legge</strong>, oppure per accertare,
+          esercitare o difendere un diritto in sede giudiziaria.
+        </p>
+        <p>
+          <strong>Trasferimenti internazionali.</strong> Alcuni di questi fornitori hanno sede negli Stati Uniti o
+          vi trasferiscono dati. In questi casi i trasferimenti sono coperti da garanzie adeguate, come lo
+          UK International Data Transfer Addendum, le Clausole contrattuali tipo dell'UE o la UK Extension
+          all'EU&ndash;US Data Privacy Framework.
+        </p>
+
+        <h3>6. I tuoi diritti</h3>
+        <p>In base al GDPR e alle leggi sulla protezione dei dati, hai il diritto di:</p>
+        <ul>
+          <li><strong>Accesso:</strong> richiedere una copia dei tuoi dati personali</li>
+          <li><strong>Rettifica:</strong> correggere informazioni inesatte</li>
+          <li><strong>Cancellazione:</strong> chiedere la cancellazione dei tuoi dati (&ldquo;diritto all'oblio&rdquo;)</li>
+          <li><strong>Portabilità:</strong> ricevere i tuoi dati in un formato portabile</li>
+          <li><strong>Opposizione:</strong> opporti in qualsiasi momento alle comunicazioni di marketing</li>
+          <li><strong>Revoca del consenso:</strong> interrompere il trattamento in qualsiasi momento</li>
+        </ul>
+
+        <p>Per esercitare uno qualsiasi di questi diritti, scrivici a <strong>{{ site.email }}</strong></p>
+
+        <h3 id="cookies">7. Cookie e statistiche</h3>
+        <p>
+          Un cookie è un piccolo file salvato sul tuo dispositivo. Ne limitiamo l'uso al minimo
+          e li suddividiamo in due categorie.
+        </p>
+
+        <h3 class="legal-subhead">Essenziali &mdash; sempre attivi</h3>
+        <p>
+          Sono necessari al funzionamento del sito e non richiedono il tuo consenso. Comprendono la
+          registrazione della tua scelta sui cookie (salvata nel browser come
+          <code>mis-cookie-consent</code> e conservata finché non la cancelli) ed eventuali cookie impostati
+          da Stripe durante il checkout per elaborare il pagamento in sicurezza e prevenire le frodi.
+        </p>
+
+        <h3 class="legal-subhead">Statistiche &mdash; solo con il tuo consenso</h3>
+        <p>
+          Utilizziamo <strong>Google Analytics 4</strong> per capire quali pagine sono utili e migliorare il
+          sito. Questi cookie sono <strong>bloccati finché non li accetti</strong>. Andiamo oltre un normale
+          banner dei cookie: lo script di Google Analytics <strong>non viene caricato affatto</strong> finché
+          non scegli &ldquo;{{ t.cookie.accept }}&rdquo;. Se rifiuti, o semplicemente ignori il banner, non viene
+          mai inviata alcuna richiesta a Google Analytics e non viene creato alcun cookie di analisi.
+          Implementiamo inoltre Google Consent Mode v2, con l'archiviazione dei dati statistici impostata su
+          &ldquo;negata&rdquo; per impostazione predefinita.
+        </p>
+        <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Cookie</th><th>Finalità</th><th>Durata</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>_ga</code></td><td>Distingue i visitatori di ritorno</td><td>2 anni</td></tr>
+            <tr><td><code>_ga_NL49D78HZD</code></td><td>Mantiene lo stato della sessione di analisi</td><td>2 anni</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>
+          In Google Analytics 4 l'anonimizzazione dell'IP è applicata per impostazione predefinita, e non
+          abbiamo attivato funzioni di pubblicità, remarketing o personalizzazione degli annunci.
+        </p>
+
+        <div class="highlight">
+          <p>
+            <strong>Se cambi idea.</strong> Puoi accettare o rifiutare i cookie di analisi in qualsiasi momento
+            da <a href="#" data-cookie-settings>{{ t.footer.cookies }}</a> &mdash; link presente anche nel footer
+            di ogni pagina. Rifiutarli non limita in alcun modo l'accesso al sito. Puoi anche eliminare i
+            cookie in qualsiasi momento dalle impostazioni del browser.
+          </p>
+        </div>
+
+        <p>
+          <strong>Base giuridica.</strong> Per i cookie di analisi ci basiamo sul tuo <strong>consenso</strong>
+          (ai sensi delle Privacy and Electronic Communications Regulations 2003 e dello UK GDPR), e sul nostro
+          <strong>legittimo interesse</strong> per i cookie essenziali che mantengono il sito sicuro e funzionante.
+        </p>
+
+        <h3>8. Link esterni</h3>
+        <p>
+          Il nostro sito contiene link a siti esterni (Google Scholar, LinkedIn, MentorMeet). Non siamo responsabili delle pratiche sulla privacy di questi siti. Ti invitiamo a leggere le loro informative prima di condividere dati personali.
+        </p>
+
+        <h3>9. Moduli di contatto e newsletter</h3>
+        <p>
+          Quando invii un modulo di contatto o ti iscrivi agli aggiornamenti:
+        </p>
+        <ul>
+          <li>Conserviamo il tuo indirizzo email e lo storico delle comunicazioni</li>
+          <li>Puoi annullare l'iscrizione alle email di marketing in qualsiasi momento</li>
+          <li>Tutte le email includono un link per annullare l'iscrizione</li>
+          <li>Non inviamo mai comunicazioni non richieste o spam</li>
+        </ul>
+
+        <h3>10. Conservazione dei dati</h3>
+        <p>
+          Conserviamo i tuoi dati per:
+        </p>
+        <ul>
+          <li><strong>Richieste di contatto:</strong> 24 mesi (salvo tua richiesta di cancellazione)</li>
+          <li><strong>Dati del mentoring:</strong> la durata del rapporto + 3 anni (per obblighi di conformità)</li>
+          <li><strong>Iscritti alla newsletter:</strong> fino all'annullamento dell'iscrizione</li>
+        </ul>
+
+        <h3>11. Modifiche alla presente informativa</h3>
+        <p>
+          Potremmo aggiornare periodicamente la presente informativa. Ti informeremo delle modifiche significative via email o pubblicando l'informativa aggiornata su questa pagina. La data di &ldquo;Ultimo aggiornamento&rdquo; in alto indica quando sono state apportate le modifiche.
+        </p>
+
+        <h3>12. Contatti</h3>
+        <p>
+          Per domande sulla presente informativa o sui tuoi dati, contattaci:
+        </p>
+        <ul>
+          <li><strong>Titolare del trattamento:</strong> Giuseppe Romano, che opera con il nome commerciale Make IT STEM</li>
+          <li><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><strong>Indirizzo commerciale:</strong> 4 Ferndale House, Ferndale Rise, Cambridge, CB5 8ET, Regno Unito</li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener">Dr Giuseppe Romano</a></li>
+        </ul>
+
+        <div class="highlight">
+          <strong>Autorità di controllo:</strong> se hai dubbi su come trattiamo i tuoi dati o ritieni che i tuoi diritti siano stati violati, puoi rivolgerti all'Information Commissioner's Office (ICO) del Regno Unito: <a href="https://ico.org.uk" target="_blank" rel="noopener">www.ico.org.uk</a>.
+          Se vivi nell'Unione europea, puoi anche presentare reclamo all'autorità per la protezione dei dati del tuo Paese &mdash; ad esempio il Garante per la protezione dei dati personali in Italia o l'Agencia Española de Protección de Datos (AEPD) in Spagna.
+        </div>
+
+        <h3>13. Quadro normativo</h3>
+        <p>
+          Trattiamo i dati personali in conformità a:
+        </p>
+        <ul>
+          <li>UK GDPR e Regolamento generale sulla protezione dei dati dell'UE (GDPR)</li>
+          <li>UK Data Protection Act 2018</li>
+          <li>Privacy and Electronic Communications Regulations 2003 (cookie e marketing)</li>
+        </ul>
+
+        <hr class="legal-divider">
+
+        <p class="legal-closing">
+          Utilizzando il sito e i servizi di Make IT STEM, dichiari di aver letto e compreso la presente informativa sulla privacy.
+        </p>
+
+      </div>
+    </section>
+{% endblock %}

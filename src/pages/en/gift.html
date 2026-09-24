@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% set title = "Free Gift — CV Templates | Make IT STEM" %}
+{% set description = "Get free CV templates for academia and industry jobs, plus STEM career tips straight to your inbox." %}
+{% set styles = ["gift"] %}
+
+{% block content %}
+    <!-- GIFT HERO -->
+    <section class="gift-hero">
+      <div class="gift-inner">
+        <!-- Left: pitch -->
+        <div>
+          <p class="gift-label">🎁 Free Gift</p>
+          <h1 class="gift-title">Get your free <span>CV templates</span> for academia &amp; industry</h1>
+          <p class="gift-subtitle">
+            Stop guessing what hiring managers want. Download the same CV frameworks I use when mentoring engineers — one for academic applications, one for industry roles — ready to edit in Overleaf or Word.
+          </p>
+          <ul class="gift-bullets">
+            <li>{{ icon("check", 18, stroke=2.5) }} Academic CV template (PhD, postdoc, lecturer applications)</li>
+            <li>{{ icon("check", 18, stroke=2.5) }} Industry CV template (graduate, junior &amp; mid-level engineering roles)</li>
+            <li>{{ icon("check", 18, stroke=2.5) }} Available in LaTeX (Overleaf) and Word format</li>
+            <li>{{ icon("check", 18, stroke=2.5) }} Plus STEM career tips straight to your inbox</li>
+          </ul>
+        </div>
+
+        <!-- Right: form -->
+        <div class="gift-form-box">
+          <div class="gift-mock">
+            {{ icon("file", 40, stroke=1.5) }}
+            <span class="gift-mock-label">Free Download</span>
+            <span class="gift-mock-title">CV Templates for Academia &amp; Industry</span>
+          </div>
+
+          <h2>Get instant access</h2>
+          <p>Enter your email and I'll send the templates straight to your inbox.</p>
+
+          <form action="{{ site.formspree }}" method="POST">
+            <input type="hidden" name="_subject" value="Free CV templates request — Make IT STEM">
+            <input type="hidden" name="gift" value="CV Templates">
+            <input type="hidden" name="language" value="{{ lang.name }}">
+            <div class="form-group">
+              <label for="gift-name">First name</label>
+              <input type="text" id="gift-name" name="name" required placeholder="Your first name">
+            </div>
+            <div class="form-group">
+              <label for="gift-email">Email address</label>
+              <input type="email" id="gift-email" name="email" required placeholder="you@email.com">
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="gift-privacy" name="privacy" required>
+              <label for="gift-privacy">I agree to receive the templates and occasional career tips. I can unsubscribe anytime. See the <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a>.</label>
+            </div>
+            <button type="submit" class="btn-gift">
+              {{ icon("download", 18) }}
+              Send me the free templates
+            </button>
+          </form>
+          <p class="gift-notice">No spam, ever. Unsubscribe with one click.</p>
+        </div>
+      </div>
+    </section>
+{% endblock %}

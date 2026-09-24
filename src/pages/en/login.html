@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% set title = "Log In | Make IT STEM" %}
+{% set description = "Make IT STEM member login — coming soon." %}
+{% set styles = ["coming-soon"] %}
+
+{% block head %}
+  {% if site.login_url %}<meta http-equiv="refresh" content="0; url={{ site.login_url }}">{% endif %}
+{% endblock %}
+
+{% block content %}
+    <!-- COMING SOON -->
+    <section class="coming-soon">
+      <div class="coming-soon-inner">
+        <span class="coming-soon-tag">Member Login</span>
+        <h1>Coming Soon</h1>
+        <p>
+          Member accounts will let you track mentoring sessions and access
+          course content once it's live. There's nothing to log into just yet —
+          check back once Courses launches.
+        </p>
+        <div class="coming-soon-actions">
+          <a href="courses.html" class="btn-primary">
+            See Courses
+            {{ icon("arrow", 16) }}
+          </a>
+          <a href="./" class="btn-secondary">Back to Home</a>
+        </div>
+      </div>
+    </section>
+{% endblock %}

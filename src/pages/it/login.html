@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% set title = "Accedi | Make IT STEM" %}
+{% set description = "Area riservata di Make IT STEM — in arrivo." %}
+{% set styles = ["coming-soon"] %}
+
+{% block head %}
+  {% if site.login_url %}<meta http-equiv="refresh" content="0; url={{ site.login_url }}">{% endif %}
+{% endblock %}
+
+{% block content %}
+    <!-- COMING SOON -->
+    <section class="coming-soon">
+      <div class="coming-soon-inner">
+        <span class="coming-soon-tag">Area riservata</span>
+        <h1>In arrivo</h1>
+        <p>
+          Con il tuo account potrai tenere traccia delle sessioni di mentoring e
+          accedere ai contenuti dei corsi non appena saranno disponibili. Per ora
+          non c'è ancora nulla a cui accedere: torna a trovarci al lancio dei corsi.
+        </p>
+        <div class="coming-soon-actions">
+          <a href="courses.html" class="btn-primary">
+            Scopri i corsi
+            {{ icon("arrow", 16) }}
+          </a>
+          <a href="./" class="btn-secondary">Torna alla home</a>
+        </div>
+      </div>
+    </section>
+{% endblock %}

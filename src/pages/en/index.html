@@ -1,0 +1,364 @@
+{% extends "base.html" %}
+{% set title = "Make IT STEM | STEM Career Mentoring for Students & Engineers" %}
+{% set description = "Personalised STEM career mentoring and workshops helping university students and early-career engineers bridge the gap between theory and industry." %}
+{% set social_title = "Make IT STEM — Turning STEM Knowledge into Employability" %}
+{% set social_description = "Bridging the gap between university theory and industry-ready skills" %}
+{% set styles = ["home"] %}
+
+{% block content %}
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <!-- Logo & Profile Section -->
+        <div class="hero-profile">
+          <img src="{{ root }}assets/img/logo.png" alt="Make IT STEM Logo" class="hero-logo">
+          <div class="hero-photo">
+            <img src="{{ root }}assets/img/vfa-awards-2026.jpg" alt="Dr Giuseppe Romano - VFA Award Winner">
+          </div>
+          <div class="vfa-award">
+            <div class="vfa-award-title">Venture Further Awards 2026</div>
+            <div class="vfa-award-subtitle">
+              Freelancer of the Year<br>
+              £4,000 Winner
+            </div>
+            <a href="https://www.manchester.ac.uk/about/news/university-of-manchester-and-mec-students-celebrated-at-the-venture-further-awards-2026/" target="_blank" rel="noopener" class="vfa-award-link">
+              Learn More
+              {{ icon("external", 14) }}
+            </a>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="hero-content">
+          <h1>Dr Giuseppe Romano</h1>
+
+          <div class="hero-credentials">
+            <span class="credential-badge">PhD</span>
+            <span class="credential-divider">&middot;</span>
+            <span class="credential-badge">CEng</span>
+            <span class="credential-divider">&middot;</span>
+            <span class="credential-badge">FHEA</span>
+            <span class="credential-divider">&middot;</span>
+            <span class="credential-badge">MIMechE</span>
+            <span class="credential-divider">&middot;</span>
+            <span class="credential-badge">MIMMM</span>
+          </div>
+
+          <p class="hero-sub">
+            Turning STEM knowledge into <em>employability</em>. Personalised mentoring that bridges the gap between university theory and industry-ready skills.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
+              Book a Free Discovery Call
+              {{ icon("arrow", 16) }}
+            </a>
+            <a href="#services" class="btn-secondary">
+              Explore Services
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>15</strong>
+              <span>Students Mentored</span>
+            </div>
+            <div class="hero-stat">
+              <strong>5</strong>
+              <span>Years in Industry</span>
+            </div>
+            <div class="hero-stat">
+              <strong>4</strong>
+              <span>Peer-Reviewed Publications</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="section-inner">
+        <p class="section-label">Services</p>
+        <h2 class="section-title">What I offer</h2>
+        <p class="section-subtitle">
+          Three ways to accelerate your transition from student to confident, industry-ready engineer.
+        </p>
+        <div class="services-grid">
+          <div class="service-card" id="mentoring">
+            <div class="service-icon">{{ icon("users", 24, color="#1CAA5A") }}</div>
+            <h3>1-to-1 Career Mentoring</h3>
+            <p>
+              Personalised guidance tailored to where you are and where you want to go.
+              We work on your CV, interview technique, skills mapping, and career strategy
+              — drawing on real industry experience, not textbook advice.
+            </p>
+            <div class="service-links">
+              <a href="https://calendly.com/makeitstem/45min" target="_blank" rel="noopener" class="service-link">
+                Book a Mentoring Session &mdash; &pound;30
+                {{ icon("arrow", 16) }}
+              </a>
+              <a href="https://mentormeet.com/profiles/dr-giuseppe-romano/" target="_blank" rel="noopener" class="service-link">
+                View MentorMeet Profile
+                {{ icon("arrow", 16) }}
+              </a>
+            </div>
+            <span class="service-tag">Most popular</span>
+          </div>
+          <div class="service-card" id="workshops">
+            <div class="service-icon">{{ icon("monitor", 24, color="#1CAA5A") }}</div>
+            <h3>Workshops</h3>
+            <p class="service-price">Group Workshops <span class="price">— £20/seat</span> <span class="seats">max 20</span></p>
+            <p class="service-desc">
+              Tailored sessions for university departments, student societies, or cohorts.
+              Topics include industry readiness, technical communication, professional
+              development, and making your degree work harder for you.
+            </p>
+            <p class="service-price">Career Cohort <span class="price">— £200/seat</span> <span class="seats">max 10</span></p>
+            <p class="service-desc">
+              4–6 week structured pathway with project work and personalised feedback.
+            </p>
+            <a href="#contact" class="service-link service-cta">
+              Join the Waiting List
+              {{ icon("arrow", 16) }}
+            </a>
+            <span class="service-tag">Universities &amp; Societies</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">{{ icon("file-text", 24, color="#1CAA5A") }}</div>
+            <h3>Digital Resources</h3>
+            <p>
+              Downloadable guides, templates, and planning tools for self-directed
+              career development. From CV frameworks to skills audits — practical
+              resources built by an engineer, for engineers.
+            </p>
+            <div class="service-links">
+              <a href="premium-resources.html" class="service-link">
+                Browse Digital Resources
+                {{ icon("arrow", 16) }}
+              </a>
+              <a href="courses.html" class="service-link">
+                Courses — Join the Waiting List
+                {{ icon("arrow", 16) }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRIDGE -->
+    <div class="bridge-divider">
+      <p class="bridge-quote">
+        "The best engineers I've worked with didn't just have strong degrees —
+        they knew how to <em>communicate value</em> and navigate industry from day one."
+      </p>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="section-inner">
+        <div class="about-content">
+          <p class="section-label">Meet the Founder</p>
+          <div class="about-photo-wrap">
+            <img src="{{ root }}assets/img/giuseppe-romano.jpeg" alt="Dr Giuseppe Romano">
+          </div>
+          <h2>Dr Giuseppe Romano</h2>
+          <p>
+            I'm a Chartered Engineer (CEng MIMechE, MIMMM, FHEA) with a PhD from
+            the University of Manchester, where I developed micromechanical
+            models for fibre-hybrid composites. I'm currently a Senior R&amp;D
+            Engineer at Synopsys, having previously worked as an R&amp;D Engineer at
+            Ansys Materials — building materials intelligence tools used across
+            aerospace, automotive, and energy simulation workflows. I also spent
+            over four years as NAFEMS' Italia Regional Representative, organising
+            engineering simulation webinars and conferences.
+          </p>
+          <p>
+            Make IT STEM grew out of something I kept seeing — through teaching
+            at Manchester and mentoring on the side — talented graduates who had
+            strong technical foundations but struggled to translate that into the
+            confidence, communication skills, and strategic thinking that
+            employers actually look for. I started mentoring informally, then
+            realised this gap needed a dedicated, structured approach.
+          </p>
+          <p>
+            Today I help students and early-career engineers bridge that gap —
+            combining real CAE and materials R&amp;D experience with personalised,
+            1:1 mentoring that goes far beyond generic careers advice.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+      <div class="section-inner">
+        <p class="section-label">Testimonials</p>
+        <h2 class="section-title">What mentees say</h2>
+        <p class="section-subtitle">
+          Real outcomes from engineers who've been through the programme.
+        </p>
+        {% set limit = 3 %}
+        {% include "partials/testimonial-cards.html" %}
+        <div class="testimonials-more">
+          <a href="testimonials.html" class="btn-primary">
+            Read all testimonials
+            {{ icon("arrow", 16) }}
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" id="process">
+      <div class="section-inner">
+        <p class="section-label">How It Works</p>
+        <h2 class="section-title">From first call to career clarity</h2>
+        <p class="section-subtitle">
+          A straightforward process designed around your goals.
+        </p>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Discovery Call</h3>
+            <p>A free 15-minute conversation to understand where you are, where you want to be, and whether we're a good fit.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Skills Assessment</h3>
+            <p>We map your technical and professional strengths, identify gaps, and set clear, measurable goals together.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Mentoring Sessions</h3>
+            <p>Structured 1-to-1 sessions tailored to your plan — CV, interview prep, industry insight, career strategy.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Launch &amp; Support</h3>
+            <p>You apply with confidence. I stay available for follow-up questions as you navigate offers and early career decisions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="section-inner">
+        <h2>Ready to bridge the gap?</h2>
+        <p>
+          Book a free 15-minute discovery call and let's talk about
+          where you are, where you want to be, and how to get there.
+        </p>
+        <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
+          Book Your Free Call
+          {{ icon("arrow", 16) }}
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="section-inner">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <p class="section-label">Get in Touch</p>
+            <h2>Let's start a conversation</h2>
+            <p>
+              Whether you're a final-year student, a recent graduate, or an
+              early-career engineer looking for direction — I'd be glad to hear from you.
+            </p>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">{{ icon("mail", 18) }}</div>
+              <div class="contact-detail-text">
+                <strong>Email</strong>
+                {{ site.email }}
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">{{ icon("map-pin", 18) }}</div>
+              <div class="contact-detail-text">
+                <strong>Based in</strong>
+                Cambridge, United Kingdom
+              </div>
+            </div>
+            <p class="contact-social-label">Follow us</p>
+            <div class="contact-detail">
+              <div class="contact-detail-icon icon-linkedin">{{ icon("linkedin-badge", 18, color="none") }}</div>
+              <div class="contact-detail-text">
+                <strong>LinkedIn</strong>
+                <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener">My Profile</a>
+                <a href="https://www.linkedin.com/company/makeitstem" target="_blank" rel="noopener">Make IT STEM</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon icon-instagram">{{ icon("instagram", 18, color="#fff") }}</div>
+              <div class="contact-detail-text">
+                <strong>Instagram</strong>
+                <a href="https://www.instagram.com/make_it_stem/" target="_blank" rel="noopener">Make IT STEM</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon icon-youtube">{{ icon("youtube", 18, color="#fff") }}</div>
+              <div class="contact-detail-text">
+                <strong>YouTube</strong>
+                <a href="https://www.youtube.com/@MakeITSTEM" target="_blank" rel="noopener">Make IT STEM</a>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" action="{{ site.formspree }}" method="POST">
+            <input type="hidden" name="language" value="{{ lang.name }}">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Full name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@email.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="enquiry">I'm enquiring about</label>
+              <select id="enquiry" name="enquiry" required>
+                <option value="">Select one...</option>
+                <option value="Free Discovery Call">Free Discovery Call</option>
+                <option value="1-to-1 Career Mentoring">1-to-1 Career Mentoring</option>
+                <option value="Group Workshops">Group Workshops</option>
+                <option value="Career Cohort">Career Cohort</option>
+                <option value="Courses">Courses</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="stage">Where are you in your career?</label>
+              <select id="stage" name="stage">
+                <option value="">Select one...</option>
+                <option value="undergrad">Undergraduate (final year)</option>
+                <option value="postgrad">Postgraduate student</option>
+                <option value="recent">Recent graduate (0–2 years)</option>
+                <option value="early">Early-career engineer (2–5 years)</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Tell me about your situation and what you're looking for..."></textarea>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">I accept the <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a></label>
+            </div>
+            <div class="privacy-notice">
+              <strong>Data Protection:</strong> Your information will be sent securely to {{ site.email }} (GDPR compliant). I will contact you to discuss your career development needs. You can unsubscribe anytime.
+            </div>
+            <button type="submit" class="btn-primary form-submit">
+              Submit
+              {{ icon("send", 18) }}
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+{% endblock %}

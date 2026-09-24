@@ -1,0 +1,27 @@
+{#-
+  Testimonial cards from src/data/testimonials.toml.
+  Set `limit` before including to show only the first N (the homepage shows 3).
+  Quotes are always shown in the language they were written in (`lang`, default "en").
+-#}
+{%- set items = data.testimonials.testimonials -%}
+{%- if limit is defined %}{% set items = items[:limit] %}{% endif %}
+      <div class="testimonials-grid">
+        {% for item in items %}
+        {% set quote_lang = item.lang | default("en") %}
+        <div class="testimonial-card">
+          <div class="testimonial-stars">{{ "★" * item.stars | default(5) }}</div>
+          <blockquote{% if quote_lang != lang.code %} lang="{{ quote_lang }}"{% endif %}>
+            "{{ item.quote | trim }}"
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              {%- if item.photo is defined %}<img src="{{ root }}assets/img/{{ item.photo }}" alt="{{ item.name }}">
+              {%- else %}{{ item.initials }}{% endif -%}
+            </div>
+            <div class="author-info">
+              <strong>{{ item.name }}</strong>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>

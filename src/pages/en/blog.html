@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% set title = "Blog | Make IT STEM" %}
+{% set description = "STEM career tips, industry insights, and engineering career advice from Dr Giuseppe Romano." %}
+{% set styles = ["blog"] %}
+
+{% block content %}
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="section-inner">
+        <h1>Blog</h1>
+        <p>STEM career tips, industry insights, and engineering advice — written by an engineer who's been through it.</p>
+      </div>
+    </section>
+
+    <!-- BLOG CONTENT -->
+    <section class="blog-section">
+      <div class="section-inner">
+        {% include "partials/blog-list.html" %}
+
+        <div class="coming-soon-notice">
+          <p>More articles are on the way — <a href="gift.html">subscribe to get notified</a> when the next post goes live.</p>
+        </div>
+      </div>
+    </section>
+{% endblock %}

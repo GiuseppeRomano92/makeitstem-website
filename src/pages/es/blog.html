@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% set title = "Blog | Make IT STEM" %}
+{% set description = "Consejos profesionales STEM, visión de la industria y recomendaciones para ingenieros, del Dr. Giuseppe Romano." %}
+{% set styles = ["blog"] %}
+
+{% block content %}
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="section-inner">
+        <h1>Blog</h1>
+        <p>Consejos profesionales STEM, visión de la industria y recomendaciones para ingenieros, escritos por un ingeniero que ya ha pasado por ello.</p>
+      </div>
+    </section>
+
+    <!-- BLOG CONTENT -->
+    <section class="blog-section">
+      <div class="section-inner">
+        {% include "partials/blog-list.html" %}
+
+        <div class="coming-soon-notice">
+          <p>Pronto habrá más artículos: <a href="gift.html">suscríbete para recibir un aviso</a> cuando se publique el próximo. Por ahora, los artículos solo están disponibles en inglés.</p>
+        </div>
+      </div>
+    </section>
+{% endblock %}

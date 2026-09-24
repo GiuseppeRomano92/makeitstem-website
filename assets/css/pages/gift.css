@@ -1,0 +1,107 @@
+/* The gift page sits on navy all the way down. */
+body { background: var(--navy); }
+
+/* ── HERO ── */
+.gift-hero {
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  padding: 8rem 2rem 4rem;
+  position: relative; overflow: hidden;
+}
+.gift-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(600px circle at 80% 20%, rgba(28,170,90,0.18) 0%, transparent 60%),
+    radial-gradient(600px circle at 20% 80%, rgba(27,58,125,0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.gift-inner {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: center;
+  max-width: 1000px; width: 100%;
+}
+.gift-label {
+  font-family: var(--display); font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--yellow); margin-bottom: 1rem;
+}
+.gift-title {
+  font-family: var(--display); font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700; color: #fff; line-height: 1.15;
+  letter-spacing: -0.02em; margin-bottom: 1.5rem;
+}
+.gift-title span { color: var(--green); }
+.gift-subtitle {
+  color: rgba(255,255,255,0.7); font-size: 1.05rem;
+  line-height: 1.75; margin-bottom: 2rem;
+}
+.gift-bullets { list-style: none; margin-bottom: 2.5rem; display: flex; flex-direction: column; gap: 0.9rem; }
+.gift-bullets li {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  color: rgba(255,255,255,0.85); font-size: 0.98rem; line-height: 1.55;
+}
+.gift-bullets li svg { flex-shrink: 0; margin-top: 2px; color: var(--green); }
+
+/* ── FORM BOX ── */
+.gift-form-box {
+  background: var(--card-white);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+}
+.gift-form-box h2 {
+  font-family: var(--display); font-size: 1.4rem; font-weight: 700;
+  color: var(--text-primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;
+}
+.gift-form-box p {
+  color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.8rem;
+}
+.gift-mock {
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  background: var(--off-white); border-radius: 12px; padding: 1.5rem;
+  margin-bottom: 1.8rem; border: 2px solid rgba(28,170,90,0.2);
+}
+.gift-mock svg { color: var(--green); }
+.gift-mock-label {
+  font-family: var(--display); font-size: 0.8rem; font-weight: 700;
+  color: var(--green); letter-spacing: 0.06em; text-transform: uppercase;
+  text-align: center;
+}
+.gift-mock-title {
+  font-family: var(--display); font-size: 1rem; font-weight: 700;
+  color: var(--text-primary); text-align: center; line-height: 1.3;
+}
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-primary); }
+.form-group input {
+  width: 100%; padding: 0.85rem 1rem;
+  border: 1.5px solid var(--border); border-radius: 8px;
+  font-family: var(--body); font-size: 0.95rem;
+  color: var(--text-primary); background: #fafafa;
+  transition: border-color 0.2s, background 0.2s;
+}
+.form-group input:focus { outline: none; border-color: var(--green); background: #fff; }
+.form-checkbox {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+  font-size: 0.85rem; color: var(--text-secondary); margin: 1.2rem 0;
+}
+.form-checkbox input[type="checkbox"] { width: 16px; height: 16px; margin-top: 2px; accent-color: var(--green); flex-shrink: 0; cursor: pointer; }
+.form-checkbox a { color: var(--green); font-weight: 600; }
+.btn-gift {
+  width: 100%; padding: 1rem;
+  background: var(--green); color: #fff;
+  font-family: var(--display); font-size: 1rem; font-weight: 700;
+  border: none; border-radius: 10px; cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+}
+.btn-gift:hover { background: var(--blue); transform: translateY(-1px); }
+.gift-notice { font-size: 0.78rem; color: var(--text-light); text-align: center; margin-top: 1rem; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 720px) {
+  .gift-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .gift-hero { padding: 6rem 1.5rem 3rem; }
+}

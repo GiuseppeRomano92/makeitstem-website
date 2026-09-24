@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% set title = "Testimonios | Make IT STEM" %}
+{% set description = "Qué dicen estudiantes e ingenieros al inicio de su carrera de la mentoría con el Dr. Giuseppe Romano: testimonios escritos y en vídeo." %}
+{% set styles = ["testimonials"] %}
+
+{% block content %}
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="section-inner">
+        <h1>Testimonios</h1>
+        <p>Qué dicen estudiantes e ingenieros al inicio de su carrera de nuestro trabajo juntos</p>
+      </div>
+    </section>
+
+    <!-- WRITTEN TESTIMONIALS (cards come from src/data/testimonials.toml) -->
+    <section class="written-section">
+      <div class="section-inner">
+        <p class="section-label">Testimonios</p>
+        <h2 class="section-title">Lo que dicen mis mentorizados</h2>
+        <p class="section-subtitle">
+          Resultados reales de estudiantes e ingenieros que han pasado por el programa. Los testimonios se muestran en su idioma original.
+        </p>
+        {% include "partials/testimonial-cards.html" %}
+      </div>
+    </section>
+
+    <!-- VIDEO TESTIMONIALS -->
+    <section class="video-section">
+      <div class="section-inner">
+        <p class="section-label">Testimonios en vídeo</p>
+        <h2 class="section-title">En sus propias palabras</h2>
+        <p class="section-subtitle">
+          Breves reseñas en vídeo de estudiantes y mentorizados.
+        </p>
+
+        <!-- To add a video, see the instructions in src/pages/en/testimonials.html. -->
+
+        <div class="video-grid">
+          {% for _ in range(3) %}
+          <figure class="video-card">
+            <div class="video-frame">
+              <!-- <iframe src="https://drive.google.com/file/d/FILE_ID/preview" allow="autoplay" allowfullscreen loading="lazy"></iframe> -->
+              <div class="video-placeholder">
+                {{ icon("play", 40, stroke=1.5) }}
+                Vídeo próximamente
+              </div>
+            </div>
+            <figcaption>
+              <strong>Nombre del estudiante</strong>
+              <span>Puesto / Universidad</span>
+            </figcaption>
+          </figure>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAVE A REVIEW -->
+    <section class="review-section" id="leave-review">
+      <div class="section-inner">
+        <p class="section-label">Deja una reseña</p>
+        <h2 class="section-title">¿Has trabajado conmigo?</h2>
+        <p class="section-subtitle">
+          Tu reseña me llega solo a mí: me pondré en contacto contigo antes de publicar nada en la web.
+        </p>
+        <div class="review-wrap">
+          <form class="contact-form" action="{{ site.formspree }}" method="POST">
+            <input type="hidden" name="_subject" value="New review submission — Make IT STEM">
+            <input type="hidden" name="language" value="{{ lang.name }}">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="review-name">Nombre</label>
+                <input type="text" id="review-name" name="name" required placeholder="Nombre y apellidos">
+              </div>
+              <div class="form-group">
+                <label for="review-rating">Valoración</label>
+                <select id="review-rating" name="rating" required>
+                  <option value="">Selecciona...</option>
+                  <option value="5 stars">★★★★★</option>
+                  <option value="4 stars">★★★★</option>
+                  <option value="3 stars">★★★</option>
+                  <option value="2 stars">★★</option>
+                  <option value="1 star">★</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="review-text">Tu reseña</label>
+              <textarea id="review-text" name="review" required placeholder="Cuéntame cómo fue trabajar conmigo..."></textarea>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="review-consent" name="consent" required>
+              <label for="review-consent">Acepto que esta reseña se publique en la web de Make IT STEM si se aprueba</label>
+            </div>
+            <div class="privacy-notice">
+              <strong>Protección de datos:</strong> tu reseña se envía de forma segura a {{ site.email }} y no se publicará sin tu aprobación (conforme al RGPD).
+            </div>
+            <button type="submit" class="btn-primary form-submit">
+              Enviar reseña
+              {{ icon("send", 18) }}
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+{% endblock %}

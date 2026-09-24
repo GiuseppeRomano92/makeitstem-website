@@ -1,0 +1,77 @@
+# Textos de la interfaz compartidos por todas las páginas en español: menú, pie
+# de página, banner de cookies y fechas. El contenido de las páginas está en
+# src/pages/es/*.html. Cada clave debe existir también en en.toml (la build lo comprueba).
+
+[nav]
+label = "Principal"
+skip = "Saltar al contenido"
+home = "Make IT STEM — inicio"
+menu = "Abrir o cerrar el menú"
+gift = "Regalo gratis"
+explore = "Explorar"
+mentoring = "Mentoría profesional 1:1"
+workshops = "Talleres"
+resources = "Recursos digitales"
+courses = "Cursos"
+process = "Cómo funciona"
+about = "Sobre mí"
+testimonials = "Testimonios"
+blog = "Blog"
+publications = "Publicaciones"
+login = "Acceder"
+cta = "Reserva una llamada gratis"
+language = "Idioma"
+
+[footer]
+services = "Servicios"
+resources = "Recursos digitales"
+courses = "Cursos"
+about = "Sobre mí"
+testimonials = "Testimonios"
+review = "Deja una reseña"
+blog = "Blog"
+publications = "Publicaciones"
+contact = "Contacto"
+privacy = "Política de privacidad"
+terms = "Términos y condiciones"
+cookies = "Configuración de cookies"
+rights = "Todos los derechos reservados."
+tagline = "Mentoría profesional STEM para estudiantes universitarios e ingenieros al inicio de su carrera."
+trading = "Giuseppe Romano, que opera con el nombre comercial Make IT STEM"
+linkedin_personal = "Giuseppe Romano en LinkedIn"
+linkedin_company = "Make IT STEM en LinkedIn"
+instagram = "Make IT STEM en Instagram"
+youtube = "Make IT STEM en YouTube"
+tiktok = "Make IT STEM en TikTok"
+
+[meta]
+logo_alt = "Logotipo de Make IT STEM"
+
+# Los lee assets/js/cookie-consent.js (claves en camelCase a propósito).
+[cookie]
+label = "Consentimiento de cookies"
+title = "Usamos cookies"
+body = "Las cookies esenciales hacen que este sitio funcione. También nos gustaría usar Google Analytics para saber qué páginas resultan útiles, pero solo si das tu consentimiento. Puedes cambiar de opinión en cualquier momento. Lee nuestra"
+policyLink = "Política de cookies y privacidad"
+reject = "Rechazar las no esenciales"
+accept = "Aceptar analíticas"
+
+[blog]
+live = "Publicado"
+all = "Todos"
+
+[blog.categories]
+cv = "CV y candidaturas"
+industry = "Preparación para la industria"
+academia = "Doctorado y academia"
+fea = "FEA y simulación"
+strategy = "Estrategia profesional"
+
+[dates]
+months_short = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
+months_long = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+
+[redirect]
+title = "Página trasladada"
+body = "Esta página se ha trasladado: te estamos redirigiendo a la"
+link = "nueva dirección"

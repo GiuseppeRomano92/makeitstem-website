@@ -1,0 +1,77 @@
+# Testi dell'interfaccia condivisi da tutte le pagine in italiano: menu, footer,
+# banner dei cookie, date. I contenuti delle pagine sono in src/pages/it/*.html.
+# Ogni chiave deve esistere anche in en.toml — la build lo verifica.
+
+[nav]
+label = "Principale"
+skip = "Vai al contenuto"
+home = "Make IT STEM — home"
+menu = "Apri o chiudi il menu"
+gift = "Regalo gratuito"
+explore = "Esplora"
+mentoring = "Mentoring di carriera 1:1"
+workshops = "Workshop"
+resources = "Risorse digitali"
+courses = "Corsi"
+process = "Come funziona"
+about = "Chi sono"
+testimonials = "Testimonianze"
+blog = "Blog"
+publications = "Pubblicazioni"
+login = "Accedi"
+cta = "Prenota una call gratuita"
+language = "Lingua"
+
+[footer]
+services = "Servizi"
+resources = "Risorse digitali"
+courses = "Corsi"
+about = "Chi sono"
+testimonials = "Testimonianze"
+review = "Lascia una recensione"
+blog = "Blog"
+publications = "Pubblicazioni"
+contact = "Contatti"
+privacy = "Informativa sulla privacy"
+terms = "Termini e condizioni"
+cookies = "Impostazioni cookie"
+rights = "Tutti i diritti riservati."
+tagline = "Mentoring di carriera STEM per studenti universitari e ingegneri a inizio carriera."
+trading = "Giuseppe Romano, che opera con il nome commerciale Make IT STEM"
+linkedin_personal = "Giuseppe Romano su LinkedIn"
+linkedin_company = "Make IT STEM su LinkedIn"
+instagram = "Make IT STEM su Instagram"
+youtube = "Make IT STEM su YouTube"
+tiktok = "Make IT STEM su TikTok"
+
+[meta]
+logo_alt = "Logo di Make IT STEM"
+
+# Letti da assets/js/cookie-consent.js (chiavi in camelCase di proposito).
+[cookie]
+label = "Consenso ai cookie"
+title = "Utilizziamo i cookie"
+body = "I cookie essenziali permettono al sito di funzionare. Vorremmo usare anche Google Analytics per capire quali pagine sono utili, ma solo con il tuo consenso. Puoi cambiare idea in qualsiasi momento. Leggi la nostra"
+policyLink = "Informativa su cookie e privacy"
+reject = "Rifiuta i non essenziali"
+accept = "Accetta gli analytics"
+
+[blog]
+live = "Online"
+all = "Tutti"
+
+[blog.categories]
+cv = "CV e candidature"
+industry = "Prepararsi all'industria"
+academia = "PhD e mondo accademico"
+fea = "FEA e simulazione"
+strategy = "Strategia di carriera"
+
+[dates]
+months_short = ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"]
+months_long = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"]
+
+[redirect]
+title = "Pagina spostata"
+body = "Questa pagina è stata spostata: ti stiamo reindirizzando al"
+link = "nuovo indirizzo"

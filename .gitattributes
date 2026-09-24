@@ -1,0 +1,8 @@
+# Use LF line endings for text files on every OS (the site build writes LF),
+# so Git doesn't convert them on checkout and GitHub Desktop stays quiet.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
