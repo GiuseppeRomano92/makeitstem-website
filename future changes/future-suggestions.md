@@ -58,8 +58,6 @@ Not urgent, but it will keep biting as the site grows.
 
 ### 8. Loose ends from earlier
 - The testimonial role labels you wanted to verify before publishing.
-- `Profile.pdf` (your CV) is still committed publicly in the repo — remove
-  it if that was not intentional.
 
 ---
 
