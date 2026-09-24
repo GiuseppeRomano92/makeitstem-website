@@ -6,7 +6,6 @@
     <loc>https://makeitstem.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/"/>
     <priority>1.0</priority>
   </url>
@@ -14,15 +13,6 @@
     <loc>https://makeitstem.com/it/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/"/>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://makeitstem.com/es/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/"/>
     <priority>1.0</priority>
   </url>
@@ -30,7 +20,6 @@
     <loc>https://makeitstem.com/gift.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/gift.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/gift.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/gift.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/gift.html"/>
     <priority>0.9</priority>
   </url>
@@ -38,15 +27,6 @@
     <loc>https://makeitstem.com/it/gift.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/gift.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/gift.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/gift.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/gift.html"/>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://makeitstem.com/es/gift.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/gift.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/gift.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/gift.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/gift.html"/>
     <priority>0.9</priority>
   </url>
@@ -54,7 +34,6 @@
     <loc>https://makeitstem.com/blog.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/blog.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/blog.html"/>
     <priority>0.8</priority>
   </url>
@@ -62,15 +41,6 @@
     <loc>https://makeitstem.com/it/blog.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/blog.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/blog.html"/>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makeitstem.com/es/blog.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/blog.html"/>
     <priority>0.8</priority>
   </url>
@@ -78,7 +48,6 @@
     <loc>https://makeitstem.com/testimonials.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/testimonials.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/testimonials.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/testimonials.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/testimonials.html"/>
     <priority>0.8</priority>
   </url>
@@ -86,47 +55,13 @@
     <loc>https://makeitstem.com/it/testimonials.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/testimonials.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/testimonials.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/testimonials.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/testimonials.html"/>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makeitstem.com/es/testimonials.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/testimonials.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/testimonials.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/testimonials.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/testimonials.html"/>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makeitstem.com/premium-resources.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/premium-resources.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/premium-resources.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/premium-resources.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/premium-resources.html"/>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://makeitstem.com/it/premium-resources.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/premium-resources.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/premium-resources.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/premium-resources.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/premium-resources.html"/>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://makeitstem.com/es/premium-resources.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/premium-resources.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/premium-resources.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/premium-resources.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/premium-resources.html"/>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://makeitstem.com/courses.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/courses.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/courses.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/courses.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/courses.html"/>
     <priority>0.6</priority>
   </url>
@@ -134,15 +69,6 @@
     <loc>https://makeitstem.com/it/courses.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/courses.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/courses.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/courses.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/courses.html"/>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makeitstem.com/es/courses.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/courses.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/courses.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/courses.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/courses.html"/>
     <priority>0.6</priority>
   </url>
@@ -150,7 +76,6 @@
     <loc>https://makeitstem.com/publications.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/publications.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/publications.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/publications.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/publications.html"/>
     <priority>0.6</priority>
   </url>
@@ -158,15 +83,6 @@
     <loc>https://makeitstem.com/it/publications.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/publications.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/publications.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/publications.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/publications.html"/>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makeitstem.com/es/publications.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/publications.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/publications.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/publications.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/publications.html"/>
     <priority>0.6</priority>
   </url>
@@ -174,7 +90,6 @@
     <loc>https://makeitstem.com/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/privacy.html"/>
     <priority>0.3</priority>
   </url>
@@ -182,15 +97,6 @@
     <loc>https://makeitstem.com/it/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/privacy.html"/>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://makeitstem.com/es/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/privacy.html"/>
     <priority>0.3</priority>
   </url>
@@ -198,7 +104,6 @@
     <loc>https://makeitstem.com/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/terms.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/terms.html"/>
     <priority>0.3</priority>
   </url>
@@ -206,15 +111,6 @@
     <loc>https://makeitstem.com/it/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/terms.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/terms.html"/>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://makeitstem.com/es/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makeitstem.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://makeitstem.com/it/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://makeitstem.com/es/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makeitstem.com/terms.html"/>
     <priority>0.3</priority>
   </url>

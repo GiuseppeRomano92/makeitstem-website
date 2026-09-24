@@ -198,21 +198,25 @@
 section { padding: 5rem 2rem; scroll-margin-top: 64px; }
 
 /* ── SERVICES ── */
+/* One full-width row per service: icon | description | price + booking. */
 .services { background: var(--off-white); }
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+.services-list {
+  display: flex; flex-direction: column;
   gap: 1.5rem;
 }
-.service-card {
+.service-row {
+  display: grid;
+  grid-template-columns: auto 1fr minmax(240px, 280px);
+  gap: 2rem;
+  align-items: start;
   background: var(--card-white);
   border-radius: 12px;
-  padding: 2.2rem 2rem;
+  padding: 2.4rem;
   border: 1px solid var(--border);
   transition: box-shadow 0.25s, transform 0.2s;
   scroll-margin-top: 84px;
 }
-.service-card:hover {
+.service-row:hover {
   box-shadow: 0 8px 30px rgba(22,34,66,0.08);
   transform: translateY(-3px);
 }
@@ -221,45 +225,81 @@ section { padding: 5rem 2rem; scroll-margin-top: 64px; }
   background: var(--navy);
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 1.5rem;
 }
 .service-icon svg { width: 24px; height: 24px; }
-.service-card h3 {
-  font-family: var(--display);
-  font-size: 1.2rem; font-weight: 600;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.01em;
-}
-.service-card p {
-  color: var(--text-secondary);
-  font-size: 0.95rem; line-height: 1.7;
-}
 .service-tag {
   display: inline-block;
-  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
   font-size: 0.78rem; font-weight: 600;
   color: var(--green);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
-.service-links {
-  display: flex; flex-direction: column; gap: 0.5rem;
-  margin-top: 1rem;
+.service-row h3 {
+  font-family: var(--display);
+  font-size: 1.35rem; font-weight: 600;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+.service-row p {
+  color: var(--text-secondary);
+  font-size: 0.95rem; line-height: 1.7;
+}
+.service-body p + p,
+.service-body .service-points + p { margin-top: 0.8rem; }
+.service-points {
+  list-style: none;
+  margin-top: 0.9rem;
+  display: flex; flex-direction: column; gap: 0.45rem;
+}
+.service-points li {
+  display: flex; align-items: flex-start; gap: 0.55rem;
+  font-size: 0.93rem; color: var(--text-primary);
+}
+.service-points svg { color: var(--green); flex-shrink: 0; margin-top: 0.2rem; }
+.service-points strong { font-weight: 600; }
+.service-aside {
+  display: flex; flex-direction: column; align-items: stretch;
+  gap: 0.8rem;
+  padding-left: 2rem;
+  border-left: 1px solid var(--border);
+}
+.service-row .service-price {
+  font-family: var(--display);
+  color: var(--text-secondary); font-size: 0.95rem;
+  line-height: 1.2;
+}
+.service-price strong {
+  font-size: 2.2rem; font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+.service-price strong.price-text { font-size: 1.6rem; }
+.service-row .service-note { font-size: 0.88rem; line-height: 1.5; }
+.service-aside .btn-primary {
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  font-size: 0.95rem;
+  box-shadow: none;
+  margin-top: 0.4rem;
 }
 .service-link {
-  display: inline-flex; align-items: center; gap: 0.5rem;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
   color: var(--green); text-decoration: none;
   font-weight: 600; font-size: 0.9rem;
 }
-.service-card .service-cta { margin-top: 0.5rem; }
-/* Workshop tiers: "Group Workshops — £20/seat  max 20" */
-.service-card .service-price {
-  font-weight: 600; color: var(--text-primary);
-  margin-bottom: 0.2rem; font-size: 0.95rem;
+.service-link:hover { text-decoration: underline; }
+@media (max-width: 860px) {
+  .service-row { grid-template-columns: auto 1fr; gap: 1.5rem; padding: 2rem 1.6rem; }
+  .service-aside {
+    grid-column: 1 / -1;
+    padding-left: 0; padding-top: 1.5rem;
+    border-left: none; border-top: 1px solid var(--border);
+  }
 }
-.service-price .price { color: var(--green); font-weight: 700; }
-.service-price .seats { font-size: 0.78rem; color: var(--text-light); font-weight: 500; }
-.service-card .service-desc { margin-bottom: 0.8rem; }
+@media (max-width: 480px) {
+  .service-row { grid-template-columns: 1fr; }
+}
 
 /* ── BRIDGE DIVIDER ── */
 .bridge-divider {
@@ -322,6 +362,12 @@ section { padding: 5rem 2rem; scroll-margin-top: 64px; }
   font-size: 1rem; line-height: 1.8;
   margin-bottom: 1.2rem;
 }
+.about-content .about-linkedin { text-align: center; margin: 2rem 0 0; }
+.about-linkedin a {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  color: var(--green); text-decoration: none; font-weight: 600;
+}
+.about-linkedin a:hover { text-decoration: underline; }
 @media (max-width: 600px) {
   .about-photo-wrap img { width: 140px; height: 140px; }
 }
@@ -544,7 +590,6 @@ section { padding: 5rem 2rem; scroll-margin-top: 64px; }
 @media (max-width: 480px) {
   .hero-actions { flex-direction: column; }
   .btn-primary, .btn-secondary { justify-content: center; width: 100%; }
-  .services-grid { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr; }
 }

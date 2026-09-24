@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% set title = "Testimonials | Make IT STEM" %}
-{% set description = "What students and early-career engineers say about mentoring with Dr Giuseppe Romano — written and video testimonials." %}
+{% set description = "What students and early-career engineers say about mentoring with Dr Giuseppe Romano." %}
 {% set styles = ["testimonials"] %}
+{# Video testimonials are hidden until there are real videos to show: set to true to bring them back. #}
+{% set show_videos = false %}
 
 {% block content %}
     <!-- PAGE HEADER -->
@@ -24,6 +26,7 @@
       </div>
     </section>
 
+    {% if show_videos %}
     <!-- VIDEO TESTIMONIALS -->
     <section class="video-section">
       <div class="section-inner">
@@ -65,6 +68,7 @@
         </div>
       </div>
     </section>
+    {% endif %}
 
     <!-- LEAVE A REVIEW -->
     <section class="review-section" id="leave-review">

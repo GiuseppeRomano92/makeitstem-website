@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% set title = "Testimonios | Make IT STEM" %}
-{% set description = "Qué dicen estudiantes e ingenieros al inicio de su carrera de la mentoría con el Dr. Giuseppe Romano: testimonios escritos y en vídeo." %}
+{% set description = "Qué dicen estudiantes e ingenieros al inicio de su carrera de la mentoría con el Dr. Giuseppe Romano." %}
 {% set styles = ["testimonials"] %}
+{# Video testimonials are hidden until there are real videos to show: set to true to bring them back. #}
+{% set show_videos = false %}
 
 {% block content %}
     <!-- PAGE HEADER -->
@@ -24,6 +26,7 @@
       </div>
     </section>
 
+    {% if show_videos %}
     <!-- VIDEO TESTIMONIALS -->
     <section class="video-section">
       <div class="section-inner">
@@ -54,6 +57,7 @@
         </div>
       </div>
     </section>
+    {% endif %}
 
     <!-- LEAVE A REVIEW -->
     <section class="review-section" id="leave-review">

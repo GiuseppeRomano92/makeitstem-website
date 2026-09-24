@@ -1,4 +1,4 @@
-/* Long-form content pages (premium resources, publications).
+/* Long-form content pages (publications).
    Element selectors are scoped to <main> so they never leak into the nav or footer. */
 
 section { padding: 5rem 2rem; }

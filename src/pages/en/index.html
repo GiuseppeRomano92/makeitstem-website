@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% set title = "Make IT STEM | STEM Career Mentoring for Students & Engineers" %}
-{% set description = "Personalised STEM career mentoring and workshops helping university students and early-career engineers bridge the gap between theory and industry." %}
+{% set description = "Personalised STEM career mentoring and small-group tutoring helping university students and early-career engineers bridge the gap between theory and industry." %}
 {% set social_title = "Make IT STEM — Turning STEM Knowledge into Employability" %}
 {% set social_description = "Bridging the gap between university theory and industry-ready skills" %}
 {% set styles = ["home"] %}
@@ -82,67 +82,86 @@
         <p class="section-label">Services</p>
         <h2 class="section-title">What I offer</h2>
         <p class="section-subtitle">
-          Three ways to accelerate your transition from student to confident, industry-ready engineer.
+          One-to-one, in a group or at your own pace: three ways to go from student
+          to confident, industry-ready engineer.
         </p>
-        <div class="services-grid">
-          <div class="service-card" id="mentoring">
+        <div class="services-list">
+          <article class="service-row" id="mentoring">
+            <div class="service-icon">{{ icon("user", 24, color="#1CAA5A") }}</div>
+            <div class="service-body">
+              <span class="service-tag">Most popular</span>
+              <h3>1-to-1 Career Mentoring</h3>
+              <p>
+                Personalised guidance tailored to where you are and where you want to go.
+                We work on your CV, interview technique, skills mapping, and career strategy
+                — drawing on real industry experience, not textbook advice.
+              </p>
+            </div>
+            <div class="service-aside">
+              <p class="service-price"><strong>&pound;45</strong> / hour</p>
+              <p class="service-note">Starts with a free 15-minute discovery call.</p>
+              <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
+                Book a Free Call
+                {{ icon("arrow", 16) }}
+              </a>
+              <a href="#contact" data-enquiry="1-to-1 Career Mentoring" class="service-link">
+                Book a Mentoring Session
+                {{ icon("arrow", 16) }}
+              </a>
+            </div>
+          </article>
+          <article class="service-row" id="group-tutoring">
             <div class="service-icon">{{ icon("users", 24, color="#1CAA5A") }}</div>
-            <h3>1-to-1 Career Mentoring</h3>
-            <p>
-              Personalised guidance tailored to where you are and where you want to go.
-              We work on your CV, interview technique, skills mapping, and career strategy
-              — drawing on real industry experience, not textbook advice.
-            </p>
-            <div class="service-links">
-              <a href="https://calendly.com/makeitstem/45min" target="_blank" rel="noopener" class="service-link">
-                Book a Mentoring Session &mdash; &pound;30
-                {{ icon("arrow", 16) }}
-              </a>
-              <a href="https://mentormeet.com/profiles/dr-giuseppe-romano/" target="_blank" rel="noopener" class="service-link">
-                View MentorMeet Profile
+            <div class="service-body">
+              <span class="service-tag">Topics &amp; dates coming soon</span>
+              <h3>Group Tutoring Sessions</h3>
+              <p>
+                Live tutoring in a small group, so everyone gets time to ask questions
+                and work through problems together.
+              </p>
+              <ul class="service-points">
+                <li>{{ icon("check", 16, stroke=2.5) }} 6 to 10 participants per group</li>
+                <li>{{ icon("check", 16, stroke=2.5) }} Session recordings available for 6 weeks after the course ends</li>
+                <li>{{ icon("check", 16, stroke=2.5) }} Certificate of attendance</li>
+              </ul>
+              <p class="service-note">
+                A group goes ahead once at least 6 people have signed up. Booking for a
+                university department or society? Get in touch about a private group.
+              </p>
+            </div>
+            <div class="service-aside">
+              <p class="service-price"><strong>&pound;20</strong> / seat per hour</p>
+              <p class="service-note">Register your interest and I'll email you when topics and dates are announced.</p>
+              <a href="#contact" data-enquiry="Group Tutoring" class="btn-primary">
+                Register Your Interest
                 {{ icon("arrow", 16) }}
               </a>
             </div>
-            <span class="service-tag">Most popular</span>
-          </div>
-          <div class="service-card" id="workshops">
+          </article>
+          <article class="service-row" id="courses">
             <div class="service-icon">{{ icon("monitor", 24, color="#1CAA5A") }}</div>
-            <h3>Workshops</h3>
-            <p class="service-price">Group Workshops <span class="price">— £20/seat</span> <span class="seats">max 20</span></p>
-            <p class="service-desc">
-              Tailored sessions for university departments, student societies, or cohorts.
-              Topics include industry readiness, technical communication, professional
-              development, and making your degree work harder for you.
-            </p>
-            <p class="service-price">Career Cohort <span class="price">— £200/seat</span> <span class="seats">max 10</span></p>
-            <p class="service-desc">
-              4–6 week structured pathway with project work and personalised feedback.
-            </p>
-            <a href="#contact" class="service-link service-cta">
-              Join the Waiting List
-              {{ icon("arrow", 16) }}
-            </a>
-            <span class="service-tag">Universities &amp; Societies</span>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">{{ icon("file-text", 24, color="#1CAA5A") }}</div>
-            <h3>Digital Resources</h3>
-            <p>
-              Downloadable guides, templates, and planning tools for self-directed
-              career development. From CV frameworks to skills audits — practical
-              resources built by an engineer, for engineers.
-            </p>
-            <div class="service-links">
-              <a href="premium-resources.html" class="service-link">
-                Browse Digital Resources
-                {{ icon("arrow", 16) }}
-              </a>
-              <a href="courses.html" class="service-link">
-                Courses — Join the Waiting List
+            <div class="service-body">
+              <span class="service-tag">Coming soon</span>
+              <h3>Online Courses &amp; Community</h3>
+              <p>
+                Self-paced STEM courses and a members' community, built on the Make IT STEM Method:
+                find exactly what you're missing, then build it step by step, at your own pace.
+              </p>
+              <ul class="service-points">
+                <li>{{ icon("check", 16, stroke=2.5) }} <span><strong>Single-module courses:</strong> short, focused courses to master one topic at a time. From &pound;19.99, available by the end of 2026.</span></li>
+                <li>{{ icon("check", 16, stroke=2.5) }} <span><strong>Full courses:</strong> complete, structured courses covering an entire subject. Coming in 2027: &pound;99 in the launch month, then &pound;149.</span></li>
+                <li>{{ icon("check", 16, stroke=2.5) }} <span><strong>Community membership:</strong> members-only content and a place to ask questions and learn with others. Coming in 2027: &pound;15/month for the first year, then &pound;19/month.</span></li>
+              </ul>
+            </div>
+            <div class="service-aside">
+              <p class="service-price"><strong class="price-text">Waiting list open</strong></p>
+              <p class="service-note">Join now for first access, and full courses at &pound;69 (waiting-list price).</p>
+              <a href="courses.html" class="btn-primary">
+                Join the Waiting List
                 {{ icon("arrow", 16) }}
               </a>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -187,6 +206,12 @@
             combining real CAE and materials R&amp;D experience with personalised,
             1:1 mentoring that goes far beyond generic careers advice.
           </p>
+          <p class="about-linkedin">
+            <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener">
+              {{ icon("linkedin-badge", 20, color="none") }}
+              Connect with me on LinkedIn
+            </a>
+          </p>
         </div>
       </div>
     </section>
@@ -213,31 +238,33 @@
     <!-- PROCESS -->
     <section class="process" id="process">
       <div class="section-inner">
-        <p class="section-label">How It Works</p>
+        <p class="section-label">The Make IT STEM Method</p>
         <h2 class="section-title">From first call to career clarity</h2>
         <p class="section-subtitle">
-          A straightforward process designed around your goals.
+          Most careers advice stops at a polished CV. The Make IT STEM Method starts
+          from what industry actually hires for, maps it against the skills you already
+          have, and closes the gap one step at a time.
         </p>
         <div class="process-steps">
           <div class="process-step">
             <div class="step-number">1</div>
-            <h3>Discovery Call</h3>
-            <p>A free 15-minute conversation to understand where you are, where you want to be, and whether we're a good fit.</p>
+            <h3>Discover</h3>
+            <p>A free 15-minute call. We talk about where you are, where you want to be, and whether I'm the right person to help. No commitment and no sales pitch.</p>
           </div>
           <div class="process-step">
             <div class="step-number">2</div>
-            <h3>Skills Assessment</h3>
-            <p>We map your technical and professional strengths, identify gaps, and set clear, measurable goals together.</p>
+            <h3>Map</h3>
+            <p>We map your technical and transferable skills against the roles you're aiming for, find the gaps that really matter, and agree clear, measurable goals.</p>
           </div>
           <div class="process-step">
             <div class="step-number">3</div>
-            <h3>Mentoring Sessions</h3>
-            <p>Structured 1-to-1 sessions tailored to your plan — CV, interview prep, industry insight, career strategy.</p>
+            <h3>Build</h3>
+            <p>Focused 1-to-1 sessions on whatever moves you forward: CV and applications, interview practice, communicating your value, industry insight and career strategy.</p>
           </div>
           <div class="process-step">
             <div class="step-number">4</div>
-            <h3>Launch &amp; Support</h3>
-            <p>You apply with confidence. I stay available for follow-up questions as you navigate offers and early career decisions.</p>
+            <h3>Launch</h3>
+            <p>You apply with confidence. I stay available for follow-up questions as you handle interviews, offers and your first career decisions.</p>
           </div>
         </div>
       </div>
@@ -285,14 +312,6 @@
             </div>
             <p class="contact-social-label">Follow us</p>
             <div class="contact-detail">
-              <div class="contact-detail-icon icon-linkedin">{{ icon("linkedin-badge", 18, color="none") }}</div>
-              <div class="contact-detail-text">
-                <strong>LinkedIn</strong>
-                <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener">My Profile</a>
-                <a href="https://www.linkedin.com/company/makeitstem" target="_blank" rel="noopener">Make IT STEM</a>
-              </div>
-            </div>
-            <div class="contact-detail">
               <div class="contact-detail-icon icon-instagram">{{ icon("instagram", 18, color="#fff") }}</div>
               <div class="contact-detail-text">
                 <strong>Instagram</strong>
@@ -325,8 +344,7 @@
                 <option value="">Select one...</option>
                 <option value="Free Discovery Call">Free Discovery Call</option>
                 <option value="1-to-1 Career Mentoring">1-to-1 Career Mentoring</option>
-                <option value="Group Workshops">Group Workshops</option>
-                <option value="Career Cohort">Career Cohort</option>
+                <option value="Group Tutoring">Group Tutoring</option>
                 <option value="Courses">Courses</option>
                 <option value="Other">Other</option>
               </select>

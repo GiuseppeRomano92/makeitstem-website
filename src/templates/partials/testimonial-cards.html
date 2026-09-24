@@ -9,6 +9,9 @@
         {% for item in items %}
         {% set quote_lang = item.lang | default("en") %}
         <div class="testimonial-card">
+          {% if item.image is defined %}
+          <img class="testimonial-image" src="{{ root }}assets/img/{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+          {% endif %}
           <div class="testimonial-stars">{{ "★" * item.stars | default(5) }}</div>
           <blockquote{% if quote_lang != lang.code %} lang="{{ quote_lang }}"{% endif %}>
             "{{ item.quote | trim }}"

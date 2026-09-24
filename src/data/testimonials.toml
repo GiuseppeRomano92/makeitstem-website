@@ -2,8 +2,10 @@
 # in every language. Quotes are shown exactly as the person wrote them, so they
 # are not translated.
 #
-# Fields: name, quote, and either initials (avatar letters) or photo (a file in
-# assets/img/). Optional: stars (default 5), lang (language of the quote, default "en").
+# Fields: name, quote, and either initials (avatar letters) or photo (a small square
+# face picture in assets/img/, shown as the round avatar). Optional: image (a larger
+# picture shown at the top of the card), stars (default 5), lang (language of the
+# quote, default "en").
 
 [[testimonials]]
 name = "Yeshwanth N. Rao"
@@ -19,7 +21,8 @@ guidance is truly privileged."""
 
 [[testimonials]]
 name = "Yang Yang"
-photo = "testimonials/yang-yang.png"
+photo = "testimonials/yang-yang-face.jpg"
+image = "testimonials/yang-yang.jpg"
 quote = """
 During my MSc Aerospace Engineering programme, I was initially quite lost on my dissertation about \
 microstructure simulation using Abaqus CAE. That's when I found Dr Romano as a personal tutor for help — \

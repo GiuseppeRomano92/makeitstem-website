@@ -80,11 +80,4 @@ section { padding: 5rem 2rem; }
   align-self: flex-start;
 }
 .blog-read-more:hover { gap: 0.7rem; }
-.coming-soon-notice {
-  text-align: center; padding: 3rem 2rem;
-  background: rgba(28,170,90,0.06); border-radius: 12px;
-  border: 1px dashed var(--green); margin-top: 2rem;
-}
-.coming-soon-notice p { color: var(--text-secondary); margin-bottom: 0; font-size: 1rem; }
-.coming-soon-notice a { color: var(--green); font-weight: 600; }
 

@@ -12,9 +12,8 @@
       <li class="nav-dropdown">
         <a href="{{ home }}#services">{{ icon("folder") }}{{ t.nav.explore }}</a>
         <ul class="dropdown-menu">
-          <li><a href="{{ home }}#mentoring">{{ icon("users") }}{{ t.nav.mentoring }}</a></li>
-          <li><a href="{{ home }}#workshops">{{ icon("monitor") }}{{ t.nav.workshops }}</a></li>
-          <li>{{ link("premium-resources.html", "premium-resources", t.nav.resources, "tag") }}</li>
+          <li><a href="{{ home }}#mentoring">{{ icon("user") }}{{ t.nav.mentoring }}</a></li>
+          <li><a href="{{ home }}#group-tutoring">{{ icon("users") }}{{ t.nav.group }}</a></li>
           <li>{{ link("courses.html", "courses", t.nav.courses, "monitor") }}</li>
           <li><a href="{{ home }}#process">{{ icon("list") }}{{ t.nav.process }}</a></li>
         </ul>
@@ -23,7 +22,9 @@
       <li>{{ link("testimonials.html", "testimonials", t.nav.testimonials, "message") }}</li>
       <li>{{ link("blog.html", "blog", t.nav.blog, "pen") }}</li>
       <li>{{ link("publications.html", "publications", t.nav.publications, "book") }}</li>
-      <li>{{ link(site.login_url or "login.html", "login", t.nav.login, "log-in") }}</li>
+      {% if site.login_url %}
+      <li>{{ link(site.login_url, "login", t.nav.login, "log-in") }}</li>
+      {% endif %}
       <li><a href="{{ home }}#contact" class="nav-cta">{{ icon("phone") }}{{ t.nav.cta }}</a></li>
       <li class="nav-lang" role="group" aria-label="{{ t.nav.language }}">
         {% for alt in alternates %}

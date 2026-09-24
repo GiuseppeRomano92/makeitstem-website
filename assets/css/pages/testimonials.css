@@ -3,6 +3,8 @@ section { padding: 5rem 2rem; }
 .written-section { background: var(--card-white); }
 .video-section { background: var(--off-white); }
 .review-section { background: var(--card-white); }
+/* Keep the sections alternating while the video section is hidden. */
+.written-section + .review-section { background: var(--off-white); }
 .section-label,
 .section-title { text-align: center; }
 .section-subtitle { margin: 0 auto 3rem; text-align: center; }

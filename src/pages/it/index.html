@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% set title = "Make IT STEM | Mentoring di carriera STEM per studenti e ingegneri" %}
-{% set description = "Mentoring di carriera STEM personalizzato e workshop per aiutare studenti universitari e giovani ingegneri a colmare il divario tra teoria e industria." %}
+{% set description = "Mentoring di carriera STEM personalizzato e tutoring in piccoli gruppi per aiutare studenti universitari e giovani ingegneri a colmare il divario tra teoria e industria." %}
 {% set social_title = "Make IT STEM — Trasformare le conoscenze STEM in occupabilità" %}
 {% set social_description = "Colmare il divario tra la teoria universitaria e le competenze richieste dall'industria" %}
 {% set styles = ["home"] %}
@@ -82,67 +82,86 @@
         <p class="section-label">Servizi</p>
         <h2 class="section-title">Cosa offro</h2>
         <p class="section-subtitle">
-          Tre modi per accelerare il passaggio da studente a ingegnere sicuro di sé e pronto per l'industria.
+          Individuale, di gruppo o al tuo ritmo: tre modi per passare da studente a
+          ingegnere sicuro di sé e pronto per l'industria.
         </p>
-        <div class="services-grid">
-          <div class="service-card" id="mentoring">
+        <div class="services-list">
+          <article class="service-row" id="mentoring">
+            <div class="service-icon">{{ icon("user", 24, color="#1CAA5A") }}</div>
+            <div class="service-body">
+              <span class="service-tag">Il più richiesto</span>
+              <h3>Mentoring di carriera 1:1</h3>
+              <p>
+                Un percorso personalizzato, costruito su dove sei oggi e su dove vuoi arrivare.
+                Lavoriamo su CV, colloqui, mappatura delle competenze e strategia di carriera,
+                partendo da un'esperienza reale nell'industria, non da consigli da manuale.
+              </p>
+            </div>
+            <div class="service-aside">
+              <p class="service-price"><strong>&pound;45</strong> / ora</p>
+              <p class="service-note">Si parte con una call conoscitiva gratuita di 15 minuti.</p>
+              <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
+                Prenota una call gratuita
+                {{ icon("arrow", 16) }}
+              </a>
+              <a href="#contact" data-enquiry="1-to-1 Career Mentoring" class="service-link">
+                Prenota una sessione di mentoring
+                {{ icon("arrow", 16) }}
+              </a>
+            </div>
+          </article>
+          <article class="service-row" id="group-tutoring">
             <div class="service-icon">{{ icon("users", 24, color="#1CAA5A") }}</div>
-            <h3>Mentoring di carriera 1:1</h3>
-            <p>
-              Un percorso personalizzato, costruito su dove sei oggi e su dove vuoi arrivare.
-              Lavoriamo su CV, colloqui, mappatura delle competenze e strategia di carriera,
-              partendo da un'esperienza reale nell'industria, non da consigli da manuale.
-            </p>
-            <div class="service-links">
-              <a href="https://calendly.com/makeitstem/45min" target="_blank" rel="noopener" class="service-link">
-                Prenota una sessione di mentoring &mdash; &pound;30
-                {{ icon("arrow", 16) }}
-              </a>
-              <a href="https://mentormeet.com/profiles/dr-giuseppe-romano/" target="_blank" rel="noopener" class="service-link">
-                Vedi il profilo su MentorMeet
+            <div class="service-body">
+              <span class="service-tag">Temi e date in arrivo</span>
+              <h3>Tutoring di gruppo</h3>
+              <p>
+                Tutoring dal vivo in piccoli gruppi, così tutti hanno il tempo di fare domande
+                e di risolvere i problemi insieme.
+              </p>
+              <ul class="service-points">
+                <li>{{ icon("check", 16, stroke=2.5) }} Da 6 a 10 partecipanti per gruppo</li>
+                <li>{{ icon("check", 16, stroke=2.5) }} Registrazioni delle sessioni disponibili per 6 settimane dopo la fine del corso</li>
+                <li>{{ icon("check", 16, stroke=2.5) }} Attestato di partecipazione</li>
+              </ul>
+              <p class="service-note">
+                Il gruppo parte quando si raggiungono almeno 6 iscritti. Vuoi organizzarlo per un
+                dipartimento universitario o un'associazione? Contattami per un gruppo privato.
+              </p>
+            </div>
+            <div class="service-aside">
+              <p class="service-price"><strong>&pound;20</strong> / posto all'ora</p>
+              <p class="service-note">Lascia il tuo interesse: ti scrivo quando annuncio temi e date.</p>
+              <a href="#contact" data-enquiry="Group Tutoring" class="btn-primary">
+                Mi interessa
                 {{ icon("arrow", 16) }}
               </a>
             </div>
-            <span class="service-tag">Il più richiesto</span>
-          </div>
-          <div class="service-card" id="workshops">
+          </article>
+          <article class="service-row" id="courses">
             <div class="service-icon">{{ icon("monitor", 24, color="#1CAA5A") }}</div>
-            <h3>Workshop</h3>
-            <p class="service-price">Workshop di gruppo <span class="price">— £20 a persona</span> <span class="seats">max 20</span></p>
-            <p class="service-desc">
-              Sessioni su misura per dipartimenti universitari, associazioni studentesche o gruppi di corso.
-              Tra i temi: prepararsi al mondo del lavoro, comunicazione tecnica, sviluppo
-              professionale e come far rendere di più la tua laurea.
-            </p>
-            <p class="service-price">Career Cohort <span class="price">— £200 a persona</span> <span class="seats">max 10</span></p>
-            <p class="service-desc">
-              Un percorso strutturato di 4–6 settimane con lavoro su progetti e feedback personalizzato.
-            </p>
-            <a href="#contact" class="service-link service-cta">
-              Iscriviti alla lista d'attesa
-              {{ icon("arrow", 16) }}
-            </a>
-            <span class="service-tag">Università e associazioni</span>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">{{ icon("file-text", 24, color="#1CAA5A") }}</div>
-            <h3>Risorse digitali</h3>
-            <p>
-              Guide scaricabili, modelli e strumenti di pianificazione per sviluppare la tua
-              carriera in autonomia. Dai modelli di CV all'analisi delle competenze: risorse
-              pratiche create da un ingegnere, per ingegneri.
-            </p>
-            <div class="service-links">
-              <a href="premium-resources.html" class="service-link">
-                Scopri le risorse digitali
-                {{ icon("arrow", 16) }}
-              </a>
-              <a href="courses.html" class="service-link">
-                Corsi — Iscriviti alla lista d'attesa
+            <div class="service-body">
+              <span class="service-tag">In arrivo</span>
+              <h3>Corsi online e community</h3>
+              <p>
+                Corsi STEM da seguire al tuo ritmo e una community per gli iscritti, costruiti sul metodo Make IT STEM:
+                capisci esattamente cosa ti manca e lo costruisci passo dopo passo, con i tuoi tempi.
+              </p>
+              <ul class="service-points">
+                <li>{{ icon("check", 16, stroke=2.5) }} <span><strong>Corsi su singoli moduli:</strong> corsi brevi e mirati per padroneggiare un argomento alla volta. Da &pound;19,99, disponibili entro la fine del 2026.</span></li>
+                <li>{{ icon("check", 16, stroke=2.5) }} <span><strong>Corsi completi:</strong> percorsi strutturati che coprono un'intera materia. In arrivo nel 2027: &pound;99 nel mese di lancio, poi &pound;149.</span></li>
+                <li>{{ icon("check", 16, stroke=2.5) }} <span><strong>Community:</strong> contenuti riservati agli iscritti e uno spazio per fare domande e imparare insieme ad altri. In arrivo nel 2027: &pound;15 al mese per il primo anno, poi &pound;19 al mese.</span></li>
+              </ul>
+            </div>
+            <div class="service-aside">
+              <p class="service-price"><strong class="price-text">Lista d'attesa aperta</strong></p>
+              <p class="service-note">Iscriviti ora per l'accesso anticipato e i corsi completi a &pound;69 (prezzo riservato alla lista d'attesa).</p>
+              <a href="courses.html" class="btn-primary">
+                Iscriviti alla lista d'attesa
                 {{ icon("arrow", 16) }}
               </a>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -187,6 +206,12 @@
             concreta in CAE e nella R&amp;D sui materiali a un mentoring personalizzato 1:1 che
             va ben oltre i consigli di carriera generici.
           </p>
+          <p class="about-linkedin">
+            <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener">
+              {{ icon("linkedin-badge", 20, color="none") }}
+              Collegati con me su LinkedIn
+            </a>
+          </p>
         </div>
       </div>
     </section>
@@ -213,31 +238,33 @@
     <!-- PROCESS -->
     <section class="process" id="process">
       <div class="section-inner">
-        <p class="section-label">Come funziona</p>
+        <p class="section-label">Il metodo Make IT STEM</p>
         <h2 class="section-title">Dalla prima call a una carriera chiara</h2>
         <p class="section-subtitle">
-          Un percorso semplice, costruito attorno ai tuoi obiettivi.
+          La maggior parte dei consigli di carriera si ferma a un CV ben fatto. Il metodo
+          Make IT STEM parte da ciò che l'industria cerca davvero, lo confronta con le
+          competenze che hai già e colma il divario un passo alla volta.
         </p>
         <div class="process-steps">
           <div class="process-step">
             <div class="step-number">1</div>
-            <h3>Call conoscitiva</h3>
-            <p>Una conversazione gratuita di 15 minuti per capire dove sei, dove vuoi arrivare e se siamo la combinazione giusta.</p>
+            <h3>Conoscersi</h3>
+            <p>Una call gratuita di 15 minuti. Parliamo di dove sei, di dove vuoi arrivare e di come posso aiutarti. Nessun impegno e nessuna vendita forzata.</p>
           </div>
           <div class="process-step">
             <div class="step-number">2</div>
-            <h3>Analisi delle competenze</h3>
-            <p>Mappiamo i tuoi punti di forza tecnici e professionali, individuiamo le lacune e fissiamo insieme obiettivi chiari e misurabili.</p>
+            <h3>Mappare</h3>
+            <p>Confrontiamo le tue competenze tecniche e trasversali con i ruoli a cui punti, individuiamo le lacune che contano davvero e fissiamo obiettivi chiari e misurabili.</p>
           </div>
           <div class="process-step">
             <div class="step-number">3</div>
-            <h3>Sessioni di mentoring</h3>
-            <p>Sessioni 1:1 strutturate e costruite sul tuo piano: CV, preparazione ai colloqui, visione dell'industria, strategia di carriera.</p>
+            <h3>Costruire</h3>
+            <p>Sessioni 1:1 mirate su ciò che ti fa fare il salto: CV e candidature, simulazioni di colloquio, come comunicare il tuo valore, visione dell'industria e strategia di carriera.</p>
           </div>
           <div class="process-step">
             <div class="step-number">4</div>
-            <h3>Lancio e supporto</h3>
-            <p>Ti candidi con sicurezza. Resto disponibile per le tue domande mentre valuti le offerte e prendi le prime decisioni di carriera.</p>
+            <h3>Partire</h3>
+            <p>Ti candidi con sicurezza. Resto disponibile per le tue domande mentre affronti colloqui, offerte e le prime decisioni di carriera.</p>
           </div>
         </div>
       </div>
@@ -285,14 +312,6 @@
             </div>
             <p class="contact-social-label">Seguici</p>
             <div class="contact-detail">
-              <div class="contact-detail-icon icon-linkedin">{{ icon("linkedin-badge", 18, color="none") }}</div>
-              <div class="contact-detail-text">
-                <strong>LinkedIn</strong>
-                <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener">Il mio profilo</a>
-                <a href="https://www.linkedin.com/company/makeitstem" target="_blank" rel="noopener">Make IT STEM</a>
-              </div>
-            </div>
-            <div class="contact-detail">
               <div class="contact-detail-icon icon-instagram">{{ icon("instagram", 18, color="#fff") }}</div>
               <div class="contact-detail-text">
                 <strong>Instagram</strong>
@@ -326,8 +345,7 @@
                 <option value="">Seleziona...</option>
                 <option value="Free Discovery Call">Call conoscitiva gratuita</option>
                 <option value="1-to-1 Career Mentoring">Mentoring di carriera 1:1</option>
-                <option value="Group Workshops">Workshop di gruppo</option>
-                <option value="Career Cohort">Career Cohort</option>
+                <option value="Group Tutoring">Tutoring di gruppo</option>
                 <option value="Courses">Corsi</option>
                 <option value="Other">Altro</option>
               </select>

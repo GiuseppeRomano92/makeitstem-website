@@ -8,8 +8,8 @@ formspree = "https://formspree.io/f/mkolboel"
 copyright_year = 2026
 
 # Course platform login (e.g. your LearnWorlds school, "https://learn.makeitstem.com/login").
-# Leave empty while courses aren't live: "Log In" then shows the coming-soon page.
-# When set, "Log In" in the nav goes straight there and login.html redirects to it.
+# Leave empty while courses aren't live: "Log In" is then hidden from the nav.
+# When set, "Log In" appears in the nav and goes straight there, and login.html redirects to it.
 login_url = ""
 
 # One entry per language. The first one is the default: it lives at the site
@@ -30,12 +30,15 @@ name = "Italiano"
 locale = "it_IT"
 path = "it/"
 
-[[languages]]
-code = "es"
-label = "ES"
-name = "Español"
-locale = "es_ES"
-path = "es/"
+# Spanish is paused: src/pages/es/ and src/i18n/es.toml are kept but not built.
+# To bring it back, uncomment this entry and bring those files up to date with
+# English (the build will list any missing interface strings or pages).
+# [[languages]]
+# code = "es"
+# label = "ES"
+# name = "Español"
+# locale = "es_ES"
+# path = "es/"
 
 # Pages listed in sitemap.xml (every language version is included), with priority.
 # login is left out on purpose — robots.txt also keeps crawlers away from it.
@@ -44,7 +47,6 @@ index = 1.0
 gift = 0.9
 blog = 0.8
 testimonials = 0.8
-premium-resources = 0.7
 courses = 0.6
 publications = 0.6
 privacy = 0.3
@@ -53,3 +55,4 @@ terms = 0.3
 # Old URLs that should keep working: old page name = new page name.
 [redirects]
 free-resources = "gift"
+premium-resources = "gift"
