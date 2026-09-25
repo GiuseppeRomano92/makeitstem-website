@@ -1,31 +1,26 @@
 {% extends "base.html" %}
-{% set title = "Courses & Community | Make IT STEM" %}
-{% set description = "Self-paced STEM courses from Make IT STEM: single-module courses by the end of 2026, full courses in 2027." %}
+{% set title = "Live Courses | Make IT STEM" %}
+{% set description = "Live online STEM courses from Make IT STEM. Join the waiting list to hear first when enrolment opens." %}
 {% set styles = ["coming-soon"] %}
 
 {% block content %}
     <!-- COMING SOON -->
     <section class="coming-soon">
       <div class="coming-soon-inner">
-        <span class="coming-soon-tag">Courses &amp; Community</span>
+        <span class="coming-soon-tag">Live Courses</span>
         <h1>Coming Soon</h1>
         <p>
-          I'm putting together self-paced STEM courses in two formats: short,
-          single-module courses that focus on one topic at a time (from &pound;19.99,
-          available by the end of 2026), and complete courses covering an entire
-          subject (coming in 2027: &pound;99 in the launch month, then &pound;149).
-          A members' community with exclusive content will open alongside them
-          (&pound;15/month for the first year, then &pound;19/month).
-          Join the waiting list and I'll email you the moment they launch —
-          waiting-list members get first access and full courses at &pound;69.
-          Prices are confirmed at launch.
+          I'm putting together live online STEM courses, built on the Make IT STEM Method:
+          find exactly what you're missing, then build it step by step, with time to ask
+          questions as you go. Join the waiting list and I'll email you as soon as topics
+          and dates are announced — waiting-list members get first access.
         </p>
         {% set waitlist_button = "Join the Waiting List" %}
         {% set waitlist_email_label = "Email address" %}
         {% set waitlist_placeholder = "your@email.com" %}
         {% include "partials/waitlist-form.html" %}
         <p class="waitlist-note">
-          No spam — just one email when courses go live. See our
+          No spam — just one email when enrolment opens. See our
           <a href="privacy.html">privacy policy</a>.
         </p>
         <div class="coming-soon-actions">

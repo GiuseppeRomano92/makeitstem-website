@@ -1,30 +1,26 @@
 {% extends "base.html" %}
-{% set title = "Corsi e community | Make IT STEM" %}
-{% set description = "Corsi STEM da seguire in autonomia, a cura di Make IT STEM: corsi su singoli moduli entro la fine del 2026, corsi completi nel 2027." %}
+{% set title = "Corsi dal vivo | Make IT STEM" %}
+{% set description = "Corsi STEM online dal vivo, a cura di Make IT STEM. Iscriviti alla lista d'attesa per sapere per primo quando si aprono le iscrizioni." %}
 {% set styles = ["coming-soon"] %}
 
 {% block content %}
     <!-- COMING SOON -->
     <section class="coming-soon">
       <div class="coming-soon-inner">
-        <span class="coming-soon-tag">Corsi e community</span>
+        <span class="coming-soon-tag">Corsi dal vivo</span>
         <h1>In arrivo</h1>
         <p>
-          Sto preparando corsi STEM da seguire in autonomia, in due formati: corsi brevi
-          su singoli moduli, dedicati a un argomento alla volta (da &pound;19,99, disponibili
-          entro la fine del 2026), e corsi completi che coprono un'intera materia (in arrivo
-          nel 2027: &pound;99 nel mese di lancio, poi &pound;149). Insieme ai corsi aprirà
-          una community con contenuti riservati agli iscritti (&pound;15 al mese per il primo anno,
-          poi &pound;19 al mese). Iscriviti alla lista d'attesa e
-          ti scriverò appena saranno disponibili: chi è in lista ha accesso anticipato e i corsi
-          completi a &pound;69. I prezzi vengono confermati al lancio.
+          Sto preparando corsi STEM online dal vivo, costruiti sul metodo Make IT STEM:
+          capisci esattamente cosa ti manca e lo costruisci passo dopo passo, con il tempo per
+          fare domande mentre impari. Iscriviti alla lista d'attesa e ti scriverò appena
+          annuncio temi e date: chi è in lista ha accesso anticipato.
         </p>
         {% set waitlist_button = "Iscriviti alla lista d'attesa" %}
         {% set waitlist_email_label = "Indirizzo email" %}
         {% set waitlist_placeholder = "tu@email.com" %}
         {% include "partials/waitlist-form.html" %}
         <p class="waitlist-note">
-          Niente spam: solo un'email quando i corsi saranno online. Consulta la nostra
+          Niente spam: solo un'email quando si aprono le iscrizioni. Consulta la nostra
           <a href="privacy.html">informativa sulla privacy</a>.
         </p>
         <div class="coming-soon-actions">
