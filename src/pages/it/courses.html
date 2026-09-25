@@ -1,26 +1,26 @@
 {% extends "base.html" %}
-{% set title = "Corsi dal vivo | Make IT STEM" %}
-{% set description = "Corsi STEM online dal vivo, a cura di Make IT STEM. Iscriviti alla lista d'attesa per sapere per primo quando si aprono le iscrizioni." %}
+{% set title = "Corsi online | Make IT STEM" %}
+{% set description = "Corsi STEM online registrati, a cura di Make IT STEM. Iscriviti alla lista d'attesa per sapere per primo quando escono." %}
 {% set styles = ["coming-soon"] %}
 
 {% block content %}
     <!-- COMING SOON -->
     <section class="coming-soon">
       <div class="coming-soon-inner">
-        <span class="coming-soon-tag">Corsi dal vivo</span>
+        <span class="coming-soon-tag">Corsi online</span>
         <h1>In arrivo</h1>
         <p>
-          Sto preparando corsi STEM online dal vivo, costruiti sul metodo Make IT STEM:
-          capisci esattamente cosa ti manca e lo costruisci passo dopo passo, con il tempo per
-          fare domande mentre impari. Iscriviti alla lista d'attesa e ti scriverò appena
-          annuncio temi e date: chi è in lista ha accesso anticipato.
+          Sto registrando corsi STEM online costruiti sul metodo Make IT STEM: capisci
+          esattamente cosa ti manca e lo costruisci passo dopo passo, con i tuoi tempi.
+          Iscriviti alla lista d'attesa e ti scriverò appena esce il primo corso: chi è in
+          lista ha accesso anticipato.
         </p>
         {% set waitlist_button = "Iscriviti alla lista d'attesa" %}
         {% set waitlist_email_label = "Indirizzo email" %}
         {% set waitlist_placeholder = "tu@email.com" %}
         {% include "partials/waitlist-form.html" %}
         <p class="waitlist-note">
-          Niente spam: solo un'email quando si aprono le iscrizioni. Consulta la nostra
+          Niente spam: solo un'email quando i corsi saranno online. Consulta la nostra
           <a href="privacy.html">informativa sulla privacy</a>.
         </p>
         <div class="coming-soon-actions">

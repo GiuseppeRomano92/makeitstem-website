@@ -1,26 +1,26 @@
 {% extends "base.html" %}
-{% set title = "Live Courses | Make IT STEM" %}
-{% set description = "Live online STEM courses from Make IT STEM. Join the waiting list to hear first when enrolment opens." %}
+{% set title = "Online Courses | Make IT STEM" %}
+{% set description = "Recorded online STEM courses from Make IT STEM. Join the waiting list to hear first when they launch." %}
 {% set styles = ["coming-soon"] %}
 
 {% block content %}
     <!-- COMING SOON -->
     <section class="coming-soon">
       <div class="coming-soon-inner">
-        <span class="coming-soon-tag">Live Courses</span>
+        <span class="coming-soon-tag">Online Courses</span>
         <h1>Coming Soon</h1>
         <p>
-          I'm putting together live online STEM courses, built on the Make IT STEM Method:
-          find exactly what you're missing, then build it step by step, with time to ask
-          questions as you go. Join the waiting list and I'll email you as soon as topics
-          and dates are announced — waiting-list members get first access.
+          I'm recording online STEM courses built on the Make IT STEM Method: find exactly
+          what you're missing, then build it step by step, at your own pace. Join the waiting
+          list and I'll email you as soon as the first course is out — waiting-list members
+          get first access.
         </p>
         {% set waitlist_button = "Join the Waiting List" %}
         {% set waitlist_email_label = "Email address" %}
         {% set waitlist_placeholder = "your@email.com" %}
         {% include "partials/waitlist-form.html" %}
         <p class="waitlist-note">
-          No spam — just one email when enrolment opens. See our
+          No spam — just one email when courses launch. See our
           <a href="privacy.html">privacy policy</a>.
         </p>
         <div class="coming-soon-actions">
