@@ -1,27 +1,34 @@
-{#- Category filters + post cards from src/data/blog.toml, in the page's language. -#}
-        <div class="category-filters">
-          <button class="category-btn active">{{ t.blog.all }}</button>
-          {% for label in t.blog.categories.values() %}
-          <button class="category-btn">{{ label }}</button>
+{#- Category filters + post cards from src/data/blog.toml, in the page's language.
+    The newest post is shown large, and the whole card links to the article.
+    The filters only appear once the posts span two or more categories; site.js
+    does the filtering. -#}
+{%- set posts = data.blog.posts -%}
+{%- set used = posts | map(attribute="category") | unique | list -%}
+        {% if used | length > 1 %}
+        <div class="category-filters" role="group" aria-label="{{ t.blog.filter }}">
+          <button type="button" class="category-btn active" data-filter="all" aria-pressed="true">{{ t.blog.all }}</button>
+          {% for key, label in t.blog.categories.items() if key in used %}
+          <button type="button" class="category-btn" data-filter="{{ key }}" aria-pressed="false">{{ label }}</button>
           {% endfor %}
         </div>
+        {% endif %}
 
         <div class="blog-grid">
-          {% for post in data.blog.posts %}
+          {% for post in posts %}
           {% set text = post[lang.code] %}
-          <article class="blog-card{% if post.live %} is-live{% endif %}">
+          <article class="blog-card{% if loop.first %} is-featured{% endif %}{% if post.live %} is-live{% endif %}" data-category="{{ post.category }}" data-reveal>
             <div class="blog-card-image">
-              <img src="{{ root }}assets/img/{{ post.image }}" alt="{{ text.image_alt }}" width="{{ post.image_width }}" height="{{ post.image_height }}">
-              {% if post.live %}<span class="blog-live">● {{ t.blog.live }}</span>{% endif %}
+              <img src="{{ root }}assets/img/{{ post.image }}" alt="{{ text.image_alt }}" width="{{ post.image_width }}" height="{{ post.image_height }}"{% if not loop.first %} loading="lazy"{% endif %} decoding="async">
+              {% if post.live %}<span class="blog-live">{{ t.blog.live }}</span>{% endif %}
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
                 <span class="blog-category">{{ t.blog.categories[post.category] }}</span>
-                <span class="blog-date">{{ post.date | date(t) }}</span>
+                <time class="blog-date" datetime="{{ post.date }}">{{ post.date | date(t) }}</time>
               </div>
               <h2>{{ text.title }}</h2>
               <p>{{ text.summary }}</p>
-              <a href="{{ post.url }}" target="_blank" rel="noopener" class="blog-read-more"{% if post.article_lang != lang.code %} hreflang="{{ post.article_lang }}"{% endif %}>{{ text.link }} {{ icon("arrow-small", 14) }}</a>
+              <a href="{{ post.url }}" target="_blank" rel="noopener" class="blog-read-more"{% if post.article_lang != lang.code %} hreflang="{{ post.article_lang }}"{% endif %}>{{ text.link }} {{ icon("arrow-up-right", 16) }}</a>
             </div>
           </article>
           {% endfor %}

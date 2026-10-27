@@ -1,0 +1,25 @@
+{#-
+  Navy banner at the top of inner pages, with a breadcrumb back to the home page.
+
+    {% from "partials/page-header.html" import page_header with context %}
+    {% call page_header("Blog") %}
+      <p>Lead paragraph…</p>
+    {% endcall %}
+
+  `crumb` sets a shorter breadcrumb label than the heading (optional).
+-#}
+{% macro page_header(heading, crumb="") -%}
+    <section class="page-header">
+      <span class="deco-rings" aria-hidden="true"></span>
+      <div class="section-inner">
+        <nav class="breadcrumb" aria-label="{{ t.nav.breadcrumb }}">
+          <ol>
+            <li><a href="./">{{ t.nav.home_label }}</a></li>
+            <li aria-current="page">{{ crumb or heading }}</li>
+          </ol>
+        </nav>
+        <h1>{{ heading }}</h1>
+{{ caller() }}
+      </div>
+    </section>
+{%- endmacro %}

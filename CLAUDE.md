@@ -12,6 +12,8 @@
   (the build fails otherwise). Testimonials and blog posts are data in `src/data/`.
 - Page CSS: shared rules in `assets/css/site.css`, page rules in `assets/css/pages/`. Scope
   element selectors (`p`, `h2`, `ul`…) under `main` so they don't leak into the nav/footer.
+  Reuse the shared buttons, section heads, cards and `data-reveal` animations ("Design
+  notes" in README.md) instead of restyling them per page.
 - Verify with `python scripts/build.py --check` (what CI runs) and preview with
   `python scripts/build.py --serve` (http://localhost:8080).
 - `publications.json` is maintained by the ORCID sync workflow; leave its format alone.

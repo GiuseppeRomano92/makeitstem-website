@@ -5,10 +5,12 @@
 # Fields: name, quote, and either initials (avatar letters) or photo (a small square
 # face picture in assets/img/, shown as the round avatar). Optional: image (a larger
 # picture shown at the top of the card), stars (default 5), lang (language of the
-# quote, default "en").
+# quote, default "en"), highlight (a phrase copied exactly from the quote, shown
+# marked up so the key outcome stands out; ignored if it isn't in the quote).
 
 [[testimonials]]
 name = "Yeshwanth N. Rao"
+highlight = "his engaging teaching style sparked my interest and eventually turned it into a passion"
 initials = "YR"
 quote = """
 I had the privilege of learning from Giuseppe during my Master's dissertation on composite materials. \
@@ -21,6 +23,7 @@ guidance is truly privileged."""
 
 [[testimonials]]
 name = "Yang Yang"
+highlight = "I scored the highest in the whole engineering faculty"
 photo = "testimonials/yang-yang-face.jpg"
 image = "testimonials/yang-yang.jpg"
 quote = """
@@ -34,6 +37,7 @@ for any query in modelling, materials or structures."""
 
 [[testimonials]]
 name = "Mohamed Sadik Mohamed Ali"
+highlight = "achieved 79.5% in my final dissertation report at the University of Manchester"
 initials = "MA"
 quote = """
 I undertook my dissertation on Finite Element Analysis using Abaqus in my final year, with help from \
@@ -44,6 +48,7 @@ I highly recommend working with him."""
 
 [[testimonials]]
 name = "Tom Simon Kocherry"
+highlight = "explains things clearly without overcomplicating it"
 initials = "TK"
 quote = """
 I've had the pleasure of learning from Giuseppe. He really knows his way around the software and \
@@ -54,6 +59,7 @@ lend a hand or share useful tips, no matter how busy he is."""
 
 [[testimonials]]
 name = "Agasthya Vivek"
+highlight = "allowed me to make significant breakthroughs in my work"
 initials = "AV"
 quote = """
 Dr Romano has been incredibly helpful with my work on composite analysis using FEA. His wealth of \
@@ -63,6 +69,7 @@ friendliness and approachability have made it very easy to work with him."""
 
 [[testimonials]]
 name = "Alessandro De Rosis"
+highlight = "he can be trusted completely and consistently delivers high-quality work with minimal supervision"
 initials = "AD"
 quote = """
 I have known Giuseppe since 2019, initially as a Graduate Teaching Assistant on two units I coordinated, \

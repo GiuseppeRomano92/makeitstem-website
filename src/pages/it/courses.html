@@ -6,8 +6,10 @@
 {% block content %}
     <!-- COMING SOON -->
     <section class="coming-soon">
+      <div class="bg-grid" aria-hidden="true"></div>
+      <span class="deco-rings" aria-hidden="true"></span>
       <div class="coming-soon-inner">
-        <span class="coming-soon-tag">Corsi online</span>
+        <span class="coming-soon-tag"><span class="pulse-dot" aria-hidden="true"></span>Corsi online</span>
         <h1>In arrivo</h1>
         <p>
           Sto registrando corsi STEM online costruiti sul metodo Make IT STEM: capisci
@@ -23,6 +25,11 @@
           Niente spam: solo un'email quando i corsi saranno online. Consulta la nostra
           <a href="privacy.html">informativa sulla privacy</a>.
         </p>
+        <ul class="coming-soon-features">
+          <li><span class="feature-icon">{{ icon("video", 20) }}</span>Video lezioni registrate da guardare quando vuoi</li>
+          <li><span class="feature-icon">{{ icon("list", 20) }}</span>Un percorso strutturato su una materia, un passo alla volta</li>
+          <li><span class="feature-icon">{{ icon("star", 20) }}</span>Chi è in lista d'attesa ha accesso anticipato al lancio</li>
+        </ul>
         <div class="coming-soon-actions">
           <a href="./" class="btn-secondary">Torna alla home</a>
         </div>

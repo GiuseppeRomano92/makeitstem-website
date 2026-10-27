@@ -1,30 +1,40 @@
 {#-
   Testimonial cards from src/data/testimonials.toml.
-  Set `limit` before including to show only the first N (the homepage shows 3).
+  Set `limit` before including to show only the first N (the homepage shows 3),
+  and `masonry = true` to pack cards of different heights tightly (site.js).
   Quotes are always shown in the language they were written in (`lang`, default "en").
+  `highlight`, if set, is a phrase copied exactly from the quote; it is marked up
+  so readers skimming the page see the key outcome.
 -#}
 {%- set items = data.testimonials.testimonials -%}
 {%- if limit is defined %}{% set items = items[:limit] %}{% endif %}
-      <div class="testimonials-grid">
+      <div class="testimonials-grid"{% if masonry is defined and masonry %} data-masonry{% endif %}>
         {% for item in items %}
         {% set quote_lang = item.lang | default("en") %}
-        <div class="testimonial-card">
+        {% set quote = item.quote | trim %}
+        {% set stars = item.stars | default(5) %}
+        <figure class="testimonial-card" data-reveal style="--reveal-delay: {{ (loop.index0 % 3) * 0.1 }}s">
           {% if item.image is defined %}
-          <img class="testimonial-image" src="{{ root }}assets/img/{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+          <img class="testimonial-image" src="{{ root }}assets/img/{{ item.image }}" alt="{{ item.name }}" loading="lazy" decoding="async">
           {% endif %}
-          <div class="testimonial-stars">{{ "★" * item.stars | default(5) }}</div>
+          <div class="testimonial-stars" role="img" aria-label="{{ stars }}/5">{{ "★" * stars }}</div>
           <blockquote{% if quote_lang != lang.code %} lang="{{ quote_lang }}"{% endif %}>
-            "{{ item.quote | trim }}"
+            {%- if item.highlight is defined and item.highlight in quote %}
+            {%- set parts = quote.split(item.highlight, 1) %}
+            &ldquo;{{ parts[0] }}<mark>{{ item.highlight }}</mark>{{ parts[1] }}&rdquo;
+            {%- else %}
+            &ldquo;{{ quote }}&rdquo;
+            {%- endif %}
           </blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              {%- if item.photo is defined %}<img src="{{ root }}assets/img/{{ item.photo }}" alt="{{ item.name }}">
+          <figcaption class="testimonial-author">
+            <span class="author-avatar">
+              {%- if item.photo is defined %}<img src="{{ root }}assets/img/{{ item.photo }}" alt="" loading="lazy">
               {%- else %}{{ item.initials }}{% endif -%}
-            </div>
-            <div class="author-info">
+            </span>
+            <span class="author-info">
               <strong>{{ item.name }}</strong>
-            </div>
-          </div>
-        </div>
+            </span>
+          </figcaption>
+        </figure>
         {% endfor %}
       </div>

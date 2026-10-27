@@ -10,8 +10,10 @@
 {% block content %}
     <!-- COMING SOON -->
     <section class="coming-soon">
+      <div class="bg-grid" aria-hidden="true"></div>
+      <span class="deco-rings" aria-hidden="true"></span>
       <div class="coming-soon-inner">
-        <span class="coming-soon-tag">Area riservata</span>
+        <span class="coming-soon-tag"><span class="pulse-dot" aria-hidden="true"></span>Area riservata</span>
         <h1>In arrivo</h1>
         <p>
           Con il tuo account potrai tenere traccia delle sessioni di mentoring e
@@ -21,7 +23,7 @@
         <div class="coming-soon-actions">
           <a href="courses.html" class="btn-primary">
             Scopri i corsi
-            {{ icon("arrow", 16) }}
+            {{ icon("arrow-right", 18) }}
           </a>
           <a href="./" class="btn-secondary">Torna alla home</a>
         </div>

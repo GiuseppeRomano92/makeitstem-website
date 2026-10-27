@@ -4,6 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#162242">
+  <script>
+    // Lets the CSS hide scroll-reveal content until site.js shows it. If site.js
+    // hasn't started within 3 s (blocked, failed to load), show everything.
+    document.documentElement.classList.add('js');
+    setTimeout(function () {
+      if (!window.misReveal) document.documentElement.classList.add('reveal-all');
+    }, 3000);
+  </script>
   <!-- Google tag (gtag.js) - loader injected by cookie-consent.js only after consent -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -34,78 +43,103 @@
   <meta property="og:description" content="Get free CV templates for academia and industry jobs, plus STEM career tips straight to your inbox.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://makeitstem.com/gift.html">
-  <meta property="og:image" content="https://makeitstem.com/assets/img/logo.png">
-  <meta property="og:image:alt" content="Make IT STEM logo">
+  <meta property="og:image" content="https://makeitstem.com/assets/img/og/og-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Make IT STEM: STEM career mentoring with Dr Giuseppe Romano">
   <meta property="og:locale" content="en_GB">
   <meta property="og:locale:alternate" content="it_IT">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Free Gift — CV Templates | Make IT STEM">
   <meta name="twitter:description" content="Get free CV templates for academia and industry jobs, plus STEM career tips straight to your inbox.">
-  <meta name="twitter:image" content="https://makeitstem.com/assets/img/logo.png">
-  <link rel="icon" type="image/png" href="assets/img/logo.png">
-  <link rel="apple-touch-icon" href="assets/img/logo.png">
+  <meta name="twitter:image" content="https://makeitstem.com/assets/img/og/og-en.jpg">
+  <meta name="twitter:image:alt" content="Make IT STEM: STEM career mentoring with Dr Giuseppe Romano">
+  <link rel="icon" type="image/png" href="assets/img/logo-mark.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=c67b4cd9">
-  <link rel="stylesheet" href="assets/css/pages/gift.css?v=ed619a4a">
+  <link rel="stylesheet" href="assets/css/site.css?v=e890cfb7">
+  <link rel="stylesheet" href="assets/css/pages/gift.css?v=8c496c03">
 </head>
 <body class="page-gift">
 
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <nav id="site-nav" aria-label="Main">
-    <a href="./" class="nav-logo" aria-label="Make IT STEM — home">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"/></svg>
+  <nav id="site-nav" class="site-nav" aria-label="Main">
+    <a href="./" class="nav-brand" aria-label="Make IT STEM — home">
+      <img src="assets/img/logo-mark.png" alt="" width="40" height="40">
+      <span class="nav-wordmark" aria-hidden="true">Make <span>IT</span> STEM</span>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="gift.html" class="nav-gift" aria-current="page"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Free Gift</a></li>
+      <li><a href="gift.html" class="nav-link nav-gift" aria-current="page"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Free Gift</a></li>
       <li class="nav-dropdown">
-        <a href="./#services"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Explore</a>
-        <ul class="dropdown-menu">
-          <li><a href="./#mentoring"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>1-to-1 Career Mentoring</a></li>
-          <li><a href="./#group-tutoring"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Group Tutoring</a></li>
-          <li><a href="courses.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>Online Courses</a></li>
-          <li><a href="./#process"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>The Method</a></li>
-        </ul>
+        <button type="button" class="nav-link nav-trigger" aria-expanded="false" aria-controls="nav-explore"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Explore<svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown-menu" id="nav-explore">
+          <ul>
+            <li><a href="./#mentoring">
+            <span class="dd-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+            <span><span class="dd-title">1-to-1 Career Mentoring</span><span class="dd-desc">Personal guidance on your CV, interviews and career strategy</span></span>
+          </a></li>
+            <li><a href="./#group-tutoring">
+            <span class="dd-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <span><span class="dd-title">Group Tutoring</span><span class="dd-desc">Live tutoring in small groups of 6 to 10 people</span></span>
+          </a></li>
+            <li><a href="courses.html">
+            <span class="dd-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+            <span><span class="dd-title">Online Courses</span><span class="dd-desc">Recorded courses at your own pace: waiting list open</span></span>
+          </a></li>
+            <li><a href="./#process">
+            <span class="dd-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span>
+            <span><span class="dd-title">The Method</span><span class="dd-desc">How we go from first call to career clarity</span></span>
+          </a></li>
+          </ul>
+          <p class="dropdown-foot">Not sure where to start? <a href="./#contact" class="link-arrow" data-enquiry="Free Discovery Call">Book a Free Call <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p>
+        </div>
       </li>
-      <li><a href="./#about"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>About</a></li>
-      <li><a href="testimonials.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Testimonials</a></li>
-      <li><a href="blog.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Blog</a></li>
-      <li><a href="publications.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Publications</a></li>
-      <li><a href="./#contact" class="nav-cta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Book a Free Call</a></li>
-      <li class="nav-lang" role="group" aria-label="Language">
-        <a href="gift.html" hreflang="en" lang="en" aria-label="English" data-lang-switch aria-current="true">EN</a>
-        <a href="it/gift.html" hreflang="it" lang="it" aria-label="Italiano" data-lang-switch>IT</a>
+      <li><a href="./#about" class="nav-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>About</a></li>
+      <li><a href="testimonials.html" class="nav-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Testimonials</a></li>
+      <li><a href="blog.html" class="nav-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Blog</a></li>
+      <li><a href="publications.html" class="nav-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Publications</a></li>
+      <li class="nav-cta-item"><a href="./#contact" class="nav-cta" data-enquiry="Free Discovery Call"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Book a Free Call</a></li>
+      <li class="nav-lang-item">
+        <div class="nav-lang" role="group" aria-label="Language">
+          <a href="gift.html" hreflang="en" lang="en" aria-label="English" data-lang-switch aria-current="true">EN</a>
+          <a href="it/gift.html" hreflang="it" lang="it" aria-label="Italiano" data-lang-switch>IT</a>
+        </div>
       </li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-actions">
+      <a href="./#contact" class="nav-cta nav-cta-short" data-enquiry="Free Discovery Call"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Book a call</a>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
   <script>
     // Fit the nav to the screen: full spacing if it fits, tighter spacing if that
-    // fits, otherwise collapse into the hamburger. Measuring (instead of a fixed
+    // fits, otherwise collapse into the menu button. Measuring (instead of a fixed
     // breakpoint) copes with longer languages and new nav items automatically.
     (function () {
       var nav = document.getElementById('site-nav');
       var links = document.getElementById('navLinks');
-      var logo = nav.querySelector('.nav-logo');
+      var brand = nav.querySelector('.nav-brand');
       function fits() {
         var style = getComputedStyle(nav);
-        return logo.offsetWidth + links.scrollWidth + 32 +
+        return brand.offsetWidth + links.scrollWidth + 40 +
           parseFloat(style.paddingLeft) + parseFloat(style.paddingRight) <= nav.clientWidth;
       }
       function fit() {
         var wasCompact = nav.classList.contains('is-compact');
-        nav.classList.remove('is-compact', 'is-tight');
+        nav.classList.remove('is-compact', 'is-tight', 'no-bar-cta');
         if (!fits()) nav.classList.add('is-tight');
         var compact = !fits();
         if (compact) nav.classList.remove('is-tight');
         nav.classList.toggle('is-compact', compact);
-        if (wasCompact && !compact) {
-          links.classList.remove('open');
-          document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
+        // Drop the short "Book a call" button from the bar if it would crowd the logo.
+        if (compact && nav.scrollWidth > nav.clientWidth) nav.classList.add('no-bar-cta');
+        if (compact !== wasCompact) {
+          nav.dispatchEvent(new CustomEvent('navmodechange', { detail: { compact: compact } }));
         }
       }
       fit();
@@ -117,10 +151,12 @@
   <main id="main" tabindex="-1">
     <!-- GIFT HERO -->
     <section class="gift-hero">
+      <div class="bg-grid" aria-hidden="true"></div>
+      <span class="deco-rings" aria-hidden="true"></span>
       <div class="gift-inner">
         <!-- Left: pitch -->
-        <div>
-          <p class="gift-label">🎁 Free Gift</p>
+        <div class="gift-pitch">
+          <p class="gift-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg> Free Gift</p>
           <h1 class="gift-title">Get your free <span>CV templates</span> for academia &amp; industry</h1>
           <p class="gift-subtitle">
             Stop guessing what hiring managers want. Download the same CV frameworks I use when mentoring engineers — one for academic applications, one for industry roles — ready to edit in Overleaf or Word.
@@ -136,7 +172,28 @@
         <!-- Right: form -->
         <div class="gift-form-box">
           <div class="gift-mock">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <div class="cv-docs" aria-hidden="true">
+              <div class="cv-doc cv-doc-academic">
+                <span class="cv-doc-tag">Academic</span>
+                <span class="cv-line cv-line-name"></span>
+                <span class="cv-line cv-line-sub"></span>
+                <span class="cv-line cv-line-head"></span>
+                <span class="cv-line"></span><span class="cv-line"></span><span class="cv-line cv-line-short"></span>
+                <span class="cv-line cv-line-head"></span>
+                <span class="cv-line"></span><span class="cv-line cv-line-short"></span>
+              </div>
+              <div class="cv-doc cv-doc-industry">
+                <span class="cv-doc-tag">Industry</span>
+                <span class="cv-line cv-line-name"></span>
+                <span class="cv-line cv-line-sub"></span>
+                <span class="cv-line cv-line-head"></span>
+                <span class="cv-line"></span><span class="cv-line"></span><span class="cv-line cv-line-short"></span>
+                <span class="cv-line cv-line-head"></span>
+                <span class="cv-line"></span><span class="cv-line cv-line-short"></span>
+              </div>
+              <span class="cv-badge cv-badge-latex">LaTeX</span>
+              <span class="cv-badge cv-badge-word">Word</span>
+            </div>
             <span class="gift-mock-label">Free Download</span>
             <span class="gift-mock-title">CV Templates for Academia &amp; Industry</span>
           </div>
@@ -150,58 +207,86 @@
             <input type="hidden" name="language" value="English">
             <div class="form-group">
               <label for="gift-name">First name</label>
-              <input type="text" id="gift-name" name="name" required placeholder="Your first name">
+              <input type="text" id="gift-name" name="name" required autocomplete="given-name" placeholder="Your first name">
             </div>
             <div class="form-group">
               <label for="gift-email">Email address</label>
-              <input type="email" id="gift-email" name="email" required placeholder="you@email.com">
+              <input type="email" id="gift-email" name="email" required autocomplete="email" placeholder="you@email.com">
             </div>
             <div class="form-checkbox">
               <input type="checkbox" id="gift-privacy" name="privacy" required>
               <label for="gift-privacy">I agree to receive the templates and occasional career tips. I can unsubscribe anytime. See the <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a>.</label>
             </div>
-            <button type="submit" class="btn-gift">
+            <button type="submit" class="btn-primary btn-lg btn-block">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Send me the free templates
             </button>
           </form>
-          <p class="gift-notice">No spam, ever. Unsubscribe with one click.</p>
+          <p class="gift-notice"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> No spam, ever. Unsubscribe with one click.</p>
         </div>
       </div>
     </section>
   </main>
 
-<footer>
-    <div class="footer-inner">
-      <ul class="footer-links">
-        <li><a href="./#services">Services</a></li>
-        <li><a href="courses.html">Online Courses</a></li>
-        <li><a href="./#about">About</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="testimonials.html#leave-review">Leave a Review</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="./#contact">Contact</a></li>
+<footer class="site-footer">
+    <span class="deco-rings" aria-hidden="true"></span>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="./" class="footer-logo" aria-label="Make IT STEM — home">
+          <img src="assets/img/logo-mark.png" alt="" width="48" height="48" loading="lazy">
+          <span aria-hidden="true">Make <span>IT</span> STEM</span>
+        </a>
+        <p>STEM career mentoring for university students and early-career engineers.</p>
+        <ul class="footer-social" aria-label="Follow Make IT STEM">
+          <li><a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.39v-1.2h-2.49v8.5h2.5v-4.34c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.34h2.5M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.5H5.5v8.5h2.77Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/make_it_stem/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
+          <li><a href="https://www.youtube.com/@MakeITSTEM" target="_blank" rel="noopener" aria-label="YouTube"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C17.5 2.6 12 2.6 12 2.6h0s-5.5 0-8.6.3c-.4 0-1.3.1-2.1 1-.6.7-.8 2.3-.8 2.3S0 8.1 0 10v1.8c0 1.9.2 3.8.2 3.8s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.7.2 7.6.3 7.6.3s5.5 0 8.6-.3c.4 0 1.3-.1 2.1-1 .6-.7.8-2.3.8-2.3s.2-1.9.2-3.8V10c0-1.9-.2-3.8-.2-3.8zM9.5 14.5v-7l6 3.5-6 3.5z"/></svg></a></li>
+        </ul>
+      </div>
+      <nav class="footer-col" aria-labelledby="footer-services">
+        <h2 id="footer-services">Services</h2>
+        <ul>
+          <li><a href="./#mentoring">1-to-1 Career Mentoring</a></li>
+          <li><a href="./#group-tutoring">Group Tutoring</a></li>
+          <li><a href="courses.html">Online Courses</a></li>
+          <li><a href="./#process">The Method</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="footer-explore">
+        <h2 id="footer-explore">Explore</h2>
+        <ul>
+          <li><a href="gift.html">Free Gift</a></li>
+          <li><a href="./#about">About</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="testimonials.html#leave-review">Leave a Review</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col footer-contact">
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:contact@makeitstem.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>contact@makeitstem.com</a></li>
+          <li><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Cambridge, United Kingdom</span></li>
+        </ul>
+        <a href="./#contact" class="btn-primary btn-sm" data-enquiry="Free Discovery Call">Book a Free Call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Make IT STEM. All rights reserved. Giuseppe Romano, trading as Make IT STEM.</p>
+      <ul class="footer-policies">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="#" data-cookie-settings>Cookie Settings</a></li>
       </ul>
-      <p class="footer-copy">
-        &copy; 2026 Make IT STEM. All rights reserved. &nbsp;|&nbsp;
-        STEM career mentoring for university students and early-career engineers.
-        <span class="footer-legal">
-          Giuseppe Romano, trading as Make IT STEM &nbsp;&middot;&nbsp;
-          <a href="mailto:contact@makeitstem.com">contact@makeitstem.com</a>
-        </span>
-        <span class="footer-policies">
-          <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp;
-          <a href="terms.html">Terms &amp; Conditions</a> &nbsp;&middot;&nbsp;
-          <a href="#" data-cookie-settings>Cookie Settings</a>
-        </span>
-      </p>
     </div>
   </footer>
 
+  <button type="button" class="back-to-top" data-back-to-top aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+
   <script type="application/json" id="site-config">{"cookie": {"accept": "Accept analytics", "body": "Essential cookies keep this site working. We\u2019d also like to use Google Analytics to see which pages are useful \u2014 only if you agree. You can change your mind at any time. Read our", "label": "Cookie consent", "policyLink": "Cookie \u0026 Privacy Policy", "reject": "Reject non-essential", "title": "We use cookies"}, "gaId": "G-NL49D78HZD", "privacyUrl": "privacy.html#cookies"}</script>
-  <script src="assets/js/site.js?v=03a960ed"></script>
-  <script src="assets/js/cookie-consent.js?v=790ca7ed"></script>
+  <script src="assets/js/site.js?v=8794bf89"></script>
+  <script src="assets/js/cookie-consent.js?v=c71a240d"></script>
 
 </body>
 </html>

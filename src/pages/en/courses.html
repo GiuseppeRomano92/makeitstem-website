@@ -6,8 +6,10 @@
 {% block content %}
     <!-- COMING SOON -->
     <section class="coming-soon">
+      <div class="bg-grid" aria-hidden="true"></div>
+      <span class="deco-rings" aria-hidden="true"></span>
       <div class="coming-soon-inner">
-        <span class="coming-soon-tag">Online Courses</span>
+        <span class="coming-soon-tag"><span class="pulse-dot" aria-hidden="true"></span>Online Courses</span>
         <h1>Coming Soon</h1>
         <p>
           I'm recording online STEM courses built on the Make IT STEM Method: find exactly
@@ -23,6 +25,11 @@
           No spam — just one email when courses launch. See our
           <a href="privacy.html">privacy policy</a>.
         </p>
+        <ul class="coming-soon-features">
+          <li><span class="feature-icon">{{ icon("video", 20) }}</span>Recorded video lessons you can watch whenever suits you</li>
+          <li><span class="feature-icon">{{ icon("list", 20) }}</span>A structured path through one subject, step by step</li>
+          <li><span class="feature-icon">{{ icon("star", 20) }}</span>Waiting-list members get first access at launch</li>
+        </ul>
         <div class="coming-soon-actions">
           <a href="./" class="btn-secondary">Back to Home</a>
         </div>

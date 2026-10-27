@@ -4,161 +4,176 @@
 {% set social_title = "Make IT STEM — Trasformare le conoscenze STEM in occupabilità" %}
 {% set social_description = "Colmare il divario tra la teoria universitaria e le competenze richieste dall'industria" %}
 {% set styles = ["home"] %}
+{% set award_url = "https://www.manchester.ac.uk/about/news/university-of-manchester-and-mec-students-celebrated-at-the-venture-further-awards-2026/" %}
 
 {% block content %}
     <!-- HERO -->
     <section class="hero">
+      <div class="bg-grid" aria-hidden="true"></div>
       <div class="hero-inner">
-        <!-- Logo & Profile Section -->
-        <div class="hero-profile">
-          <img src="{{ root }}assets/img/logo.png" alt="Logo di Make IT STEM" class="hero-logo">
-          <div class="hero-photo">
-            <img src="{{ root }}assets/img/vfa-awards-2026.jpg" alt="Dr Giuseppe Romano, vincitore dei Venture Further Awards">
-          </div>
-          <div class="vfa-award">
-            <div class="vfa-award-title">Venture Further Awards 2026</div>
-            <div class="vfa-award-subtitle">
-              Freelancer dell'anno<br>
-              Premio da £4.000
-            </div>
-            <a href="https://www.manchester.ac.uk/about/news/university-of-manchester-and-mec-students-celebrated-at-the-venture-further-awards-2026/" target="_blank" rel="noopener" class="vfa-award-link" hreflang="en">
-              Scopri di più
-              {{ icon("external", 14) }}
-            </a>
-          </div>
-        </div>
-
-        <!-- Main Content -->
         <div class="hero-content">
-          <h1>Dr Giuseppe Romano</h1>
-
-          <div class="hero-credentials">
-            <span class="credential-badge">PhD</span>
-            <span class="credential-divider">&middot;</span>
-            <span class="credential-badge">CEng</span>
-            <span class="credential-divider">&middot;</span>
-            <span class="credential-badge">FHEA</span>
-            <span class="credential-divider">&middot;</span>
-            <span class="credential-badge">MIMechE</span>
-            <span class="credential-divider">&middot;</span>
-            <span class="credential-badge">MIMMM</span>
-          </div>
-
+          <p class="hero-eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>Mentoring di carriera STEM per studenti e ingegneri</p>
+          <h1>Trasformare le conoscenze STEM in <span class="hl">occupabilità</span></h1>
           <p class="hero-sub">
-            Trasformare le conoscenze STEM in <em>occupabilità</em>. Un mentoring personalizzato che colma il divario tra la teoria universitaria e le competenze richieste dall'industria.
+            Un mentoring personalizzato che colma il divario tra la teoria universitaria e le competenze richieste dall'industria.
           </p>
-
           <div class="hero-actions">
-            <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
+            <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary btn-lg">
               Prenota una call conoscitiva gratuita
-              {{ icon("arrow", 16) }}
+              {{ icon("arrow-right", 18) }}
             </a>
-            <a href="#services" class="btn-secondary">
+            <a href="#services" class="btn-secondary btn-lg">
               Scopri i servizi
             </a>
           </div>
+          <ul class="hero-assurances">
+            <li>{{ icon("check", 16, stroke=2.5) }} Call gratuita di 15 minuti</li>
+            <li>{{ icon("check", 16, stroke=2.5) }} Nessun impegno, nessuna vendita forzata</li>
+          </ul>
+        </div>
 
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <strong>15</strong>
-              <span>Studenti seguiti</span>
-            </div>
-            <div class="hero-stat">
-              <strong>5</strong>
-              <span>Anni nell'industria</span>
-            </div>
-            <div class="hero-stat">
-              <strong>4</strong>
-              <span>Pubblicazioni peer-reviewed</span>
-            </div>
+        <div class="hero-visual">
+          <svg class="hero-orbits" viewBox="0 0 600 600" aria-hidden="true">
+            <circle class="orbit orbit-outer" cx="300" cy="300" r="292"/>
+            <circle class="orbit orbit-mid" cx="300" cy="300" r="236"/>
+            <circle class="orbit orbit-inner" cx="300" cy="300" r="180"/>
+            <g class="orbiter orbiter-1"><circle cx="300" cy="8" r="7"/></g>
+            <g class="orbiter orbiter-2"><circle cx="300" cy="64" r="5"/></g>
+            <g class="orbiter orbiter-3"><circle cx="300" cy="120" r="4"/></g>
+          </svg>
+          <div class="hero-portrait">
+            <img src="{{ root }}assets/img/giuseppe-romano.jpeg" alt="Dr Giuseppe Romano" width="400" height="400" fetchpriority="high">
           </div>
+          <a class="hero-chip chip-award" href="{{ award_url }}" target="_blank" rel="noopener" hreflang="en">
+            <span class="chip-icon">{{ icon("trophy", 18) }}</span>
+            <span class="chip-text"><strong>Freelancer dell'anno</strong><span>Venture Further Awards 2026</span></span>
+          </a>
+          <div class="hero-chip chip-phd">
+            <span class="chip-icon">{{ icon("graduation-cap", 18) }}</span>
+            <span class="chip-text"><strong>PhD</strong><span>Università di Manchester</span></span>
+          </div>
+          <p class="hero-namecard">
+            <strong>Dr Giuseppe Romano</strong>
+            <span>PhD &middot; CEng &middot; FHEA &middot; MIMechE &middot; MIMMM</span>
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- STATS -->
+    <div class="hero-stats-wrap">
+      <ul class="hero-stats" data-reveal>
+        <li class="hero-stat">
+          <span class="stat-icon">{{ icon("users", 22) }}</span>
+          <span class="stat-text"><strong data-count>15</strong><span>Studenti seguiti</span></span>
+        </li>
+        <li class="hero-stat">
+          <span class="stat-icon">{{ icon("briefcase", 22) }}</span>
+          <span class="stat-text"><strong data-count>5</strong><span>Anni nell'industria</span></span>
+        </li>
+        <li class="hero-stat">
+          <span class="stat-icon">{{ icon("book-open", 22) }}</span>
+          <span class="stat-text"><strong data-count>4</strong><span>Pubblicazioni peer-reviewed</span></span>
+        </li>
+      </ul>
+    </div>
+
     <!-- SERVICES -->
     <section class="services" id="services">
       <div class="section-inner">
-        <p class="section-label">Servizi</p>
-        <h2 class="section-title">Cosa offro</h2>
-        <p class="section-subtitle">
-          Individuale, di gruppo o al tuo ritmo: tre modi per passare da studente a
-          ingegnere sicuro di sé e pronto per l'industria.
-        </p>
-        <div class="services-list">
-          <article class="service-row" id="mentoring">
-            <div class="service-icon">{{ icon("user", 24, color="#1CAA5A") }}</div>
-            <div class="service-body">
+        <div class="section-head is-center" data-reveal>
+          <p class="section-label">Servizi</p>
+          <h2 class="section-title">Cosa offro</h2>
+          <p class="section-subtitle">
+            Individuale, di gruppo o al tuo ritmo: tre modi per passare da studente a
+            ingegnere sicuro di sé e pronto per l'industria.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card is-featured" id="mentoring" data-reveal>
+            <div class="service-card-top">
+              <span class="service-icon">{{ icon("user", 24) }}</span>
               <span class="service-tag">Il più richiesto</span>
-              <h3>Mentoring di carriera 1:1</h3>
-              <p>
-                Un percorso personalizzato, costruito su dove sei oggi e su dove vuoi arrivare.
-                Lavoriamo su CV, colloqui, mappatura delle competenze e strategia di carriera,
-                partendo da un'esperienza reale nell'industria, non da consigli da manuale.
-              </p>
             </div>
-            <div class="service-aside">
+            <h3>Mentoring di carriera 1:1</h3>
+            <p>
+              Un percorso personalizzato, costruito su dove sei oggi e su dove vuoi arrivare,
+              partendo da un'esperienza reale nell'industria, non da consigli da manuale.
+            </p>
+            <ul class="service-points">
+              <li>{{ icon("check", 16, stroke=2.5) }} CV e candidature</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Preparazione ai colloqui</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Mappatura delle competenze</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Strategia di carriera</li>
+            </ul>
+            <div class="service-price-block">
               <p class="service-price"><strong>&pound;45</strong> / ora</p>
               <p class="service-note">Si parte con una call conoscitiva gratuita di 15 minuti.</p>
+            </div>
+            <div class="service-actions">
               <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
                 Prenota una call gratuita
-                {{ icon("arrow", 16) }}
+                {{ icon("arrow-right", 18) }}
               </a>
-              <a href="#contact" data-enquiry="1-to-1 Career Mentoring" class="service-link">
+              <a href="#contact" data-enquiry="1-to-1 Career Mentoring" class="service-link link-arrow">
                 Prenota una sessione di mentoring
-                {{ icon("arrow", 16) }}
+                {{ icon("arrow-right", 16) }}
               </a>
             </div>
           </article>
-          <article class="service-row" id="group-tutoring">
-            <div class="service-icon">{{ icon("users", 24, color="#1CAA5A") }}</div>
-            <div class="service-body">
+          <article class="service-card" id="group-tutoring" data-reveal style="--reveal-delay: 0.1s">
+            <div class="service-card-top">
+              <span class="service-icon">{{ icon("users", 24) }}</span>
               <span class="service-tag">Temi e date in arrivo</span>
-              <h3>Tutoring di gruppo</h3>
-              <p>
-                Tutoring dal vivo in piccoli gruppi, così tutti hanno il tempo di fare domande
-                e di risolvere i problemi insieme.
-              </p>
-              <ul class="service-points">
-                <li>{{ icon("check", 16, stroke=2.5) }} Da 6 a 10 partecipanti per gruppo</li>
-                <li>{{ icon("check", 16, stroke=2.5) }} Registrazioni delle sessioni disponibili per 6 settimane dopo la fine del corso</li>
-                <li>{{ icon("check", 16, stroke=2.5) }} Attestato di partecipazione</li>
-              </ul>
-              <p class="service-note">
-                Il gruppo parte quando si raggiungono almeno 6 iscritti. Vuoi organizzarlo per un
-                dipartimento universitario o un'associazione? Contattami per un gruppo privato.
-              </p>
             </div>
-            <div class="service-aside">
+            <h3>Tutoring di gruppo</h3>
+            <p>
+              Tutoring dal vivo in piccoli gruppi, così tutti hanno il tempo di fare domande
+              e di risolvere i problemi insieme.
+            </p>
+            <ul class="service-points">
+              <li>{{ icon("check", 16, stroke=2.5) }} Da 6 a 10 partecipanti per gruppo</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Registrazioni delle sessioni disponibili per 6 settimane dopo la fine del corso</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Attestato di partecipazione</li>
+            </ul>
+            <p class="service-small">
+              Il gruppo parte quando si raggiungono almeno 6 iscritti. Vuoi organizzarlo per un
+              dipartimento universitario o un'associazione? Contattami per un gruppo privato.
+            </p>
+            <div class="service-price-block">
               <p class="service-price"><strong>&pound;20</strong> / posto all'ora</p>
               <p class="service-note">Lascia il tuo interesse: ti scrivo quando annuncio temi e date.</p>
+            </div>
+            <div class="service-actions">
               <a href="#contact" data-enquiry="Group Tutoring" class="btn-primary">
                 Mi interessa
-                {{ icon("arrow", 16) }}
+                {{ icon("arrow-right", 18) }}
               </a>
             </div>
           </article>
-          <article class="service-row" id="courses">
-            <div class="service-icon">{{ icon("monitor", 24, color="#1CAA5A") }}</div>
-            <div class="service-body">
+          <article class="service-card" id="courses" data-reveal style="--reveal-delay: 0.2s">
+            <div class="service-card-top">
+              <span class="service-icon">{{ icon("monitor", 24) }}</span>
               <span class="service-tag">In arrivo</span>
-              <h3>Corsi online</h3>
-              <p>
-                Corsi STEM registrati, costruiti sul metodo Make IT STEM: capisci esattamente cosa
-                ti manca e lo costruisci passo dopo passo, con i tuoi tempi.
-              </p>
-              <ul class="service-points">
-                <li>{{ icon("check", 16, stroke=2.5) }} Video lezioni registrate da guardare quando vuoi</li>
-                <li>{{ icon("check", 16, stroke=2.5) }} Un percorso strutturato su una materia, un passo alla volta</li>
-                <li>{{ icon("check", 16, stroke=2.5) }} Chi è in lista d'attesa ha accesso anticipato al lancio</li>
-              </ul>
             </div>
-            <div class="service-aside">
+            <h3>Corsi online</h3>
+            <p>
+              Corsi STEM registrati, costruiti sul metodo Make IT STEM: capisci esattamente cosa
+              ti manca e lo costruisci passo dopo passo, con i tuoi tempi.
+            </p>
+            <ul class="service-points">
+              <li>{{ icon("check", 16, stroke=2.5) }} Video lezioni registrate da guardare quando vuoi</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Un percorso strutturato su una materia, un passo alla volta</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Chi è in lista d'attesa ha accesso anticipato al lancio</li>
+            </ul>
+            <div class="service-price-block">
               <p class="service-price"><strong class="price-text">Lista d'attesa aperta</strong></p>
               <p class="service-note">Iscriviti ora: ti scrivo appena esce il primo corso.</p>
+            </div>
+            <div class="service-actions">
               <a href="courses.html" class="btn-primary">
                 Iscriviti alla lista d'attesa
-                {{ icon("arrow", 16) }}
+                {{ icon("arrow-right", 18) }}
               </a>
             </div>
           </article>
@@ -167,22 +182,45 @@
     </section>
 
     <!-- BRIDGE -->
-    <div class="bridge-divider">
-      <p class="bridge-quote">
-        “I migliori ingegneri con cui ho lavorato non avevano solo una laurea solida:
-        sapevano <em>comunicare il proprio valore</em> e muoversi nell'industria fin dal primo giorno.”
-      </p>
-    </div>
+    <section class="bridge">
+      <div class="bg-grid" aria-hidden="true"></div>
+      <figure class="section-inner" data-reveal>
+        <blockquote class="bridge-quote">
+          <p>
+            I migliori ingegneri con cui ho lavorato non avevano solo una laurea solida:
+            sapevano <em>comunicare il proprio valore</em> e muoversi nell'industria fin dal primo giorno.
+          </p>
+        </blockquote>
+        <figcaption class="bridge-author">
+          <img src="{{ root }}assets/img/giuseppe-romano.jpeg" alt="" width="46" height="46" loading="lazy">
+          <span><strong>Dr Giuseppe Romano</strong>Fondatore di Make IT STEM</span>
+        </figcaption>
+      </figure>
+    </section>
 
     <!-- ABOUT -->
     <section class="about" id="about">
-      <div class="section-inner">
-        <div class="about-content">
-          <p class="section-label">Il fondatore</p>
-          <div class="about-photo-wrap">
-            <img src="{{ root }}assets/img/giuseppe-romano.jpeg" alt="Dr Giuseppe Romano">
+      <div class="section-inner about-layout">
+        <div class="about-media" data-reveal>
+          <div class="about-photo">
+            <picture>
+              <source type="image/webp" srcset="{{ root }}assets/img/vfa-awards-2026-800.webp 800w, {{ root }}assets/img/vfa-awards-2026-1200.webp 1200w" sizes="(min-width: 992px) 520px, 92vw">
+              <img src="{{ root }}assets/img/vfa-awards-2026-1200.jpg" srcset="{{ root }}assets/img/vfa-awards-2026-800.jpg 800w, {{ root }}assets/img/vfa-awards-2026-1200.jpg 1200w" sizes="(min-width: 992px) 520px, 92vw" width="1200" height="860" alt="Il Dr Giuseppe Romano riceve il premio Freelancer dell'anno ai Venture Further Awards 2026" loading="lazy" decoding="async">
+            </picture>
           </div>
-          <h2>Dr Giuseppe Romano</h2>
+          <a class="about-award" href="{{ award_url }}" target="_blank" rel="noopener" hreflang="en">
+            <span class="about-award-icon">{{ icon("trophy", 22) }}</span>
+            <span class="about-award-text">
+              <strong>Freelancer dell'anno</strong>
+              <span>Venture Further Awards 2026 &middot; premio da &pound;4.000</span>
+              <span class="about-award-more">Scopri di più {{ icon("arrow-up-right", 14) }}</span>
+            </span>
+          </a>
+        </div>
+        <div class="about-content" data-reveal style="--reveal-delay: 0.1s">
+          <p class="section-label">Il fondatore</p>
+          <h2 class="section-title">Dr Giuseppe Romano</h2>
+          <p class="about-credentials">PhD &middot; CEng &middot; FHEA &middot; MIMechE &middot; MIMMM</p>
           <p>
             Sono un Chartered Engineer (CEng MIMechE, MIMMM, FHEA) con un PhD conseguito
             all'Università di Manchester, dove ho sviluppato modelli micromeccanici per
@@ -206,12 +244,28 @@
             concreta in CAE e nella R&amp;D sui materiali a un mentoring personalizzato 1:1 che
             va ben oltre i consigli di carriera generici.
           </p>
-          <p class="about-linkedin">
-            <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener">
-              {{ icon("linkedin-badge", 20, color="none") }}
-              Collegati con me su LinkedIn
-            </a>
-          </p>
+          <ul class="about-facts">
+            <li class="about-fact">
+              <span class="fact-icon">{{ icon("graduation-cap", 20) }}</span>
+              <span class="fact-text"><strong>PhD</strong><span>Università di Manchester</span></span>
+            </li>
+            <li class="about-fact">
+              <span class="fact-icon">{{ icon("briefcase", 20) }}</span>
+              <span class="fact-text"><strong>Senior R&amp;D Engineer</strong><span>Synopsys</span></span>
+            </li>
+            <li class="about-fact">
+              <span class="fact-icon">{{ icon("award", 20) }}</span>
+              <span class="fact-text"><strong>Chartered Engineer</strong><span>CEng MIMechE &middot; MIMMM</span></span>
+            </li>
+            <li class="about-fact">
+              <span class="fact-icon">{{ icon("globe", 20) }}</span>
+              <span class="fact-text"><strong>NAFEMS Italia</strong><span>Regional Representative per oltre 4 anni</span></span>
+            </li>
+          </ul>
+          <a class="btn-outline" href="{{ site.social.linkedin }}" target="_blank" rel="noopener">
+            {{ icon("linkedin", 18) }}
+            Collegati con me su LinkedIn
+          </a>
         </div>
       </div>
     </section>
@@ -219,17 +273,19 @@
     <!-- TESTIMONIALS -->
     <section class="testimonials" id="testimonials">
       <div class="section-inner">
-        <p class="section-label">Testimonianze</p>
-        <h2 class="section-title">Cosa dicono i miei mentee</h2>
-        <p class="section-subtitle">
-          Risultati concreti di ingegneri che hanno seguito il percorso. Le testimonianze sono riportate nella lingua originale.
-        </p>
+        <div class="section-head is-center" data-reveal>
+          <p class="section-label">Testimonianze</p>
+          <h2 class="section-title">Cosa dicono i miei mentee</h2>
+          <p class="section-subtitle">
+            Risultati concreti di ingegneri che hanno seguito il percorso. Le testimonianze sono riportate nella lingua originale.
+          </p>
+        </div>
         {% set limit = 3 %}
         {% include "partials/testimonial-cards.html" %}
-        <div class="testimonials-more">
-          <a href="testimonials.html" class="btn-primary">
+        <div class="testimonials-more" data-reveal>
+          <a href="testimonials.html" class="btn-outline">
             Leggi tutte le testimonianze
-            {{ icon("arrow", 16) }}
+            {{ icon("arrow-right", 18) }}
           </a>
         </div>
       </div>
@@ -238,146 +294,125 @@
     <!-- PROCESS -->
     <section class="process" id="process">
       <div class="section-inner">
-        <p class="section-label">Il metodo Make IT STEM</p>
-        <h2 class="section-title">Dalla prima call a una carriera chiara</h2>
-        <p class="section-subtitle">
-          La maggior parte dei consigli di carriera si ferma a un CV ben fatto. Il metodo
-          Make IT STEM parte da ciò che l'industria cerca davvero, lo confronta con le
-          competenze che hai già e colma il divario un passo alla volta.
-        </p>
-        <div class="process-steps">
-          <div class="process-step">
-            <div class="step-number">1</div>
+        <div class="section-head is-center" data-reveal>
+          <p class="section-label">Il metodo Make IT STEM</p>
+          <h2 class="section-title">Dalla prima call a una carriera chiara</h2>
+          <p class="section-subtitle">
+            La maggior parte dei consigli di carriera si ferma a un CV ben fatto. Il metodo
+            Make IT STEM parte da ciò che l'industria cerca davvero, lo confronta con le
+            competenze che hai già e colma il divario un passo alla volta.
+          </p>
+        </div>
+        <ol class="process-steps" data-reveal>
+          <li class="process-step">
+            <span class="step-node">{{ icon("compass", 28) }}<span class="step-number">1</span></span>
             <h3>Conoscersi</h3>
             <p>Una call gratuita di 15 minuti. Parliamo di dove sei, di dove vuoi arrivare e di come posso aiutarti. Nessun impegno e nessuna vendita forzata.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">2</div>
+          </li>
+          <li class="process-step">
+            <span class="step-node">{{ icon("map", 28) }}<span class="step-number">2</span></span>
             <h3>Mappare</h3>
             <p>Confrontiamo le tue competenze tecniche e trasversali con i ruoli a cui punti, individuiamo le lacune che contano davvero e fissiamo obiettivi chiari e misurabili.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">3</div>
+          </li>
+          <li class="process-step">
+            <span class="step-node">{{ icon("tool", 28) }}<span class="step-number">3</span></span>
             <h3>Costruire</h3>
             <p>Sessioni 1:1 mirate su ciò che ti fa fare il salto: CV e candidature, simulazioni di colloquio, come comunicare il tuo valore, visione dell'industria e strategia di carriera.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">4</div>
+          </li>
+          <li class="process-step">
+            <span class="step-node">{{ icon("rocket", 28) }}<span class="step-number">4</span></span>
             <h3>Partire</h3>
             <p>Ti candidi con sicurezza. Resto disponibile per le tue domande mentre affronti colloqui, offerte e le prime decisioni di carriera.</p>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta-section">
-      <div class="section-inner">
-        <h2>Vuoi colmare il divario?</h2>
-        <p>
-          Prenota una call conoscitiva gratuita di 15 minuti: parliamo di dove sei,
-          di dove vuoi arrivare e di come arrivarci.
-        </p>
-        <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
-          Prenota la tua call gratuita
-          {{ icon("arrow", 16) }}
-        </a>
-      </div>
-    </section>
+    {% include "partials/cta-band.html" %}
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
-      <div class="section-inner">
-        <div class="contact-layout">
-          <div class="contact-info">
-            <p class="section-label">Contatti</p>
-            <h2>Iniziamo a parlarne</h2>
-            <p>
-              Che tu sia all'ultimo anno di università, neolaureato o un ingegnere a inizio
-              carriera in cerca di una direzione, sarò felice di sentirti.
-            </p>
-            <div class="contact-detail">
-              <div class="contact-detail-icon">{{ icon("mail", 18) }}</div>
-              <div class="contact-detail-text">
-                <strong>Email</strong>
-                {{ site.email }}
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail-icon">{{ icon("map-pin", 18) }}</div>
-              <div class="contact-detail-text">
-                <strong>Sede</strong>
-                Cambridge, Regno Unito
-              </div>
-            </div>
-            <p class="contact-social-label">Seguici</p>
-            <div class="contact-detail">
-              <div class="contact-detail-icon icon-instagram">{{ icon("instagram", 18, color="#fff") }}</div>
-              <div class="contact-detail-text">
-                <strong>Instagram</strong>
-                <a href="https://www.instagram.com/make_it_stem/" target="_blank" rel="noopener">Make IT STEM</a>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail-icon icon-youtube">{{ icon("youtube", 18, color="#fff") }}</div>
-              <div class="contact-detail-text">
-                <strong>YouTube</strong>
-                <a href="https://www.youtube.com/@MakeITSTEM" target="_blank" rel="noopener">Make IT STEM</a>
-              </div>
+      <div class="section-inner contact-layout">
+        <div class="contact-info" data-reveal>
+          <p class="section-label">Contatti</p>
+          <h2 class="section-title">Iniziamo a parlarne</h2>
+          <p class="contact-lead">
+            Che tu sia all'ultimo anno di università, neolaureato o un ingegnere a inizio
+            carriera in cerca di una direzione, sarò felice di sentirti.
+          </p>
+          <div class="contact-cards">
+            <a class="contact-card" href="mailto:{{ site.email }}">
+              <span class="contact-card-icon">{{ icon("mail", 20) }}</span>
+              <span class="contact-card-text"><strong>Email</strong><span>{{ site.email }}</span></span>
+            </a>
+            <div class="contact-card">
+              <span class="contact-card-icon">{{ icon("map-pin", 20) }}</span>
+              <span class="contact-card-text"><strong>Sede</strong><span>Cambridge, Regno Unito</span></span>
             </div>
           </div>
-          {# Option values stay in English so every enquiry arrives in the same format. #}
-          <form class="contact-form" action="{{ site.formspree }}" method="POST">
-            <input type="hidden" name="language" value="{{ lang.name }}">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Nome</label>
-                <input type="text" id="name" name="name" required placeholder="Nome e cognome">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="tu@email.com">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="enquiry">Oggetto della richiesta</label>
-              <select id="enquiry" name="enquiry" required>
-                <option value="">Seleziona...</option>
-                <option value="Free Discovery Call">Call conoscitiva gratuita</option>
-                <option value="1-to-1 Career Mentoring">Mentoring di carriera 1:1</option>
-                <option value="Group Tutoring">Tutoring di gruppo</option>
-                <option value="Courses">Corsi</option>
-                <option value="Other">Altro</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="stage">A che punto sei della tua carriera?</label>
-              <select id="stage" name="stage">
-                <option value="">Seleziona...</option>
-                <option value="undergrad">Studente di laurea triennale (ultimo anno)</option>
-                <option value="postgrad">Studente di magistrale o dottorato</option>
-                <option value="recent">Neolaureato (0–2 anni)</option>
-                <option value="early">Ingegnere a inizio carriera (2–5 anni)</option>
-                <option value="other">Altro</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Messaggio</label>
-              <textarea id="message" name="message" required placeholder="Raccontami la tua situazione e cosa stai cercando..."></textarea>
-            </div>
-            <div class="form-checkbox">
-              <input type="checkbox" id="privacy" name="privacy" required>
-              <label for="privacy">Accetto l'<a href="privacy.html" target="_blank" rel="noopener">informativa sulla privacy</a></label>
-            </div>
-            <div class="privacy-notice">
-              <strong>Protezione dei dati:</strong> le tue informazioni vengono inviate in modo sicuro a {{ site.email }} (in conformità al GDPR). Ti contatterò per parlare delle tue esigenze di sviluppo professionale. Puoi annullare l'iscrizione in qualsiasi momento.
-            </div>
-            <button type="submit" class="btn-primary form-submit">
-              Invia
-              {{ icon("send", 18) }}
-            </button>
-          </form>
+          <p class="contact-social-label">Seguici</p>
+          <div class="contact-social">
+            <a class="social-pill social-instagram" href="{{ site.social.instagram }}" target="_blank" rel="noopener">
+              <span class="social-pill-icon">{{ icon("instagram", 17, color="#fff") }}</span>Instagram
+            </a>
+            <a class="social-pill social-youtube" href="{{ site.social.youtube }}" target="_blank" rel="noopener">
+              <span class="social-pill-icon">{{ icon("youtube", 17, color="#fff") }}</span>YouTube
+            </a>
+          </div>
         </div>
+        {# Option values stay in English so every enquiry arrives in the same format. #}
+        <form class="contact-form" action="{{ site.formspree }}" method="POST" data-reveal style="--reveal-delay: 0.1s">
+          <input type="hidden" name="language" value="{{ lang.name }}">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Nome e cognome">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="tu@email.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="enquiry">Oggetto della richiesta</label>
+            <select id="enquiry" name="enquiry" required>
+              <option value="">Seleziona...</option>
+              <option value="Free Discovery Call">Call conoscitiva gratuita</option>
+              <option value="1-to-1 Career Mentoring">Mentoring di carriera 1:1</option>
+              <option value="Group Tutoring">Tutoring di gruppo</option>
+              <option value="Courses">Corsi</option>
+              <option value="Other">Altro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="stage">A che punto sei della tua carriera?</label>
+            <select id="stage" name="stage">
+              <option value="">Seleziona...</option>
+              <option value="undergrad">Studente di laurea triennale (ultimo anno)</option>
+              <option value="postgrad">Studente di magistrale o dottorato</option>
+              <option value="recent">Neolaureato (0–2 anni)</option>
+              <option value="early">Ingegnere a inizio carriera (2–5 anni)</option>
+              <option value="other">Altro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Messaggio</label>
+            <textarea id="message" name="message" required placeholder="Raccontami la tua situazione e cosa stai cercando..."></textarea>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy">Accetto l'<a href="privacy.html" target="_blank" rel="noopener">informativa sulla privacy</a></label>
+          </div>
+          <div class="privacy-notice">
+            {{ icon("lock", 16) }}
+            <span><strong>Protezione dei dati:</strong> le tue informazioni vengono inviate in modo sicuro a {{ site.email }} (in conformità al GDPR). Ti contatterò per parlare delle tue esigenze di sviluppo professionale. Puoi annullare l'iscrizione in qualsiasi momento.</span>
+          </div>
+          <button type="submit" class="btn-primary btn-lg form-submit">
+            Invia
+            {{ icon("send", 18) }}
+          </button>
+        </form>
       </div>
     </section>
 {% endblock %}

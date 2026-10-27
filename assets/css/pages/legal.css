@@ -1,86 +1,135 @@
-/* Shared by privacy.html and terms.html. Element selectors are scoped to <main>
-   so they never leak into the nav or footer. */
+/* Shared by privacy.html and terms.html. Text styles are scoped to .legal-body
+   so they never leak into the page header, nav or footer. */
 
-.page-header h1 { margin-bottom: 0.5rem; }
+.legal { background: var(--card-white); }
 
-/* ── CONTENT ── */
-section { padding: 5rem 2rem; }
-.section-inner { max-width: 900px; margin: 0 auto; }
-main h2 {
+/* ── LAYOUT: contents list + text ── */
+/* site.js fills the contents from the section headings and adds .has-toc. */
+.legal-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; max-width: 1120px; }
+.legal-toc details {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--off-white);
+}
+.legal-toc summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1rem 1.2rem;
+  list-style: none;
+  cursor: pointer;
   font-family: var(--display);
-  font-size: 1.6rem;
+  font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-primary);
+}
+.legal-toc summary::-webkit-details-marker { display: none; }
+.legal-toc summary::after {
+  content: '';
+  width: 8px; height: 8px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 0.25s var(--ease-out);
+}
+.legal-toc details[open] summary::after { transform: rotate(-135deg) translateY(-2px); }
+.legal-toc ol { list-style: none; display: grid; gap: 0.1rem; padding: 0 0.6rem 0.8rem; }
+.legal-toc a {
+  display: block;
+  padding: 0.45rem 0.7rem;
+  border-radius: 10px;
+  font-size: 0.86rem; line-height: 1.4;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.legal-toc a:hover { background: var(--card-white); color: var(--text-primary); }
+.legal-toc a.is-current {
+  background: var(--card-white);
+  color: var(--green-ink); font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+@media (min-width: 1024px) {
+  .legal-layout.has-toc { grid-template-columns: 270px minmax(0, 1fr); gap: clamp(2.5rem, 5vw, 4.5rem); align-items: start; }
+  .legal-toc {
+    position: sticky; top: calc(var(--nav-height) + 1.5rem);
+    max-height: calc(100vh - var(--nav-height) - 3rem);
+    overflow-y: auto;
+  }
+  /* Always open on wide screens: the summary is just a heading there. */
+  .legal-toc summary { cursor: default; pointer-events: none; }
+  .legal-toc summary::after { display: none; }
+}
+
+/* ── TEXT ── */
+.legal-body { max-width: 760px; }
+.legal-body h2 {
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  letter-spacing: -0.01em;
-  scroll-margin-top: 84px;
+  letter-spacing: -0.02em;
 }
-main h2:first-child {
-  margin-top: 0;
-}
-main h3 {
+.legal-body h2:first-child { margin-top: 0; }
+.legal-body h3 {
   font-family: var(--display);
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin-top: 1.8rem;
+  margin-top: 2.4rem;
   margin-bottom: 0.8rem;
-  scroll-margin-top: 84px;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--border);
 }
-main p {
+.legal-body p {
   margin-bottom: 1rem;
   color: var(--text-secondary);
   line-height: 1.8;
 }
-main ul, main ol {
-  margin: 1.5rem 0 1.5rem 2rem;
+.legal-body ul, .legal-body ol {
+  margin: 1.25rem 0 1.5rem 1.35rem;
   color: var(--text-secondary);
 }
-main li {
-  margin-bottom: 0.6rem;
-  line-height: 1.7;
-}
-main strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-.highlight {
-  background: rgba(28,170,90,0.08);
-  border-left: 4px solid var(--green);
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 6px;
-}
-.highlight p {
-  margin-bottom: 0;
-}
-main a {
-  color: var(--green);
-  text-decoration: none;
+.legal-body li { margin-bottom: 0.6rem; padding-left: 0.3rem; line-height: 1.7; }
+.legal-body li::marker { color: var(--green); }
+.legal-body strong { color: var(--text-primary); font-weight: 600; }
+.legal-body a {
+  color: var(--green-ink);
   font-weight: 500;
-  transition: color 0.2s;
-}
-main a:hover {
-  color: var(--blue);
   text-decoration: underline;
+  text-decoration-color: rgba(14, 124, 63, 0.35);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
 }
-main table {
+.legal-body a:hover { text-decoration-color: currentColor; }
+.highlight {
+  background: var(--green-50);
+  border: 1px solid rgba(28, 170, 90, 0.22);
+  border-left: 4px solid var(--green);
+  padding: 1.25rem 1.4rem;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+.highlight p { margin-bottom: 0; }
+.legal-body table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
+  font-size: 0.92rem;
 }
-main th, main td {
-  padding: 1rem;
+.legal-body th, .legal-body td {
+  padding: 0.85rem 1rem;
   text-align: left;
+  vertical-align: top;
   border-bottom: 1px solid var(--border);
 }
-main th {
+.legal-body th {
   background: var(--off-white);
   font-weight: 600;
   color: var(--text-primary);
 }
-main code {
+.legal-body code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.875em;
   background: var(--off-white);
@@ -92,26 +141,22 @@ main code {
 }
 
 /* Wide tables must scroll themselves, never the page. */
-.table-scroll { overflow-x: auto; margin: 1.5rem 0; }
+.table-scroll { overflow-x: auto; margin: 1.5rem 0; border: 1px solid var(--border); border-radius: 12px; }
 .table-scroll table { margin: 0; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 992px) {
-  main h2 { font-size: 1.4rem; }
-  main h3 { font-size: 1rem; }
-}
+.table-scroll:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+.table-scroll tr:last-child td { border-bottom: 0; }
 
 /* ── SMALL PIECES ── */
-main h3.legal-subhead { font-size: 1rem; margin-top: 1.4rem; }
+.legal-body h3.legal-subhead { font-size: 1rem; margin-top: 1.4rem; padding-top: 0; border-top: 0; }
 .legal-divider { margin: 3rem 0; border: none; border-top: 1px solid var(--border); }
-main .legal-closing { text-align: center; color: var(--text-light); font-size: 0.9rem; margin-top: 3rem; }
+.legal-body .legal-closing { text-align: center; color: var(--text-light); font-size: 0.9rem; margin-top: 3rem; }
 /* Italian pages: note that the English version is the binding one. */
 .translation-note {
-  background: var(--off-white);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  background: #FFF8DB;
+  border: 1px solid rgba(245, 183, 0, 0.45);
+  border-radius: 12px;
   padding: 1rem 1.25rem;
   margin-bottom: 2rem;
   font-size: 0.9rem;
 }
-main .translation-note p { margin: 0; font-size: 0.9rem; }
+.legal-body .translation-note p { margin: 0; font-size: 0.9rem; color: var(--text-primary); }

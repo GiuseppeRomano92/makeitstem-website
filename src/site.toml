@@ -40,6 +40,12 @@ path = "it/"
 # locale = "es_ES"
 # path = "es/"
 
+# Social profiles, used by the footer and the homepage contact section.
+[social]
+linkedin = "https://www.linkedin.com/in/giusepperomano92/"
+instagram = "https://www.instagram.com/make_it_stem/"
+youtube = "https://www.youtube.com/@MakeITSTEM"
+
 # Pages listed in sitemap.xml (every language version is included), with priority.
 # login is left out on purpose — robots.txt also keeps crawlers away from it.
 [sitemap]

@@ -1,20 +1,25 @@
 {% extends "base.html" %}
+{% from "partials/page-header.html" import page_header with context %}
 {% set title = "Termini e condizioni | Make IT STEM" %}
 {% set description = "Termini e condizioni per mentoring, workshop, risorse gratuite e corsi di Make IT STEM." %}
 {% set styles = ["legal"] %}
 
 {% block content %}
     <!-- PAGE HEADER -->
-    <section class="page-header">
-      <div class="section-inner">
-        <h1>Termini e condizioni</h1>
-        <div class="meta">Ultimo aggiornamento: 24 settembre 2026</div>
-      </div>
-    </section>
+    {% call page_header("Termini e condizioni") %}
+        <p class="meta">Ultimo aggiornamento: 24 settembre 2026</p>
+    {% endcall %}
 
     <!-- CONTENT -->
-    <section class="content-section">
-      <div class="section-inner">
+    <section class="content-section legal">
+      <div class="section-inner legal-layout">
+        <nav class="legal-toc" aria-label="{{ t.legal.toc }}" data-toc hidden>
+          <details>
+            <summary>{{ t.legal.toc }}</summary>
+            <ol></ol>
+          </details>
+        </nav>
+        <div class="legal-body">
         <div class="translation-note">
           <p>
             Questa è una traduzione di cortesia. In caso di differenze tra questa versione e la
@@ -29,7 +34,7 @@
           una sessione. Utilizzando questo sito o prenotando i nostri servizi, accetti i presenti termini.
         </p>
 
-        <h3>1. Chi siamo</h3>
+        <h3 id="who-we-are">1. Chi siamo</h3>
         <p>
           Questo sito è gestito da <strong>Giuseppe Romano, che opera con il nome commerciale Make IT STEM</strong>,
           ditta individuale (sole trader) con sede nel Regno Unito.
@@ -45,7 +50,7 @@
           che opera come Make IT STEM. &ldquo;Tu&rdquo; indica la persona che utilizza il nostro sito o acquista i nostri servizi.
         </p>
 
-        <h3>2. Cosa offriamo</h3>
+        <h3 id="what-we-offer">2. Cosa offriamo</h3>
         <p>Offriamo quanto segue; ciascun servizio può essere soggetto a condizioni aggiuntive indicate al momento della prenotazione o dell'acquisto:</p>
         <ul>
           <li><strong>Mentoring di carriera 1:1:</strong> una call conoscitiva gratuita di 15 minuti, seguita da sessioni
@@ -56,7 +61,7 @@
           <li><strong>Corsi:</strong> corsi online strutturati, attualmente disponibili solo tramite lista d'attesa</li>
         </ul>
 
-        <h3>3. Prezzi e pagamento</h3>
+        <h3 id="prices-and-payment">3. Prezzi e pagamento</h3>
         <p>
           La call conoscitiva è gratuita e non comporta alcun obbligo. Le sessioni di mentoring costano
           <strong>&pound;45 l'ora</strong>, salvo un prezzo diverso concordato con te per iscritto prima della sessione.
@@ -93,7 +98,7 @@
           Nulla di quanto qui previsto limita i tuoi diritti di legge &mdash; vedi la clausola 11.
         </p>
 
-        <h3>5. Sessioni di mentoring</h3>
+        <h3 id="mentoring-sessions">5. Sessioni di mentoring</h3>
         <p>
           Per prenotare una call conoscitiva o una sessione di mentoring, contattaci tramite il modulo su questo sito
           o via email. La prenotazione è confermata quando abbiamo concordato un orario con te per iscritto.
@@ -109,7 +114,7 @@
             funzionante e un dispositivo adeguato sono a tuo carico.</li>
         </ul>
 
-        <h3>6. Tutoring di gruppo e workshop</h3>
+        <h3 id="group-tutoring">6. Tutoring di gruppo e workshop</h3>
         <p>
           Il tutoring di gruppo costa <strong>&pound;20 a posto all'ora</strong>, salvo un prezzo diverso indicato
           quando il gruppo viene annunciato. Ogni gruppo ha un <strong>minimo di 6 e un massimo di 10</strong>
@@ -132,14 +137,14 @@
           differenze, tali condizioni scritte prevalgono su questa clausola.
         </p>
 
-        <h3>7. Corsi e liste d'attesa</h3>
+        <h3 id="courses-and-waitlists">7. Corsi e liste d'attesa</h3>
         <p>
           L'iscrizione alla lista d'attesa di un corso è gratuita e non comporta alcun obbligo. Non è un acquisto
           e non riserva un posto. Ti contatteremo all'apertura delle iscrizioni; il contratto si perfeziona solo
           quando ti iscrivi e paghi, e in quel momento ti verranno fornite le condizioni specifiche del corso.
         </p>
 
-        <h3>8. Risorse gratuite</h3>
+        <h3 id="free-resources">8. Risorse gratuite</h3>
         <p>
           Le nostre risorse sono fornite gratuitamente, in alcuni casi in cambio del tuo indirizzo email.
           Le risorse gratuite sono fornite &ldquo;così come sono&rdquo;, per uso personale, e possiamo modificarle o
@@ -147,7 +152,7 @@
           <a href="privacy.html">Informativa sulla privacy</a>, e puoi annullare l'iscrizione in qualsiasi momento.
         </p>
 
-        <h3>9. Proprietà intellettuale</h3>
+        <h3 id="intellectual-property">9. Proprietà intellettuale</h3>
         <p>
           Tutti i contenuti di questo sito e delle nostre risorse &mdash; testi, checklist, modelli, slide,
           grafiche e materiale dei corsi &mdash; sono di proprietà di Giuseppe Romano, che opera come Make IT STEM,
@@ -169,7 +174,7 @@
           Sono disponibili licenze per istituzioni e team: contattaci se te ne serve una.
         </p>
 
-        <h3>10. Natura dei nostri servizi &mdash; nessun risultato garantito</h3>
+        <h3 id="no-guaranteed-outcomes">10. Natura dei nostri servizi &mdash; nessun risultato garantito</h3>
         <p>
           Il nostro mentoring, i workshop e le risorse offrono indicazioni, informazioni e opinioni professionali
           basate sull'esperienza maturata in ambito accademico e industriale. Hanno lo scopo di aiutarti a prendere
@@ -185,7 +190,7 @@
           </p>
         </div>
 
-        <h3>11. I tuoi diritti di consumatore</h3>
+        <h3 id="consumer-rights">11. I tuoi diritti di consumatore</h3>
         <p>
           Se sei un consumatore, hai diritti di legge ai sensi del Consumer Rights Act 2015 &mdash; tra cui il diritto
           a che i servizi siano prestati con ragionevole cura e competenza, e che i contenuti digitali siano di qualità
@@ -198,7 +203,7 @@
           servizi digitali), e nemmeno questi sono eliminati o limitati dai presenti termini.
         </p>
 
-        <h3>12. Uso accettabile del sito</h3>
+        <h3 id="acceptable-use">12. Uso accettabile del sito</h3>
         <p>Ti impegni a non:</p>
         <ul>
           <li>utilizzare il sito in modo illecito, o in modo da danneggiarlo o comprometterne il funzionamento</li>
@@ -212,14 +217,14 @@
           di lavoro. Se rifiutiamo una prenotazione che hai già pagato, ti rimborseremo integralmente.
         </p>
 
-        <h3>13. Disponibilità del sito</h3>
+        <h3 id="availability">13. Disponibilità del sito</h3>
         <p>
           Ci impegniamo a mantenere il sito disponibile, ma non garantiamo un accesso ininterrotto. Il sito è ospitato
           da un fornitore terzo e può essere non disponibile per manutenzione o per cause al di fuori del nostro
           controllo. Possiamo modificare, sospendere o ritirare qualsiasi parte del sito o dei nostri servizi in qualsiasi momento.
         </p>
 
-        <h3>14. Servizi e link di terze parti</h3>
+        <h3 id="third-party-services">14. Servizi e link di terze parti</h3>
         <p>
           Ci avvaliamo di fornitori terzi per pagamenti, moduli, mailing list e statistiche, e inseriamo
           link a siti esterni come LinkedIn e Google Scholar. Questi servizi hanno condizioni e informative sulla
@@ -227,7 +232,7 @@
           avvaliamo sono elencati nella nostra <a href="privacy.html">Informativa sulla privacy</a>.
         </p>
 
-        <h3>15. Limitazione di responsabilità</h3>
+        <h3 id="limitation-of-liability">15. Limitazione di responsabilità</h3>
         <p>
           Nulla nei presenti termini esclude o limita la nostra responsabilità per morte o lesioni personali causate
           da negligenza, per frode o dichiarazioni fraudolente, o per qualsiasi altra responsabilità che non possa
@@ -247,7 +252,7 @@
           cui la responsabilità non può essere limitata per legge.
         </p>
 
-        <h3>16. Privacy e protezione dei dati</h3>
+        <h3 id="privacy">16. Privacy e protezione dei dati</h3>
         <p>
           Trattiamo i dati personali in conformità allo UK GDPR e al Data Protection Act 2018.
           Consulta la nostra <a href="privacy.html">Informativa sulla privacy</a> per sapere quali dati raccogliamo,
@@ -255,14 +260,14 @@
           la tua preferenza sui cookie di analisi da <a href="#" data-cookie-settings>{{ t.footer.cookies }}</a>.
         </p>
 
-        <h3>17. Modifiche ai presenti termini</h3>
+        <h3 id="changes">17. Modifiche ai presenti termini</h3>
         <p>
           Possiamo aggiornare periodicamente i presenti termini. Alla tua prenotazione o al tuo acquisto si applica
           la versione pubblicata su questa pagina nel momento in cui lo effettui. La data di &ldquo;Ultimo
           aggiornamento&rdquo; in alto indica quando la pagina è stata modificata l'ultima volta.
         </p>
 
-        <h3>18. Reclami</h3>
+        <h3 id="complaints">18. Reclami</h3>
         <p>
           Se qualcosa non è andato come previsto, contattaci prima di tutto a
           <a href="mailto:{{ site.email }}">{{ site.email }}</a> &mdash; ci impegniamo a dare riscontro
@@ -270,7 +275,7 @@
           fornitore di pagamenti terzo, potresti anche utilizzare la sua procedura di risoluzione delle controversie.
         </p>
 
-        <h3>19. Legge applicabile</h3>
+        <h3 id="governing-law">19. Legge applicabile</h3>
         <p>
           I presenti termini sono regolati dalle leggi di <strong>Inghilterra e Galles</strong>, e la giurisdizione
           spetta ai tribunali di Inghilterra e Galles. Se sei un consumatore residente in un'altra parte del Regno
@@ -280,7 +285,7 @@
           anche agire davanti ai giudici di quel Paese.
         </p>
 
-        <h3>20. Disposizioni generali</h3>
+        <h3 id="general">20. Disposizioni generali</h3>
         <ul>
           <li>Se una clausola risulta inapplicabile, il resto dei presenti termini continua ad applicarsi.</li>
           <li>Se non facciamo valere subito un termine, non perdiamo il diritto di farlo valere in seguito.</li>
@@ -288,7 +293,7 @@
           <li>Non puoi trasferire i tuoi diritti derivanti dai presenti termini senza il nostro consenso.</li>
         </ul>
 
-        <h3>21. Contatti</h3>
+        <h3 id="contact">21. Contatti</h3>
         <ul>
           <li><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
           <li><strong>Nome commerciale:</strong> Giuseppe Romano, che opera con il nome commerciale Make IT STEM</li>
@@ -302,6 +307,7 @@
           i presenti termini e condizioni.
         </p>
 
+        </div>
       </div>
     </section>
 {% endblock %}

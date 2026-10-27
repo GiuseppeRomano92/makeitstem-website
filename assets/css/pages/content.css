@@ -1,17 +1,15 @@
 /* Long-form content pages (publications).
    Element selectors are scoped to <main> so they never leak into the nav or footer. */
 
-section { padding: 5rem 2rem; }
-.section-inner { max-width: 900px; margin: 0 auto; }
-main h2 {
+main .content-section h2 {
   font-family: var(--display);
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 700; line-height: 1.15;
   letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
 }
-main p {
+main .content-section p {
   color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.8;

@@ -6,10 +6,12 @@
 {% block content %}
     <!-- GIFT HERO -->
     <section class="gift-hero">
+      <div class="bg-grid" aria-hidden="true"></div>
+      <span class="deco-rings" aria-hidden="true"></span>
       <div class="gift-inner">
         <!-- Left: pitch -->
-        <div>
-          <p class="gift-label">🎁 Free Gift</p>
+        <div class="gift-pitch">
+          <p class="gift-label">{{ icon("gift", 16) }} Free Gift</p>
           <h1 class="gift-title">Get your free <span>CV templates</span> for academia &amp; industry</h1>
           <p class="gift-subtitle">
             Stop guessing what hiring managers want. Download the same CV frameworks I use when mentoring engineers — one for academic applications, one for industry roles — ready to edit in Overleaf or Word.
@@ -25,7 +27,28 @@
         <!-- Right: form -->
         <div class="gift-form-box">
           <div class="gift-mock">
-            {{ icon("file", 40, stroke=1.5) }}
+            <div class="cv-docs" aria-hidden="true">
+              <div class="cv-doc cv-doc-academic">
+                <span class="cv-doc-tag">Academic</span>
+                <span class="cv-line cv-line-name"></span>
+                <span class="cv-line cv-line-sub"></span>
+                <span class="cv-line cv-line-head"></span>
+                <span class="cv-line"></span><span class="cv-line"></span><span class="cv-line cv-line-short"></span>
+                <span class="cv-line cv-line-head"></span>
+                <span class="cv-line"></span><span class="cv-line cv-line-short"></span>
+              </div>
+              <div class="cv-doc cv-doc-industry">
+                <span class="cv-doc-tag">Industry</span>
+                <span class="cv-line cv-line-name"></span>
+                <span class="cv-line cv-line-sub"></span>
+                <span class="cv-line cv-line-head"></span>
+                <span class="cv-line"></span><span class="cv-line"></span><span class="cv-line cv-line-short"></span>
+                <span class="cv-line cv-line-head"></span>
+                <span class="cv-line"></span><span class="cv-line cv-line-short"></span>
+              </div>
+              <span class="cv-badge cv-badge-latex">LaTeX</span>
+              <span class="cv-badge cv-badge-word">Word</span>
+            </div>
             <span class="gift-mock-label">Free Download</span>
             <span class="gift-mock-title">CV Templates for Academia &amp; Industry</span>
           </div>
@@ -39,22 +62,22 @@
             <input type="hidden" name="language" value="{{ lang.name }}">
             <div class="form-group">
               <label for="gift-name">First name</label>
-              <input type="text" id="gift-name" name="name" required placeholder="Your first name">
+              <input type="text" id="gift-name" name="name" required autocomplete="given-name" placeholder="Your first name">
             </div>
             <div class="form-group">
               <label for="gift-email">Email address</label>
-              <input type="email" id="gift-email" name="email" required placeholder="you@email.com">
+              <input type="email" id="gift-email" name="email" required autocomplete="email" placeholder="you@email.com">
             </div>
             <div class="form-checkbox">
               <input type="checkbox" id="gift-privacy" name="privacy" required>
               <label for="gift-privacy">I agree to receive the templates and occasional career tips. I can unsubscribe anytime. See the <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a>.</label>
             </div>
-            <button type="submit" class="btn-gift">
+            <button type="submit" class="btn-primary btn-lg btn-block">
               {{ icon("download", 18) }}
               Send me the free templates
             </button>
           </form>
-          <p class="gift-notice">No spam, ever. Unsubscribe with one click.</p>
+          <p class="gift-notice">{{ icon("lock", 13) }} No spam, ever. Unsubscribe with one click.</p>
         </div>
       </div>
     </section>

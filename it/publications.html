@@ -4,6 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#162242">
+  <script>
+    // Lets the CSS hide scroll-reveal content until site.js shows it. If site.js
+    // hasn't started within 3 s (blocked, failed to load), show everything.
+    document.documentElement.classList.add('js');
+    setTimeout(function () {
+      if (!window.misReveal) document.documentElement.classList.add('reveal-all');
+    }, 3000);
+  </script>
   <!-- Google tag (gtag.js) - loader injected by cookie-consent.js only after consent -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -34,79 +43,104 @@
   <meta property="og:description" content="Pubblicazioni accademiche e attività di ricerca del Dr Giuseppe Romano, con link a Google Scholar.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://makeitstem.com/it/publications.html">
-  <meta property="og:image" content="https://makeitstem.com/assets/img/logo.png">
-  <meta property="og:image:alt" content="Logo di Make IT STEM">
+  <meta property="og:image" content="https://makeitstem.com/assets/img/og/og-it.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Make IT STEM: mentoring di carriera STEM con il Dr Giuseppe Romano">
   <meta property="og:locale" content="it_IT">
   <meta property="og:locale:alternate" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pubblicazioni | Dr Giuseppe Romano - Make IT STEM">
   <meta name="twitter:description" content="Pubblicazioni accademiche e attività di ricerca del Dr Giuseppe Romano, con link a Google Scholar.">
-  <meta name="twitter:image" content="https://makeitstem.com/assets/img/logo.png">
-  <link rel="icon" type="image/png" href="../assets/img/logo.png">
-  <link rel="apple-touch-icon" href="../assets/img/logo.png">
+  <meta name="twitter:image" content="https://makeitstem.com/assets/img/og/og-it.jpg">
+  <meta name="twitter:image:alt" content="Make IT STEM: mentoring di carriera STEM con il Dr Giuseppe Romano">
+  <link rel="icon" type="image/png" href="../assets/img/logo-mark.png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/site.css?v=c67b4cd9">
-  <link rel="stylesheet" href="../assets/css/pages/content.css?v=f7ebd97f">
-  <link rel="stylesheet" href="../assets/css/pages/publications.css?v=85eae347">
+  <link rel="stylesheet" href="../assets/css/site.css?v=e890cfb7">
+  <link rel="stylesheet" href="../assets/css/pages/content.css?v=bb814522">
+  <link rel="stylesheet" href="../assets/css/pages/publications.css?v=0d6e4df0">
 </head>
 <body class="page-publications">
 
   <a class="skip-link" href="#main">Vai al contenuto</a>
 
-  <nav id="site-nav" aria-label="Principale">
-    <a href="./" class="nav-logo" aria-label="Make IT STEM — home">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"/></svg>
+  <nav id="site-nav" class="site-nav" aria-label="Principale">
+    <a href="./" class="nav-brand" aria-label="Make IT STEM — home">
+      <img src="../assets/img/logo-mark.png" alt="" width="40" height="40">
+      <span class="nav-wordmark" aria-hidden="true">Make <span>IT</span> STEM</span>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="gift.html" class="nav-gift"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Regalo gratuito</a></li>
+      <li><a href="gift.html" class="nav-link nav-gift"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Regalo gratuito</a></li>
       <li class="nav-dropdown">
-        <a href="./#services"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Esplora</a>
-        <ul class="dropdown-menu">
-          <li><a href="./#mentoring"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Mentoring di carriera 1:1</a></li>
-          <li><a href="./#group-tutoring"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Tutoring di gruppo</a></li>
-          <li><a href="courses.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>Corsi online</a></li>
-          <li><a href="./#process"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>Il metodo</a></li>
-        </ul>
+        <button type="button" class="nav-link nav-trigger" aria-expanded="false" aria-controls="nav-explore"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Esplora<svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown-menu" id="nav-explore">
+          <ul>
+            <li><a href="./#mentoring">
+            <span class="dd-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+            <span><span class="dd-title">Mentoring di carriera 1:1</span><span class="dd-desc">Un percorso su misura per CV, colloqui e strategia di carriera</span></span>
+          </a></li>
+            <li><a href="./#group-tutoring">
+            <span class="dd-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <span><span class="dd-title">Tutoring di gruppo</span><span class="dd-desc">Tutoring dal vivo in piccoli gruppi da 6 a 10 persone</span></span>
+          </a></li>
+            <li><a href="courses.html">
+            <span class="dd-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+            <span><span class="dd-title">Corsi online</span><span class="dd-desc">Corsi registrati da seguire con i tuoi tempi: lista d&#39;attesa aperta</span></span>
+          </a></li>
+            <li><a href="./#process">
+            <span class="dd-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span>
+            <span><span class="dd-title">Il metodo</span><span class="dd-desc">Come passiamo dalla prima call a una carriera chiara</span></span>
+          </a></li>
+          </ul>
+          <p class="dropdown-foot">Non sai da dove iniziare? <a href="./#contact" class="link-arrow" data-enquiry="Free Discovery Call">Prenota una call gratuita <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></p>
+        </div>
       </li>
-      <li><a href="./#about"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Chi sono</a></li>
-      <li><a href="testimonials.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Testimonianze</a></li>
-      <li><a href="blog.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Blog</a></li>
-      <li><a href="publications.html" aria-current="page"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Pubblicazioni</a></li>
-      <li><a href="./#contact" class="nav-cta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Prenota una call gratuita</a></li>
-      <li class="nav-lang" role="group" aria-label="Lingua">
-        <a href="../publications.html" hreflang="en" lang="en" aria-label="English" data-lang-switch>EN</a>
-        <a href="../it/publications.html" hreflang="it" lang="it" aria-label="Italiano" data-lang-switch aria-current="true">IT</a>
+      <li><a href="./#about" class="nav-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Chi sono</a></li>
+      <li><a href="testimonials.html" class="nav-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Testimonianze</a></li>
+      <li><a href="blog.html" class="nav-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Blog</a></li>
+      <li><a href="publications.html" class="nav-link" aria-current="page"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Pubblicazioni</a></li>
+      <li class="nav-cta-item"><a href="./#contact" class="nav-cta" data-enquiry="Free Discovery Call"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Prenota una call gratuita</a></li>
+      <li class="nav-lang-item">
+        <div class="nav-lang" role="group" aria-label="Lingua">
+          <a href="../publications.html" hreflang="en" lang="en" aria-label="English" data-lang-switch>EN</a>
+          <a href="../it/publications.html" hreflang="it" lang="it" aria-label="Italiano" data-lang-switch aria-current="true">IT</a>
+        </div>
       </li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Apri o chiudi il menu" aria-controls="navLinks" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-actions">
+      <a href="./#contact" class="nav-cta nav-cta-short" data-enquiry="Free Discovery Call"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Prenota</a>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Apri o chiudi il menu" aria-controls="navLinks" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
   <script>
     // Fit the nav to the screen: full spacing if it fits, tighter spacing if that
-    // fits, otherwise collapse into the hamburger. Measuring (instead of a fixed
+    // fits, otherwise collapse into the menu button. Measuring (instead of a fixed
     // breakpoint) copes with longer languages and new nav items automatically.
     (function () {
       var nav = document.getElementById('site-nav');
       var links = document.getElementById('navLinks');
-      var logo = nav.querySelector('.nav-logo');
+      var brand = nav.querySelector('.nav-brand');
       function fits() {
         var style = getComputedStyle(nav);
-        return logo.offsetWidth + links.scrollWidth + 32 +
+        return brand.offsetWidth + links.scrollWidth + 40 +
           parseFloat(style.paddingLeft) + parseFloat(style.paddingRight) <= nav.clientWidth;
       }
       function fit() {
         var wasCompact = nav.classList.contains('is-compact');
-        nav.classList.remove('is-compact', 'is-tight');
+        nav.classList.remove('is-compact', 'is-tight', 'no-bar-cta');
         if (!fits()) nav.classList.add('is-tight');
         var compact = !fits();
         if (compact) nav.classList.remove('is-tight');
         nav.classList.toggle('is-compact', compact);
-        if (wasCompact && !compact) {
-          links.classList.remove('open');
-          document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
+        // Drop the short "Book a call" button from the bar if it would crowd the logo.
+        if (compact && nav.scrollWidth > nav.clientWidth) nav.classList.add('no-bar-cta');
+        if (compact !== wasCompact) {
+          nav.dispatchEvent(new CustomEvent('navmodechange', { detail: { compact: compact } }));
         }
       }
       fit();
@@ -117,91 +151,153 @@
 
   <main id="main" tabindex="-1">
     <!-- PAGE HEADER -->
-    <section class="page-header">
+<section class="page-header">
+      <span class="deco-rings" aria-hidden="true"></span>
       <div class="section-inner">
+        <nav class="breadcrumb" aria-label="Percorso di navigazione">
+          <ol>
+            <li><a href="./">Home</a></li>
+            <li aria-current="page">Pubblicazioni</li>
+          </ol>
+        </nav>
         <h1>Ricerca e pubblicazioni</h1>
         <p>All'incrocio tra materiali avanzati, simulazione e formazione in ingegneria</p>
         <a href="https://orcid.org/0000-0002-9385-3541" target="_blank" rel="noopener" class="orcid-link">
           <svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z"/><path fill="#fff" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z"/><path fill="#fff" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z"/><path fill="#fff" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1C84.2,46.7,88.7,51.3,88.7,56.8z"/></svg>
           ORCID: 0000-0002-9385-3541
         </a>
+
+      </div>
+    </section>
+    <!-- CONTENT -->
+    <section class="content-section">
+      <div class="section-inner pubs-layout">
+        <div class="pubs-main">
+          <h2>Il mio lavoro accademico</h2>
+          <p>
+            La mia ricerca si concentra su materiali avanzati, simulazione computazionale e applicazione pratica della teoria ingegneristica nell'industria. Pubblico regolarmente su riviste e conferenze con revisione paritaria.
+          </p>
+
+          <div id="publications"
+               data-src="../publications.json"
+               data-journal-heading="Articoli su rivista"
+               data-conference-heading="Atti di conferenze"
+               data-view-paper="Vedi l'articolo"
+               data-fallback="L'elenco completo delle mie pubblicazioni è disponibile su"
+               data-scholar-url="https://scholar.google.com/citations?hl=it&amp;user=dF_84b0AAAAJ">
+            <p class="pub-loading">Caricamento delle pubblicazioni…</p>
+          </div>
+        </div>
+
+        <div class="pubs-aside">
+          <div class="pubs-panel" data-reveal>
+            <h2 class="research-heading">Interessi di ricerca</h2>
+            <ul class="research-list">
+              <li><span class="research-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>Materiali avanzati e strutture in composito</li>
+              <li><span class="research-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></span>Analisi agli elementi finiti e simulazione computazionale</li>
+              <li><span class="research-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span>Analisi termica e meccanica</li>
+              <li><span class="research-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Approcci di modellazione multiscala</li>
+              <li><span class="research-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>Formazione in ingegneria e collaborazione tra università e industria</li>
+              <li><span class="research-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>Sviluppo della carriera STEM e occupabilità</li>
+            </ul>
+          </div>
+
+          <div class="cta-box" data-reveal style="--reveal-delay: 0.1s">
+            <span class="cta-box-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+            <h3>Profilo completo e citazioni</h3>
+            <p>
+              Per citazioni, h-index e l'elenco più aggiornato, visita il mio profilo Google Scholar.
+            </p>
+            <a href="https://scholar.google.com/citations?hl=it&amp;user=dF_84b0AAAAJ" target="_blank" rel="noopener" class="btn-primary btn-block">
+              Vedi su Google Scholar
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- CONTENT -->
-    <section class="content-section">
-      <div class="section-inner">
-        <h2>Il mio lavoro accademico</h2>
-        <p>
-          La mia ricerca si concentra su materiali avanzati, simulazione computazionale e applicazione pratica della teoria ingegneristica nell'industria. Pubblico regolarmente su riviste e conferenze con revisione paritaria.
-        </p>
-
-        <div id="publications"
-             data-src="../publications.json"
-             data-journal-heading="Articoli su rivista"
-             data-conference-heading="Atti di conferenze"
-             data-view-paper="Vedi l'articolo →"
-             data-fallback="L'elenco completo delle mie pubblicazioni è disponibile su"
-             data-scholar-url="https://scholar.google.com/citations?hl=it&amp;user=dF_84b0AAAAJ">
-          <p class="pub-loading">Caricamento delle pubblicazioni…</p>
-        </div>
-
-        <div class="cta-box">
-          <h3>Profilo completo e citazioni</h3>
-          <p>
-            Per citazioni, h-index e l'elenco più aggiornato, visita il mio profilo Google Scholar.
-          </p>
-          <a href="https://scholar.google.com/citations?hl=it&amp;user=dF_84b0AAAAJ" target="_blank" rel="noopener" class="btn-primary">
-            Vedi su Google Scholar
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    <!-- CTA -->
+<section class="cta-band">
+      <div class="bg-grid" aria-hidden="true"></div>
+      <span class="deco-rings" aria-hidden="true"></span>
+      <div class="section-inner" data-reveal>
+        <h2>Vuoi colmare il divario?</h2>
+        <p>Prenota una call conoscitiva gratuita di 15 minuti: parliamo di dove sei, di dove vuoi arrivare e di come arrivarci.</p>
+        <div class="cta-band-actions">
+          <a href="./#contact" data-enquiry="Free Discovery Call" class="btn-primary btn-lg">
+            Prenota la tua call gratuita
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="gift.html" class="btn-ghost btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+            Scarica i modelli di CV gratuiti
           </a>
         </div>
-
-        <h2 class="research-heading">Interessi di ricerca</h2>
-        <ul class="research-list">
-          <li>Materiali avanzati e strutture in composito</li>
-          <li>Analisi agli elementi finiti e simulazione computazionale</li>
-          <li>Analisi termica e meccanica</li>
-          <li>Approcci di modellazione multiscala</li>
-          <li>Formazione in ingegneria e collaborazione tra università e industria</li>
-          <li>Sviluppo della carriera STEM e occupabilità</li>
-        </ul>
       </div>
     </section>
   </main>
 
-<footer>
-    <div class="footer-inner">
-      <ul class="footer-links">
-        <li><a href="./#services">Servizi</a></li>
-        <li><a href="courses.html">Corsi online</a></li>
-        <li><a href="./#about">Chi sono</a></li>
-        <li><a href="testimonials.html">Testimonianze</a></li>
-        <li><a href="testimonials.html#leave-review">Lascia una recensione</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="publications.html">Pubblicazioni</a></li>
-        <li><a href="./#contact">Contatti</a></li>
+<footer class="site-footer">
+    <span class="deco-rings" aria-hidden="true"></span>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="./" class="footer-logo" aria-label="Make IT STEM — home">
+          <img src="../assets/img/logo-mark.png" alt="" width="48" height="48" loading="lazy">
+          <span aria-hidden="true">Make <span>IT</span> STEM</span>
+        </a>
+        <p>Mentoring di carriera STEM per studenti universitari e ingegneri a inizio carriera.</p>
+        <ul class="footer-social" aria-label="Segui Make IT STEM">
+          <li><a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.39v-1.2h-2.49v8.5h2.5v-4.34c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.34h2.5M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.5H5.5v8.5h2.77Z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/make_it_stem/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
+          <li><a href="https://www.youtube.com/@MakeITSTEM" target="_blank" rel="noopener" aria-label="YouTube"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C17.5 2.6 12 2.6 12 2.6h0s-5.5 0-8.6.3c-.4 0-1.3.1-2.1 1-.6.7-.8 2.3-.8 2.3S0 8.1 0 10v1.8c0 1.9.2 3.8.2 3.8s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.7.2 7.6.3 7.6.3s5.5 0 8.6-.3c.4 0 1.3-.1 2.1-1 .6-.7.8-2.3.8-2.3s.2-1.9.2-3.8V10c0-1.9-.2-3.8-.2-3.8zM9.5 14.5v-7l6 3.5-6 3.5z"/></svg></a></li>
+        </ul>
+      </div>
+      <nav class="footer-col" aria-labelledby="footer-services">
+        <h2 id="footer-services">Servizi</h2>
+        <ul>
+          <li><a href="./#mentoring">Mentoring di carriera 1:1</a></li>
+          <li><a href="./#group-tutoring">Tutoring di gruppo</a></li>
+          <li><a href="courses.html">Corsi online</a></li>
+          <li><a href="./#process">Il metodo</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="footer-explore">
+        <h2 id="footer-explore">Esplora</h2>
+        <ul>
+          <li><a href="gift.html">Regalo gratuito</a></li>
+          <li><a href="./#about">Chi sono</a></li>
+          <li><a href="testimonials.html">Testimonianze</a></li>
+          <li><a href="testimonials.html#leave-review">Lascia una recensione</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="publications.html">Pubblicazioni</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col footer-contact">
+        <h2>Contatti</h2>
+        <ul>
+          <li><a href="mailto:contact@makeitstem.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>contact@makeitstem.com</a></li>
+          <li><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Cambridge, Regno Unito</span></li>
+        </ul>
+        <a href="./#contact" class="btn-primary btn-sm" data-enquiry="Free Discovery Call">Prenota una call gratuita <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Make IT STEM. Tutti i diritti riservati. Giuseppe Romano, che opera con il nome commerciale Make IT STEM.</p>
+      <ul class="footer-policies">
+        <li><a href="privacy.html">Informativa sulla privacy</a></li>
+        <li><a href="terms.html">Termini e condizioni</a></li>
+        <li><a href="#" data-cookie-settings>Impostazioni cookie</a></li>
       </ul>
-      <p class="footer-copy">
-        &copy; 2026 Make IT STEM. Tutti i diritti riservati. &nbsp;|&nbsp;
-        Mentoring di carriera STEM per studenti universitari e ingegneri a inizio carriera.
-        <span class="footer-legal">
-          Giuseppe Romano, che opera con il nome commerciale Make IT STEM &nbsp;&middot;&nbsp;
-          <a href="mailto:contact@makeitstem.com">contact@makeitstem.com</a>
-        </span>
-        <span class="footer-policies">
-          <a href="privacy.html">Informativa sulla privacy</a> &nbsp;&middot;&nbsp;
-          <a href="terms.html">Termini e condizioni</a> &nbsp;&middot;&nbsp;
-          <a href="#" data-cookie-settings>Impostazioni cookie</a>
-        </span>
-      </p>
     </div>
   </footer>
 
+  <button type="button" class="back-to-top" data-back-to-top aria-label="Torna su"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+
   <script type="application/json" id="site-config">{"cookie": {"accept": "Accetta gli analytics", "body": "I cookie essenziali permettono al sito di funzionare. Vorremmo usare anche Google Analytics per capire quali pagine sono utili, ma solo con il tuo consenso. Puoi cambiare idea in qualsiasi momento. Leggi la nostra", "label": "Consenso ai cookie", "policyLink": "Informativa su cookie e privacy", "reject": "Rifiuta i non essenziali", "title": "Utilizziamo i cookie"}, "gaId": "G-NL49D78HZD", "privacyUrl": "privacy.html#cookies"}</script>
-  <script src="../assets/js/site.js?v=03a960ed"></script>
-  <script src="../assets/js/publications.js?v=7281559c"></script>
-  <script src="../assets/js/cookie-consent.js?v=790ca7ed"></script>
+  <script src="../assets/js/site.js?v=8794bf89"></script>
+  <script src="../assets/js/publications.js?v=18a21d7c"></script>
+  <script src="../assets/js/cookie-consent.js?v=c71a240d"></script>
 
 </body>
 </html>

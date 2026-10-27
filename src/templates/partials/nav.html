@@ -1,64 +1,82 @@
-{#- Main navigation. Links are relative to the current language folder. -#}
+{#- Main navigation. Links are relative to the current language folder.
+    On narrow screens (or when the links don't fit) the links move into a
+    full-height drawer behind the menu button; site.js handles opening it. -#}
 {%- set home = "" if page == "index" else "./" -%}
 {%- macro link(href, target, label, name, cls="") -%}
-<a href="{{ href }}"{% if cls %} class="{{ cls }}"{% endif %}{% if page == target %} aria-current="page"{% endif %}>{{ icon(name) }}{{ label }}</a>
+<a href="{{ href }}" class="nav-link{% if cls %} {{ cls }}{% endif %}"{% if page == target %} aria-current="page"{% endif %}>{{ icon(name) }}{{ label }}</a>
 {%- endmacro %}
-  <nav id="site-nav" aria-label="{{ t.nav.label }}">
-    <a href="./" class="nav-logo" aria-label="{{ t.nav.home }}">
-      {{ icon("home", 24) }}
+{%- macro explore_item(href, name, label, desc, target="") -%}
+<li><a href="{{ href }}"{% if target and page == target %} aria-current="page"{% endif %}>
+            <span class="dd-icon">{{ icon(name, 18) }}</span>
+            <span><span class="dd-title">{{ label }}</span><span class="dd-desc">{{ desc }}</span></span>
+          </a></li>
+{%- endmacro %}
+  <nav id="site-nav" class="site-nav" aria-label="{{ t.nav.label }}">
+    <a href="./" class="nav-brand" aria-label="{{ t.nav.home }}">
+      <img src="{{ root }}assets/img/logo-mark.png" alt="" width="40" height="40">
+      <span class="nav-wordmark" aria-hidden="true">Make <span>IT</span> STEM</span>
     </a>
     <ul class="nav-links" id="navLinks">
       <li>{{ link("gift.html", "gift", t.nav.gift, "gift", "nav-gift") }}</li>
       <li class="nav-dropdown">
-        <a href="{{ home }}#services">{{ icon("folder") }}{{ t.nav.explore }}</a>
-        <ul class="dropdown-menu">
-          <li><a href="{{ home }}#mentoring">{{ icon("user") }}{{ t.nav.mentoring }}</a></li>
-          <li><a href="{{ home }}#group-tutoring">{{ icon("users") }}{{ t.nav.group }}</a></li>
-          <li>{{ link("courses.html", "courses", t.nav.courses, "monitor") }}</li>
-          <li><a href="{{ home }}#process">{{ icon("list") }}{{ t.nav.process }}</a></li>
-        </ul>
+        <button type="button" class="nav-link nav-trigger" aria-expanded="false" aria-controls="nav-explore">{{ icon("folder") }}{{ t.nav.explore }}{{ icon("chevron-down", 14, cls="nav-chevron") }}</button>
+        <div class="dropdown-menu" id="nav-explore">
+          <ul>
+            {{ explore_item(home ~ "#mentoring", "user", t.nav.mentoring, t.nav.mentoring_desc) }}
+            {{ explore_item(home ~ "#group-tutoring", "users", t.nav.group, t.nav.group_desc) }}
+            {{ explore_item("courses.html", "monitor", t.nav.courses, t.nav.courses_desc, "courses") }}
+            {{ explore_item(home ~ "#process", "list", t.nav.process, t.nav.process_desc) }}
+          </ul>
+          <p class="dropdown-foot">{{ t.nav.help }} <a href="{{ home }}#contact" class="link-arrow" data-enquiry="Free Discovery Call">{{ t.nav.cta }} {{ icon("arrow-right", 15) }}</a></p>
+        </div>
       </li>
-      <li><a href="{{ home }}#about">{{ icon("user") }}{{ t.nav.about }}</a></li>
+      <li><a href="{{ home }}#about" class="nav-link">{{ icon("user") }}{{ t.nav.about }}</a></li>
       <li>{{ link("testimonials.html", "testimonials", t.nav.testimonials, "message") }}</li>
       <li>{{ link("blog.html", "blog", t.nav.blog, "pen") }}</li>
       <li>{{ link("publications.html", "publications", t.nav.publications, "book") }}</li>
       {% if site.login_url %}
       <li>{{ link(site.login_url, "login", t.nav.login, "log-in") }}</li>
       {% endif %}
-      <li><a href="{{ home }}#contact" class="nav-cta">{{ icon("phone") }}{{ t.nav.cta }}</a></li>
-      <li class="nav-lang" role="group" aria-label="{{ t.nav.language }}">
-        {% for alt in alternates %}
-        <a href="{{ alt.href }}" hreflang="{{ alt.code }}" lang="{{ alt.code }}" aria-label="{{ alt.name }}" data-lang-switch{% if alt.code == lang.code %} aria-current="true"{% endif %}>{{ alt.label }}</a>
-        {% endfor %}
+      <li class="nav-cta-item"><a href="{{ home }}#contact" class="nav-cta" data-enquiry="Free Discovery Call">{{ icon("phone") }}{{ t.nav.cta }}</a></li>
+      <li class="nav-lang-item">
+        <div class="nav-lang" role="group" aria-label="{{ t.nav.language }}">
+          {% for alt in alternates %}
+          <a href="{{ alt.href }}" hreflang="{{ alt.code }}" lang="{{ alt.code }}" aria-label="{{ alt.name }}" data-lang-switch{% if alt.code == lang.code %} aria-current="true"{% endif %}>{{ alt.label }}</a>
+          {% endfor %}
+        </div>
       </li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="{{ t.nav.menu }}" aria-controls="navLinks" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-actions">
+      <a href="{{ home }}#contact" class="nav-cta nav-cta-short" data-enquiry="Free Discovery Call">{{ icon("phone", 14) }}{{ t.nav.cta_short }}</a>
+      <button type="button" class="hamburger" id="hamburger" aria-label="{{ t.nav.menu }}" aria-controls="navLinks" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
   <script>
     // Fit the nav to the screen: full spacing if it fits, tighter spacing if that
-    // fits, otherwise collapse into the hamburger. Measuring (instead of a fixed
+    // fits, otherwise collapse into the menu button. Measuring (instead of a fixed
     // breakpoint) copes with longer languages and new nav items automatically.
     (function () {
       var nav = document.getElementById('site-nav');
       var links = document.getElementById('navLinks');
-      var logo = nav.querySelector('.nav-logo');
+      var brand = nav.querySelector('.nav-brand');
       function fits() {
         var style = getComputedStyle(nav);
-        return logo.offsetWidth + links.scrollWidth + 32 +
+        return brand.offsetWidth + links.scrollWidth + 40 +
           parseFloat(style.paddingLeft) + parseFloat(style.paddingRight) <= nav.clientWidth;
       }
       function fit() {
         var wasCompact = nav.classList.contains('is-compact');
-        nav.classList.remove('is-compact', 'is-tight');
+        nav.classList.remove('is-compact', 'is-tight', 'no-bar-cta');
         if (!fits()) nav.classList.add('is-tight');
         var compact = !fits();
         if (compact) nav.classList.remove('is-tight');
         nav.classList.toggle('is-compact', compact);
-        if (wasCompact && !compact) {
-          links.classList.remove('open');
-          document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
+        // Drop the short "Book a call" button from the bar if it would crowd the logo.
+        if (compact && nav.scrollWidth > nav.clientWidth) nav.classList.add('no-bar-cta');
+        if (compact !== wasCompact) {
+          nav.dispatchEvent(new CustomEvent('navmodechange', { detail: { compact: compact } }));
         }
       }
       fit();

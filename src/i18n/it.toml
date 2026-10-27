@@ -20,6 +20,15 @@ publications = "Pubblicazioni"
 login = "Accedi"
 cta = "Prenota una call gratuita"
 language = "Lingua"
+mentoring_desc = "Un percorso su misura per CV, colloqui e strategia di carriera"
+group_desc = "Tutoring dal vivo in piccoli gruppi da 6 a 10 persone"
+courses_desc = "Corsi registrati da seguire con i tuoi tempi: lista d'attesa aperta"
+process_desc = "Come passiamo dalla prima call a una carriera chiara"
+help = "Non sai da dove iniziare?"
+cta_short = "Prenota"
+home_label = "Home"
+breadcrumb = "Percorso di navigazione"
+back_to_top = "Torna su"
 
 [footer]
 services = "Servizi"
@@ -36,9 +45,12 @@ cookies = "Impostazioni cookie"
 rights = "Tutti i diritti riservati."
 tagline = "Mentoring di carriera STEM per studenti universitari e ingegneri a inizio carriera."
 trading = "Giuseppe Romano, che opera con il nome commerciale Make IT STEM"
+explore = "Esplora"
+follow = "Segui Make IT STEM"
+location = "Cambridge, Regno Unito"
 
 [meta]
-logo_alt = "Logo di Make IT STEM"
+share_image_alt = "Make IT STEM: mentoring di carriera STEM con il Dr Giuseppe Romano"
 
 # Letti da assets/js/cookie-consent.js (chiavi in camelCase di proposito).
 [cookie]
@@ -52,6 +64,7 @@ accept = "Accetta gli analytics"
 [blog]
 live = "Online"
 all = "Tutti"
+filter = "Filtra gli articoli per categoria"
 
 [blog.categories]
 cv = "CV e candidature"
@@ -68,3 +81,13 @@ months_long = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "lu
 title = "Pagina spostata"
 body = "Questa pagina è stata spostata: ti stiamo reindirizzando al"
 link = "nuovo indirizzo"
+
+# Invito all'azione finale, in fondo alla home e alle pagine interne.
+[cta]
+title = "Vuoi colmare il divario?"
+body = "Prenota una call conoscitiva gratuita di 15 minuti: parliamo di dove sei, di dove vuoi arrivare e di come arrivarci."
+button = "Prenota la tua call gratuita"
+gift = "Scarica i modelli di CV gratuiti"
+
+[legal]
+toc = "In questa pagina"

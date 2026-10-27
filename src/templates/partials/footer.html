@@ -1,28 +1,54 @@
 {%- set home = "" if page == "index" else "./" -%}
-  <footer>
-    <div class="footer-inner">
-      <ul class="footer-links">
-        <li><a href="{{ home }}#services">{{ t.footer.services }}</a></li>
-        <li><a href="courses.html">{{ t.footer.courses }}</a></li>
-        <li><a href="{{ home }}#about">{{ t.footer.about }}</a></li>
-        <li><a href="testimonials.html">{{ t.footer.testimonials }}</a></li>
-        <li><a href="testimonials.html#leave-review">{{ t.footer.review }}</a></li>
-        <li><a href="blog.html">{{ t.footer.blog }}</a></li>
-        <li><a href="publications.html">{{ t.footer.publications }}</a></li>
-        <li><a href="{{ home }}#contact">{{ t.footer.contact }}</a></li>
+  <footer class="site-footer">
+    <span class="deco-rings" aria-hidden="true"></span>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="./" class="footer-logo" aria-label="{{ t.nav.home }}">
+          <img src="{{ root }}assets/img/logo-mark.png" alt="" width="48" height="48" loading="lazy">
+          <span aria-hidden="true">Make <span>IT</span> STEM</span>
+        </a>
+        <p>{{ t.footer.tagline }}</p>
+        <ul class="footer-social" aria-label="{{ t.footer.follow }}">
+          <li><a href="{{ site.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">{{ icon("linkedin", 19) }}</a></li>
+          <li><a href="{{ site.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">{{ icon("instagram", 18) }}</a></li>
+          <li><a href="{{ site.social.youtube }}" target="_blank" rel="noopener" aria-label="YouTube">{{ icon("youtube", 19) }}</a></li>
+        </ul>
+      </div>
+      <nav class="footer-col" aria-labelledby="footer-services">
+        <h2 id="footer-services">{{ t.footer.services }}</h2>
+        <ul>
+          <li><a href="{{ home }}#mentoring">{{ t.nav.mentoring }}</a></li>
+          <li><a href="{{ home }}#group-tutoring">{{ t.nav.group }}</a></li>
+          <li><a href="courses.html">{{ t.footer.courses }}</a></li>
+          <li><a href="{{ home }}#process">{{ t.nav.process }}</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="footer-explore">
+        <h2 id="footer-explore">{{ t.footer.explore }}</h2>
+        <ul>
+          <li><a href="gift.html">{{ t.nav.gift }}</a></li>
+          <li><a href="{{ home }}#about">{{ t.footer.about }}</a></li>
+          <li><a href="testimonials.html">{{ t.footer.testimonials }}</a></li>
+          <li><a href="testimonials.html#leave-review">{{ t.footer.review }}</a></li>
+          <li><a href="blog.html">{{ t.footer.blog }}</a></li>
+          <li><a href="publications.html">{{ t.footer.publications }}</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col footer-contact">
+        <h2>{{ t.footer.contact }}</h2>
+        <ul>
+          <li><a href="mailto:{{ site.email }}">{{ icon("mail", 16) }}{{ site.email }}</a></li>
+          <li><span>{{ icon("map-pin", 16) }}{{ t.footer.location }}</span></li>
+        </ul>
+        <a href="{{ home }}#contact" class="btn-primary btn-sm" data-enquiry="Free Discovery Call">{{ t.nav.cta }} {{ icon("arrow-right", 16) }}</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ site.copyright_year }} {{ site.name }}. {{ t.footer.rights }} {{ t.footer.trading }}.</p>
+      <ul class="footer-policies">
+        <li><a href="privacy.html">{{ t.footer.privacy }}</a></li>
+        <li><a href="terms.html">{{ t.footer.terms }}</a></li>
+        <li><a href="#" data-cookie-settings>{{ t.footer.cookies }}</a></li>
       </ul>
-      <p class="footer-copy">
-        &copy; {{ site.copyright_year }} {{ site.name }}. {{ t.footer.rights }} &nbsp;|&nbsp;
-        {{ t.footer.tagline }}
-        <span class="footer-legal">
-          {{ t.footer.trading }} &nbsp;&middot;&nbsp;
-          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-        </span>
-        <span class="footer-policies">
-          <a href="privacy.html">{{ t.footer.privacy }}</a> &nbsp;&middot;&nbsp;
-          <a href="terms.html">{{ t.footer.terms }}</a> &nbsp;&middot;&nbsp;
-          <a href="#" data-cookie-settings>{{ t.footer.cookies }}</a>
-        </span>
-      </p>
     </div>
   </footer>

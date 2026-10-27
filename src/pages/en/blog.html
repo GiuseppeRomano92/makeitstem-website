@@ -1,16 +1,14 @@
 {% extends "base.html" %}
+{% from "partials/page-header.html" import page_header with context %}
 {% set title = "Blog | Make IT STEM" %}
 {% set description = "STEM career tips, industry insights, and engineering career advice from Dr Giuseppe Romano." %}
 {% set styles = ["blog"] %}
 
 {% block content %}
     <!-- PAGE HEADER -->
-    <section class="page-header">
-      <div class="section-inner">
-        <h1>Blog</h1>
+    {% call page_header("Blog") %}
         <p>STEM career tips, industry insights, and engineering advice — written by an engineer who's been through it.</p>
-      </div>
-    </section>
+    {% endcall %}
 
     <!-- BLOG CONTENT -->
     <section class="blog-section">
@@ -18,4 +16,6 @@
         {% include "partials/blog-list.html" %}
       </div>
     </section>
+
+    {% include "partials/cta-band.html" %}
 {% endblock %}

@@ -20,6 +20,15 @@ publications = "Publications"
 login = "Log In"
 cta = "Book a Free Call"
 language = "Language"
+mentoring_desc = "Personal guidance on your CV, interviews and career strategy"
+group_desc = "Live tutoring in small groups of 6 to 10 people"
+courses_desc = "Recorded courses at your own pace: waiting list open"
+process_desc = "How we go from first call to career clarity"
+help = "Not sure where to start?"
+cta_short = "Book a call"
+home_label = "Home"
+breadcrumb = "Breadcrumb"
+back_to_top = "Back to top"
 
 [footer]
 services = "Services"
@@ -36,9 +45,12 @@ cookies = "Cookie Settings"
 rights = "All rights reserved."
 tagline = "STEM career mentoring for university students and early-career engineers."
 trading = "Giuseppe Romano, trading as Make IT STEM"
+explore = "Explore"
+follow = "Follow Make IT STEM"
+location = "Cambridge, United Kingdom"
 
 [meta]
-logo_alt = "Make IT STEM logo"
+share_image_alt = "Make IT STEM: STEM career mentoring with Dr Giuseppe Romano"
 
 # Read by assets/js/cookie-consent.js (keys are camelCase on purpose).
 [cookie]
@@ -52,6 +64,7 @@ accept = "Accept analytics"
 [blog]
 live = "Live"
 all = "All"
+filter = "Filter posts by category"
 
 [blog.categories]
 cv = "CV & Applications"
@@ -68,3 +81,13 @@ months_long = ["January", "February", "March", "April", "May", "June", "July", "
 title = "Page moved"
 body = "This page has moved — redirecting you to"
 link = "its new location"
+
+# Closing call to action shown at the end of the homepage and the inner pages.
+[cta]
+title = "Ready to bridge the gap?"
+body = "Book a free 15-minute discovery call and let's talk about where you are, where you want to be, and how to get there."
+button = "Book Your Free Call"
+gift = "Get the free CV templates"
+
+[legal]
+toc = "On this page"

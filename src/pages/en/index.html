@@ -4,161 +4,176 @@
 {% set social_title = "Make IT STEM — Turning STEM Knowledge into Employability" %}
 {% set social_description = "Bridging the gap between university theory and industry-ready skills" %}
 {% set styles = ["home"] %}
+{% set award_url = "https://www.manchester.ac.uk/about/news/university-of-manchester-and-mec-students-celebrated-at-the-venture-further-awards-2026/" %}
 
 {% block content %}
     <!-- HERO -->
     <section class="hero">
+      <div class="bg-grid" aria-hidden="true"></div>
       <div class="hero-inner">
-        <!-- Logo & Profile Section -->
-        <div class="hero-profile">
-          <img src="{{ root }}assets/img/logo.png" alt="Make IT STEM Logo" class="hero-logo">
-          <div class="hero-photo">
-            <img src="{{ root }}assets/img/vfa-awards-2026.jpg" alt="Dr Giuseppe Romano - VFA Award Winner">
-          </div>
-          <div class="vfa-award">
-            <div class="vfa-award-title">Venture Further Awards 2026</div>
-            <div class="vfa-award-subtitle">
-              Freelancer of the Year<br>
-              £4,000 Winner
-            </div>
-            <a href="https://www.manchester.ac.uk/about/news/university-of-manchester-and-mec-students-celebrated-at-the-venture-further-awards-2026/" target="_blank" rel="noopener" class="vfa-award-link">
-              Learn More
-              {{ icon("external", 14) }}
-            </a>
-          </div>
-        </div>
-
-        <!-- Main Content -->
         <div class="hero-content">
-          <h1>Dr Giuseppe Romano</h1>
-
-          <div class="hero-credentials">
-            <span class="credential-badge">PhD</span>
-            <span class="credential-divider">&middot;</span>
-            <span class="credential-badge">CEng</span>
-            <span class="credential-divider">&middot;</span>
-            <span class="credential-badge">FHEA</span>
-            <span class="credential-divider">&middot;</span>
-            <span class="credential-badge">MIMechE</span>
-            <span class="credential-divider">&middot;</span>
-            <span class="credential-badge">MIMMM</span>
-          </div>
-
+          <p class="hero-eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>STEM career mentoring for students &amp; engineers</p>
+          <h1>Turning STEM knowledge into <span class="hl">employability</span></h1>
           <p class="hero-sub">
-            Turning STEM knowledge into <em>employability</em>. Personalised mentoring that bridges the gap between university theory and industry-ready skills.
+            Personalised mentoring that bridges the gap between university theory and industry-ready skills.
           </p>
-
           <div class="hero-actions">
-            <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
+            <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary btn-lg">
               Book a Free Discovery Call
-              {{ icon("arrow", 16) }}
+              {{ icon("arrow-right", 18) }}
             </a>
-            <a href="#services" class="btn-secondary">
+            <a href="#services" class="btn-secondary btn-lg">
               Explore Services
             </a>
           </div>
+          <ul class="hero-assurances">
+            <li>{{ icon("check", 16, stroke=2.5) }} Free 15-minute call</li>
+            <li>{{ icon("check", 16, stroke=2.5) }} No commitment, no sales pitch</li>
+          </ul>
+        </div>
 
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <strong>15</strong>
-              <span>Students Mentored</span>
-            </div>
-            <div class="hero-stat">
-              <strong>5</strong>
-              <span>Years in Industry</span>
-            </div>
-            <div class="hero-stat">
-              <strong>4</strong>
-              <span>Peer-Reviewed Publications</span>
-            </div>
+        <div class="hero-visual">
+          <svg class="hero-orbits" viewBox="0 0 600 600" aria-hidden="true">
+            <circle class="orbit orbit-outer" cx="300" cy="300" r="292"/>
+            <circle class="orbit orbit-mid" cx="300" cy="300" r="236"/>
+            <circle class="orbit orbit-inner" cx="300" cy="300" r="180"/>
+            <g class="orbiter orbiter-1"><circle cx="300" cy="8" r="7"/></g>
+            <g class="orbiter orbiter-2"><circle cx="300" cy="64" r="5"/></g>
+            <g class="orbiter orbiter-3"><circle cx="300" cy="120" r="4"/></g>
+          </svg>
+          <div class="hero-portrait">
+            <img src="{{ root }}assets/img/giuseppe-romano.jpeg" alt="Dr Giuseppe Romano" width="400" height="400" fetchpriority="high">
           </div>
+          <a class="hero-chip chip-award" href="{{ award_url }}" target="_blank" rel="noopener">
+            <span class="chip-icon">{{ icon("trophy", 18) }}</span>
+            <span class="chip-text"><strong>Freelancer of the Year</strong><span>Venture Further Awards 2026</span></span>
+          </a>
+          <div class="hero-chip chip-phd">
+            <span class="chip-icon">{{ icon("graduation-cap", 18) }}</span>
+            <span class="chip-text"><strong>PhD</strong><span>University of Manchester</span></span>
+          </div>
+          <p class="hero-namecard">
+            <strong>Dr Giuseppe Romano</strong>
+            <span>PhD &middot; CEng &middot; FHEA &middot; MIMechE &middot; MIMMM</span>
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- STATS -->
+    <div class="hero-stats-wrap">
+      <ul class="hero-stats" data-reveal>
+        <li class="hero-stat">
+          <span class="stat-icon">{{ icon("users", 22) }}</span>
+          <span class="stat-text"><strong data-count>15</strong><span>Students mentored</span></span>
+        </li>
+        <li class="hero-stat">
+          <span class="stat-icon">{{ icon("briefcase", 22) }}</span>
+          <span class="stat-text"><strong data-count>5</strong><span>Years in industry</span></span>
+        </li>
+        <li class="hero-stat">
+          <span class="stat-icon">{{ icon("book-open", 22) }}</span>
+          <span class="stat-text"><strong data-count>4</strong><span>Peer-reviewed publications</span></span>
+        </li>
+      </ul>
+    </div>
+
     <!-- SERVICES -->
     <section class="services" id="services">
       <div class="section-inner">
-        <p class="section-label">Services</p>
-        <h2 class="section-title">What I offer</h2>
-        <p class="section-subtitle">
-          One-to-one, in a group or at your own pace: three ways to go from student
-          to confident, industry-ready engineer.
-        </p>
-        <div class="services-list">
-          <article class="service-row" id="mentoring">
-            <div class="service-icon">{{ icon("user", 24, color="#1CAA5A") }}</div>
-            <div class="service-body">
+        <div class="section-head is-center" data-reveal>
+          <p class="section-label">Services</p>
+          <h2 class="section-title">What I offer</h2>
+          <p class="section-subtitle">
+            One-to-one, in a group or at your own pace: three ways to go from student
+            to confident, industry-ready engineer.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card is-featured" id="mentoring" data-reveal>
+            <div class="service-card-top">
+              <span class="service-icon">{{ icon("user", 24) }}</span>
               <span class="service-tag">Most popular</span>
-              <h3>1-to-1 Career Mentoring</h3>
-              <p>
-                Personalised guidance tailored to where you are and where you want to go.
-                We work on your CV, interview technique, skills mapping, and career strategy
-                — drawing on real industry experience, not textbook advice.
-              </p>
             </div>
-            <div class="service-aside">
+            <h3>1-to-1 Career Mentoring</h3>
+            <p>
+              Personalised guidance tailored to where you are and where you want to go,
+              drawing on real industry experience, not textbook advice.
+            </p>
+            <ul class="service-points">
+              <li>{{ icon("check", 16, stroke=2.5) }} CV and applications</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Interview technique</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Skills mapping</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Career strategy</li>
+            </ul>
+            <div class="service-price-block">
               <p class="service-price"><strong>&pound;45</strong> / hour</p>
               <p class="service-note">Starts with a free 15-minute discovery call.</p>
+            </div>
+            <div class="service-actions">
               <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
                 Book a Free Call
-                {{ icon("arrow", 16) }}
+                {{ icon("arrow-right", 18) }}
               </a>
-              <a href="#contact" data-enquiry="1-to-1 Career Mentoring" class="service-link">
+              <a href="#contact" data-enquiry="1-to-1 Career Mentoring" class="service-link link-arrow">
                 Book a Mentoring Session
-                {{ icon("arrow", 16) }}
+                {{ icon("arrow-right", 16) }}
               </a>
             </div>
           </article>
-          <article class="service-row" id="group-tutoring">
-            <div class="service-icon">{{ icon("users", 24, color="#1CAA5A") }}</div>
-            <div class="service-body">
+          <article class="service-card" id="group-tutoring" data-reveal style="--reveal-delay: 0.1s">
+            <div class="service-card-top">
+              <span class="service-icon">{{ icon("users", 24) }}</span>
               <span class="service-tag">Topics &amp; dates coming soon</span>
-              <h3>Group Tutoring Sessions</h3>
-              <p>
-                Live tutoring in a small group, so everyone gets time to ask questions
-                and work through problems together.
-              </p>
-              <ul class="service-points">
-                <li>{{ icon("check", 16, stroke=2.5) }} 6 to 10 participants per group</li>
-                <li>{{ icon("check", 16, stroke=2.5) }} Session recordings available for 6 weeks after the course ends</li>
-                <li>{{ icon("check", 16, stroke=2.5) }} Certificate of attendance</li>
-              </ul>
-              <p class="service-note">
-                A group goes ahead once at least 6 people have signed up. Booking for a
-                university department or society? Get in touch about a private group.
-              </p>
             </div>
-            <div class="service-aside">
+            <h3>Group Tutoring Sessions</h3>
+            <p>
+              Live tutoring in a small group, so everyone gets time to ask questions
+              and work through problems together.
+            </p>
+            <ul class="service-points">
+              <li>{{ icon("check", 16, stroke=2.5) }} 6 to 10 participants per group</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Session recordings available for 6 weeks after the course ends</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Certificate of attendance</li>
+            </ul>
+            <p class="service-small">
+              A group goes ahead once at least 6 people have signed up. Booking for a
+              university department or society? Get in touch about a private group.
+            </p>
+            <div class="service-price-block">
               <p class="service-price"><strong>&pound;20</strong> / seat per hour</p>
               <p class="service-note">Register your interest and I'll email you when topics and dates are announced.</p>
+            </div>
+            <div class="service-actions">
               <a href="#contact" data-enquiry="Group Tutoring" class="btn-primary">
                 Register Your Interest
-                {{ icon("arrow", 16) }}
+                {{ icon("arrow-right", 18) }}
               </a>
             </div>
           </article>
-          <article class="service-row" id="courses">
-            <div class="service-icon">{{ icon("monitor", 24, color="#1CAA5A") }}</div>
-            <div class="service-body">
+          <article class="service-card" id="courses" data-reveal style="--reveal-delay: 0.2s">
+            <div class="service-card-top">
+              <span class="service-icon">{{ icon("monitor", 24) }}</span>
               <span class="service-tag">Coming soon</span>
-              <h3>Online Courses</h3>
-              <p>
-                Recorded STEM courses built on the Make IT STEM Method: find exactly what you're
-                missing, then build it step by step, at your own pace.
-              </p>
-              <ul class="service-points">
-                <li>{{ icon("check", 16, stroke=2.5) }} Recorded video lessons you can watch whenever suits you</li>
-                <li>{{ icon("check", 16, stroke=2.5) }} A structured path through one subject, step by step</li>
-                <li>{{ icon("check", 16, stroke=2.5) }} Waiting-list members get first access at launch</li>
-              </ul>
             </div>
-            <div class="service-aside">
+            <h3>Online Courses</h3>
+            <p>
+              Recorded STEM courses built on the Make IT STEM Method: find exactly what you're
+              missing, then build it step by step, at your own pace.
+            </p>
+            <ul class="service-points">
+              <li>{{ icon("check", 16, stroke=2.5) }} Recorded video lessons you can watch whenever suits you</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} A structured path through one subject, step by step</li>
+              <li>{{ icon("check", 16, stroke=2.5) }} Waiting-list members get first access at launch</li>
+            </ul>
+            <div class="service-price-block">
               <p class="service-price"><strong class="price-text">Waiting list open</strong></p>
               <p class="service-note">Join now and I'll email you as soon as the first course is out.</p>
+            </div>
+            <div class="service-actions">
               <a href="courses.html" class="btn-primary">
                 Join the Waiting List
-                {{ icon("arrow", 16) }}
+                {{ icon("arrow-right", 18) }}
               </a>
             </div>
           </article>
@@ -167,22 +182,45 @@
     </section>
 
     <!-- BRIDGE -->
-    <div class="bridge-divider">
-      <p class="bridge-quote">
-        "The best engineers I've worked with didn't just have strong degrees —
-        they knew how to <em>communicate value</em> and navigate industry from day one."
-      </p>
-    </div>
+    <section class="bridge">
+      <div class="bg-grid" aria-hidden="true"></div>
+      <figure class="section-inner" data-reveal>
+        <blockquote class="bridge-quote">
+          <p>
+            The best engineers I've worked with didn't just have strong degrees —
+            they knew how to <em>communicate value</em> and navigate industry from day one.
+          </p>
+        </blockquote>
+        <figcaption class="bridge-author">
+          <img src="{{ root }}assets/img/giuseppe-romano.jpeg" alt="" width="46" height="46" loading="lazy">
+          <span><strong>Dr Giuseppe Romano</strong>Founder, Make IT STEM</span>
+        </figcaption>
+      </figure>
+    </section>
 
     <!-- ABOUT -->
     <section class="about" id="about">
-      <div class="section-inner">
-        <div class="about-content">
-          <p class="section-label">Meet the Founder</p>
-          <div class="about-photo-wrap">
-            <img src="{{ root }}assets/img/giuseppe-romano.jpeg" alt="Dr Giuseppe Romano">
+      <div class="section-inner about-layout">
+        <div class="about-media" data-reveal>
+          <div class="about-photo">
+            <picture>
+              <source type="image/webp" srcset="{{ root }}assets/img/vfa-awards-2026-800.webp 800w, {{ root }}assets/img/vfa-awards-2026-1200.webp 1200w" sizes="(min-width: 992px) 520px, 92vw">
+              <img src="{{ root }}assets/img/vfa-awards-2026-1200.jpg" srcset="{{ root }}assets/img/vfa-awards-2026-800.jpg 800w, {{ root }}assets/img/vfa-awards-2026-1200.jpg 1200w" sizes="(min-width: 992px) 520px, 92vw" width="1200" height="860" alt="Dr Giuseppe Romano receiving the Freelancer of the Year award at the Venture Further Awards 2026" loading="lazy" decoding="async">
+            </picture>
           </div>
-          <h2>Dr Giuseppe Romano</h2>
+          <a class="about-award" href="{{ award_url }}" target="_blank" rel="noopener">
+            <span class="about-award-icon">{{ icon("trophy", 22) }}</span>
+            <span class="about-award-text">
+              <strong>Freelancer of the Year</strong>
+              <span>Venture Further Awards 2026 &middot; &pound;4,000 winner</span>
+              <span class="about-award-more">Learn more {{ icon("arrow-up-right", 14) }}</span>
+            </span>
+          </a>
+        </div>
+        <div class="about-content" data-reveal style="--reveal-delay: 0.1s">
+          <p class="section-label">Meet the Founder</p>
+          <h2 class="section-title">Dr Giuseppe Romano</h2>
+          <p class="about-credentials">PhD &middot; CEng &middot; FHEA &middot; MIMechE &middot; MIMMM</p>
           <p>
             I'm a Chartered Engineer (CEng MIMechE, MIMMM, FHEA) with a PhD from
             the University of Manchester, where I developed micromechanical
@@ -206,12 +244,28 @@
             combining real CAE and materials R&amp;D experience with personalised,
             1:1 mentoring that goes far beyond generic careers advice.
           </p>
-          <p class="about-linkedin">
-            <a href="https://www.linkedin.com/in/giusepperomano92/" target="_blank" rel="noopener">
-              {{ icon("linkedin-badge", 20, color="none") }}
-              Connect with me on LinkedIn
-            </a>
-          </p>
+          <ul class="about-facts">
+            <li class="about-fact">
+              <span class="fact-icon">{{ icon("graduation-cap", 20) }}</span>
+              <span class="fact-text"><strong>PhD</strong><span>University of Manchester</span></span>
+            </li>
+            <li class="about-fact">
+              <span class="fact-icon">{{ icon("briefcase", 20) }}</span>
+              <span class="fact-text"><strong>Senior R&amp;D Engineer</strong><span>Synopsys</span></span>
+            </li>
+            <li class="about-fact">
+              <span class="fact-icon">{{ icon("award", 20) }}</span>
+              <span class="fact-text"><strong>Chartered Engineer</strong><span>CEng MIMechE &middot; MIMMM</span></span>
+            </li>
+            <li class="about-fact">
+              <span class="fact-icon">{{ icon("globe", 20) }}</span>
+              <span class="fact-text"><strong>NAFEMS Italia</strong><span>Regional Representative for 4+ years</span></span>
+            </li>
+          </ul>
+          <a class="btn-outline" href="{{ site.social.linkedin }}" target="_blank" rel="noopener">
+            {{ icon("linkedin", 18) }}
+            Connect with me on LinkedIn
+          </a>
         </div>
       </div>
     </section>
@@ -219,17 +273,19 @@
     <!-- TESTIMONIALS -->
     <section class="testimonials" id="testimonials">
       <div class="section-inner">
-        <p class="section-label">Testimonials</p>
-        <h2 class="section-title">What mentees say</h2>
-        <p class="section-subtitle">
-          Real outcomes from engineers who've been through the programme.
-        </p>
+        <div class="section-head is-center" data-reveal>
+          <p class="section-label">Testimonials</p>
+          <h2 class="section-title">What mentees say</h2>
+          <p class="section-subtitle">
+            Real outcomes from engineers who've been through the programme.
+          </p>
+        </div>
         {% set limit = 3 %}
         {% include "partials/testimonial-cards.html" %}
-        <div class="testimonials-more">
-          <a href="testimonials.html" class="btn-primary">
+        <div class="testimonials-more" data-reveal>
+          <a href="testimonials.html" class="btn-outline">
             Read all testimonials
-            {{ icon("arrow", 16) }}
+            {{ icon("arrow-right", 18) }}
           </a>
         </div>
       </div>
@@ -238,145 +294,124 @@
     <!-- PROCESS -->
     <section class="process" id="process">
       <div class="section-inner">
-        <p class="section-label">The Make IT STEM Method</p>
-        <h2 class="section-title">From first call to career clarity</h2>
-        <p class="section-subtitle">
-          Most careers advice stops at a polished CV. The Make IT STEM Method starts
-          from what industry actually hires for, maps it against the skills you already
-          have, and closes the gap one step at a time.
-        </p>
-        <div class="process-steps">
-          <div class="process-step">
-            <div class="step-number">1</div>
+        <div class="section-head is-center" data-reveal>
+          <p class="section-label">The Make IT STEM Method</p>
+          <h2 class="section-title">From first call to career clarity</h2>
+          <p class="section-subtitle">
+            Most careers advice stops at a polished CV. The Make IT STEM Method starts
+            from what industry actually hires for, maps it against the skills you already
+            have, and closes the gap one step at a time.
+          </p>
+        </div>
+        <ol class="process-steps" data-reveal>
+          <li class="process-step">
+            <span class="step-node">{{ icon("compass", 28) }}<span class="step-number">1</span></span>
             <h3>Discover</h3>
             <p>A free 15-minute call. We talk about where you are, where you want to be, and whether I'm the right person to help. No commitment and no sales pitch.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">2</div>
+          </li>
+          <li class="process-step">
+            <span class="step-node">{{ icon("map", 28) }}<span class="step-number">2</span></span>
             <h3>Map</h3>
             <p>We map your technical and transferable skills against the roles you're aiming for, find the gaps that really matter, and agree clear, measurable goals.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">3</div>
+          </li>
+          <li class="process-step">
+            <span class="step-node">{{ icon("tool", 28) }}<span class="step-number">3</span></span>
             <h3>Build</h3>
             <p>Focused 1-to-1 sessions on whatever moves you forward: CV and applications, interview practice, communicating your value, industry insight and career strategy.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">4</div>
+          </li>
+          <li class="process-step">
+            <span class="step-node">{{ icon("rocket", 28) }}<span class="step-number">4</span></span>
             <h3>Launch</h3>
             <p>You apply with confidence. I stay available for follow-up questions as you handle interviews, offers and your first career decisions.</p>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta-section">
-      <div class="section-inner">
-        <h2>Ready to bridge the gap?</h2>
-        <p>
-          Book a free 15-minute discovery call and let's talk about
-          where you are, where you want to be, and how to get there.
-        </p>
-        <a href="#contact" data-enquiry="Free Discovery Call" class="btn-primary">
-          Book Your Free Call
-          {{ icon("arrow", 16) }}
-        </a>
-      </div>
-    </section>
+    {% include "partials/cta-band.html" %}
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
-      <div class="section-inner">
-        <div class="contact-layout">
-          <div class="contact-info">
-            <p class="section-label">Get in Touch</p>
-            <h2>Let's start a conversation</h2>
-            <p>
-              Whether you're a final-year student, a recent graduate, or an
-              early-career engineer looking for direction — I'd be glad to hear from you.
-            </p>
-            <div class="contact-detail">
-              <div class="contact-detail-icon">{{ icon("mail", 18) }}</div>
-              <div class="contact-detail-text">
-                <strong>Email</strong>
-                {{ site.email }}
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail-icon">{{ icon("map-pin", 18) }}</div>
-              <div class="contact-detail-text">
-                <strong>Based in</strong>
-                Cambridge, United Kingdom
-              </div>
-            </div>
-            <p class="contact-social-label">Follow us</p>
-            <div class="contact-detail">
-              <div class="contact-detail-icon icon-instagram">{{ icon("instagram", 18, color="#fff") }}</div>
-              <div class="contact-detail-text">
-                <strong>Instagram</strong>
-                <a href="https://www.instagram.com/make_it_stem/" target="_blank" rel="noopener">Make IT STEM</a>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail-icon icon-youtube">{{ icon("youtube", 18, color="#fff") }}</div>
-              <div class="contact-detail-text">
-                <strong>YouTube</strong>
-                <a href="https://www.youtube.com/@MakeITSTEM" target="_blank" rel="noopener">Make IT STEM</a>
-              </div>
+      <div class="section-inner contact-layout">
+        <div class="contact-info" data-reveal>
+          <p class="section-label">Get in Touch</p>
+          <h2 class="section-title">Let's start a conversation</h2>
+          <p class="contact-lead">
+            Whether you're a final-year student, a recent graduate, or an
+            early-career engineer looking for direction — I'd be glad to hear from you.
+          </p>
+          <div class="contact-cards">
+            <a class="contact-card" href="mailto:{{ site.email }}">
+              <span class="contact-card-icon">{{ icon("mail", 20) }}</span>
+              <span class="contact-card-text"><strong>Email</strong><span>{{ site.email }}</span></span>
+            </a>
+            <div class="contact-card">
+              <span class="contact-card-icon">{{ icon("map-pin", 20) }}</span>
+              <span class="contact-card-text"><strong>Based in</strong><span>Cambridge, United Kingdom</span></span>
             </div>
           </div>
-          <form class="contact-form" action="{{ site.formspree }}" method="POST">
-            <input type="hidden" name="language" value="{{ lang.name }}">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Full name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="you@email.com">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="enquiry">I'm enquiring about</label>
-              <select id="enquiry" name="enquiry" required>
-                <option value="">Select one...</option>
-                <option value="Free Discovery Call">Free Discovery Call</option>
-                <option value="1-to-1 Career Mentoring">1-to-1 Career Mentoring</option>
-                <option value="Group Tutoring">Group Tutoring</option>
-                <option value="Courses">Courses</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="stage">Where are you in your career?</label>
-              <select id="stage" name="stage">
-                <option value="">Select one...</option>
-                <option value="undergrad">Undergraduate (final year)</option>
-                <option value="postgrad">Postgraduate student</option>
-                <option value="recent">Recent graduate (0–2 years)</option>
-                <option value="early">Early-career engineer (2–5 years)</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required placeholder="Tell me about your situation and what you're looking for..."></textarea>
-            </div>
-            <div class="form-checkbox">
-              <input type="checkbox" id="privacy" name="privacy" required>
-              <label for="privacy">I accept the <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a></label>
-            </div>
-            <div class="privacy-notice">
-              <strong>Data Protection:</strong> Your information will be sent securely to {{ site.email }} (GDPR compliant). I will contact you to discuss your career development needs. You can unsubscribe anytime.
-            </div>
-            <button type="submit" class="btn-primary form-submit">
-              Submit
-              {{ icon("send", 18) }}
-            </button>
-          </form>
+          <p class="contact-social-label">Follow us</p>
+          <div class="contact-social">
+            <a class="social-pill social-instagram" href="{{ site.social.instagram }}" target="_blank" rel="noopener">
+              <span class="social-pill-icon">{{ icon("instagram", 17, color="#fff") }}</span>Instagram
+            </a>
+            <a class="social-pill social-youtube" href="{{ site.social.youtube }}" target="_blank" rel="noopener">
+              <span class="social-pill-icon">{{ icon("youtube", 17, color="#fff") }}</span>YouTube
+            </a>
+          </div>
         </div>
+        <form class="contact-form" action="{{ site.formspree }}" method="POST" data-reveal style="--reveal-delay: 0.1s">
+          <input type="hidden" name="language" value="{{ lang.name }}">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Full name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@email.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="enquiry">I'm enquiring about</label>
+            <select id="enquiry" name="enquiry" required>
+              <option value="">Select one...</option>
+              <option value="Free Discovery Call">Free Discovery Call</option>
+              <option value="1-to-1 Career Mentoring">1-to-1 Career Mentoring</option>
+              <option value="Group Tutoring">Group Tutoring</option>
+              <option value="Courses">Courses</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="stage">Where are you in your career?</label>
+            <select id="stage" name="stage">
+              <option value="">Select one...</option>
+              <option value="undergrad">Undergraduate (final year)</option>
+              <option value="postgrad">Postgraduate student</option>
+              <option value="recent">Recent graduate (0–2 years)</option>
+              <option value="early">Early-career engineer (2–5 years)</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell me about your situation and what you're looking for..."></textarea>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy">I accept the <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a></label>
+          </div>
+          <div class="privacy-notice">
+            {{ icon("lock", 16) }}
+            <span><strong>Data Protection:</strong> Your information will be sent securely to {{ site.email }} (GDPR compliant). I will contact you to discuss your career development needs. You can unsubscribe anytime.</span>
+          </div>
+          <button type="submit" class="btn-primary btn-lg form-submit">
+            Submit
+            {{ icon("send", 18) }}
+          </button>
+        </form>
       </div>
     </section>
 {% endblock %}
